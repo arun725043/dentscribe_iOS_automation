@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-11T17:18:31 IST" name="Suite" finished-at="2023-12-11T17:19:57 IST" duration-ms="86313">
+    <groups>
+    </groups>
+    <test started-at="2023-12-11T17:18:31 IST" name="Test" finished-at="2023-12-11T17:19:57 IST" duration-ms="86313">
+      <class name="com.dentscribe.testCases_iOS.TestChangePassword">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestChangePassword@28fa541]" started-at="2023-12-11T17:18:31 IST" name="configureAppium" finished-at="2023-12-11T17:18:39 IST" duration-ms="8069" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="verifyChangePasswordFromSettingsPage()[pri:1, instance:com.dentscribe.testCases_iOS.TestChangePassword@28fa541]" started-at="2023-12-11T17:18:39 IST" name="verifyChangePasswordFromSettingsPage" finished-at="2023-12-11T17:19:33 IST" duration-ms="54493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyChangePasswordFromSettingsPage -->
+        <test-method signature="verifyUserShouldNotLoginFromOldPassword()[pri:2, instance:com.dentscribe.testCases_iOS.TestChangePassword@28fa541]" started-at="2023-12-11T17:19:33 IST" name="verifyUserShouldNotLoginFromOldPassword" finished-at="2023-12-11T17:19:42 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestChangePassword.verifyChangePasswordFromSettingsPage" duration-ms="9116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserShouldNotLoginFromOldPassword -->
+        <test-method signature="verifyUserShouldLoginFromNewChangedPassword()[pri:3, instance:com.dentscribe.testCases_iOS.TestChangePassword@28fa541]" started-at="2023-12-11T17:19:42 IST" name="verifyUserShouldLoginFromNewChangedPassword" finished-at="2023-12-11T17:19:57 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestChangePassword.verifyChangePasswordFromSettingsPage" duration-ms="14605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserShouldLoginFromNewChangedPassword -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestChangePassword -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

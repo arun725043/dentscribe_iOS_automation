@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.dentscribe.ExtentReport.TestListeners" />
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+			
+			
+		
+		    <class name="com.dentscribe.testCasesIOS.UserBlockUnblockTest" />
+			
+			<!--
+			 <class name="com.dentscribe.testCasesIOS.VerifyInvalidSearchPatientTest" />
+				 <class name="com.dentscribe.testCasesIOS.DS_029_CalendarTest" />
+			
+			<class name="com.dentscribe.testCasesIOS.ForgotPassowrdTest"/>
+				<class name="com.dentscribe.testCasesIOS.SignUpFieldsValidationTest" />
+			
+			<class name="com.dentscribe.testCasesIOS.SubscriptionPlanFreeTrailTest" />
+			
+			<class name="com.dentscribe.testCasesIOS.DS_005_SignupWithoutPracticeForm" />
+			
+			<class name="com.dentscribe.testCasesIOS.AccoutingPracticeSettingTest"/>
+			
+			<class name="com.dentscribe.testCasesIOS.ChangePasswordTest"/>
+			
+			
+			
+			<class name="com.dentscribe.testCasesIOS.PatientProfileTest"/>
+			
+			<class name="com.dentscribe.testCasesIOS.DS_005_SignupUserTest"/>
+			
+			
+			<class name="com.dentscribe.testCasesIOS.DS_005_SignupUserTest"/>
+			<class name="com.dentscribe.testCasesIOS.CancelSubscription" />
+			
+			<class name="com.dentscribe.testCasesIOS.DS_027_Pause_Back_RecordingTest" />
+			<class name="com.dentscribe.testCasesIOS.SoapReportEditTest"/>
+			<class name="com.dentscribe.testCasesIOS.SoapReportSubmitEditSignatureTest"/> 
+			<class name="com.dentscribe.testCasesIOS.SoapReportSubmitSignaturSubmitTest"/>
+			<class name="com.dentscribe.testCasesIOS.DS_027_RecordingTest"/>
+			
+			
+			<class name="com.dentscribe.testCasesIOS.DS_004_SmsVerificationTest" />
+		
+			<class name="com.dentscribe.testCasesIOS.DS_001_008_LoginTest" />
+		
+			<class name="com.dentscribe.testCasesIOS.AccoutingPracticeSettingTest"/>
+			
+			<class name="com.dentscribe.testCasesIOS.DS_020_021_HelpAndLogoutTest"/>
+			<class name="com.dentscribe.testCasesIOS.DS_017_SearchPatientTest" />
+			<class name="com.dentscribe.testCasesIOS.SubscriptionPlanFreeTrailTest"/>
+			<class name="com.dentscribe.testCasesIOS.DS_006_010_013_014_015_ExisitingSikkaUserApplicationFlow"/>
+            <class name="com.dentscribe.testCasesIOS.DentScribeSmokeTest"/>
+            <class name="com.dentscribe.testCasesIOS.DS_016_TourPagesTest"/>
+			
+			
+			<classname="com.dentscribe.testCasesIOS.EULATest" />
+			<class name="com.dentscribe.testCasesIOS.SubscriptionPlanTest"/>
+			
+			<class name="com.dentscribe.testCases.DS_003_VerifySignupPageMandatoryFields"/>
+			<class name="com.dentscribe.testCases.DS_028_SettingPageTest"/>
+			/>-->
+		</classes>
+	</test>
+</suite> 

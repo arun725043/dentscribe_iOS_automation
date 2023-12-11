@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.dentscribe.ExtentReport.TestListeners" />
+	</listeners>
+	<test thread-count="1" name="Test">
+		<classes>
+			 
+			<class name="com.dentscribe.testCases_iOS.TestChangePassword" />
+			
+			<!-- DONE TES CASES-->
+			<!-- 
+			<class name="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan" />
+			<class name="com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan" />
+			<class name="com.dentscribe.testCases_iOS.TestLoginPage" />
+			<class name="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin" />
+			<class name="com.dentscribe.testCases_iOS.TestSignUpPage" />
+			<class name="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup" />
+			<class name="com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice" />
+			<class name="com.dentscribe.testCases_iOS.TestTourPages" />
+			<class name="com.dentscribe.testCases_iOS.TestPatientSearchPage" />
+			<class name="com.dentscribe.testCases_iOS.TestForgotPassowrdPage" />
+			<class name="com.dentscribe.testCases_iOS.TestSettingsPage" />
+			-->
+			
+			
+
+		</classes>
+	</test>
+</suite> 

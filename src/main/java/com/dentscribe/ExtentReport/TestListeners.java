@@ -1,0 +1,85 @@
+package com.dentscribe.ExtentReport;
+
+import java.io.File;
+
+import java.io.IOException;
+import java.lang.reflect.Field;
+import java.util.Arrays;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.Markup;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.dentscribe.base.iOSBase;
+
+import io.appium.java_client.AppiumDriver;
+
+public class TestListeners extends iOSBase implements ITestListener {
+
+	// This reference is used by test cases (classes) to create test steps in Report
+	private ExtentReports extent = new ExtentManager().createInsatance();
+	private ExtentTest test;
+	private ExtentReports extentReport;
+	public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+
+	@Override
+	public void onStart(ITestContext context) {
+		extentReport = ExtentManager.createInsatance();
+		extentTest.set(test);
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+		if (extentReport != null) {
+			extentReport.flush();
+		}
+	}
+
+	@Override
+	public void onTestStart(ITestResult result) {
+		test = extentReport.createTest(result.getTestClass().getName() + " -> " + result.getMethod().getMethodName());
+		extentTest.set(test);
+		// System.out.println("Pool on different test case iteration"+extentTest);
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		System.out.println(Arrays.toString(result.getThrowable().getStackTrace()));
+		String logText = "<b> Test Case '" + result.getMethod().getMethodName() + "' is Skipped </b>";
+		ExtentManager.logSkipDetails(logText);
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+		String logText = "<b> Test Case '" + result.getMethod().getMethodName() + "' is Successful </b>";
+		ExtentManager.logPassDetails(logText);
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+		String stackTrace = Arrays.toString(result.getThrowable().getStackTrace());
+
+		stackTrace = stackTrace.replaceAll(",", "<br>");
+		String formatedTrace = "<details>\n" + " <summary>Click Here to See Exception Logs</summary>\n" + " " + stackTrace + "\n" + "</details\n>";
+		ExtentManager.logExceptionDetails(formatedTrace);
+
+		Object currentClass = result.getInstance();
+		AppiumDriver driver = ((iOSBase) currentClass).driver;
+		if (driver != null) {
+			test.fail(MediaEntityBuilder.createScreenCaptureFromBase64String(Screenshot.getBase64(driver)).build());
+		} else {
+			System.out.println("Driver is null");
+		}
+	}
+}

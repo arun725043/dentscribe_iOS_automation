@@ -1,0 +1,35 @@
+_____________________patient details_________________
+patientName=Curtis Davina
+patientPhone=4084250111
+dob=1969-11-11
+insurance=Delta Dental Plan Of Ca.
+random=raryzt
+
+//_________opendental patient record_______
+opendentalPatientName=Smith John
+opendentalPatientPhone=5369875621
+opendentaldob=1979-06-23
+opendentalInsurance= Metlife 
+
+______________practice form__________
+state=Alabama
+country=United States
+
+//_____________payment details_____
+cardNo=4242 4242 4242 4242
+expiry=12/34
+cvc=567
+zipcode=12345
+
+//______________signup details__________
+countryCode=+91
+countryName=India
+otp=839389
+
+//_____________calendar_____________
+calendarTestDate=01-12-2023
+
+//_____________PMS SoftwareIds___________
+eaglesoft=D22072
+dentrix=D46381
+opendental=D46103
