@@ -53,5 +53,28 @@ public class PatientProfileTest extends iOSBase{
 		
 		
 	}
+	
+	@Test (priority = 5, dependsOnMethods = { "verifyContinueRecordingButtonAndClick" })
+	public void verifyPatientprofilePage()
+	{
+		// search result should be display after searching
+		assertTrue(calendarPage.verifySearchLandingPage());
+		ExtentManager.logInfoDetails("Patient search page opened successfully");
+
+		// Search By patientName and verify
+		ExtentManager.logInfoDetails("Searching By name : <b> " + readData("testData", "patientName") + "</b>");
+		searchPage.searchPatient(readData("testData", "patientName"));
+		waitUntilLoaderDisappear(driver);
+		
+		// To click on patient name 
+		searchPage.performClickONPatient();
+		
+		// To verify the 'Patient Profile' text 
+		patientProfilePage.verifyPatientProfileText();
+		
+		// To verify the patient name 
+		assertTrue(patientProfilePage.verifyPatientName(readData("testData", "patientName")));
+		ExtentManager.logInfoDetails(readData("testData", "patientName")+": Profile Opened as expected");
+	}
 
 }

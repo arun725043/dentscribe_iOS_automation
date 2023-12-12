@@ -2,6 +2,9 @@ package com.dentscribe.pages.ios;
 
 import org.dentscribe.utils.iOSActions;
 import org.openqa.selenium.By;
+import org.testng.Assert;
+
+import com.dentscribe.ExtentReport.ExtentManager;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.ios.IOSDriver;
@@ -15,7 +18,8 @@ public class RecordingPage extends iOSActions{
 		this.driver = driver;
 	}
 
-	public By buttonStartRecording = By.xpath("//XCUIElementTypeOther[@name='Start-recording']");
+	public By headerTextRecordingPage = By.xpath("//XCUIElementTypeStaticText[@name='Record']");
+	public By textStartRecording = By.xpath("//XCUIElementTypeStaticText[@name='• Recording']");
 	public By pauseButton = AppiumBy.accessibilityId("pause-button");
 	public By stopButton = AppiumBy.accessibilityId("stop-button");
 	public By backIcon = By.xpath("//XCUIElementTypeOther[@name='Record']/XCUIElementTypeOther");
@@ -23,29 +27,25 @@ public class RecordingPage extends iOSActions{
 	public By doYouWantPusePopupCancel = AppiumBy.accessibilityId("Cancel");
 	public By doHYouWandPasuePopupOK = AppiumBy.accessibilityId("OK");
 	
-	// ______________click start recording button___________
-	public boolean clickVerifyStartRecording(String operation) {
-		
-		boolean flag = false;
-		if (operation == "click") {
-			click(driver, buttonStartRecording, "Start Recording");
-		} else if (operation == "verify") {
-			flag = IsElementPresent(driver, buttonStartRecording);
+	//________verify whether Recording page exists or not_________ 
+	public void validateRecordingPage()
+	{
+		if(IsElementPresent(driver, headerTextRecordingPage) && IsElementPresent(driver, textStartRecording))
+		{
+			ExtentManager.logInfoDetails("<b>User is now on Recording page as expected and recording is running");
 		}
-		return flag;
+		else {
+			ExtentManager.logFailureDetails("Either Recording not exists or opened or verifying note message is not available or as expected. please check");
+			Assert.fail();
+		}
 	}
 	
-	// click on pause button 
-	public void performClickPause() {
-		click(driver, pauseButton, "Pause buton on recording page");
-	}
-	
-	// ____________click pause stoop button_____________
+	// ____________click pause stop button_____________
 	public void clickPauseStopButton(String buttonName) {
 		if (buttonName == "pause") {
-			click(driver, pauseButton, "pause");
+			click(driver, pauseButton, "pause button on Recording page");
 		} else if (buttonName == "stop") {
-			click(driver, stopButton, "stop");
+			click(driver, stopButton, "stop button on Recording page");
 		}
 	}
 	

@@ -90,7 +90,7 @@ public class SignUpPage extends iOSActions {
 		}
 	}
 		
-	//________verify whether Sms verification page exists or not_________ 
+	//________verify whether SMS verification page exists or not_________ 
 	public void validateSmsVerificationPage()
 	{
 		if(IsElementPresent(driver, textSmsVerification) && IsElementPresent(driver, linkResendCode))

@@ -1,29 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="8" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-11T17:18:31 IST" name="Suite" finished-at="2023-12-11T17:19:57 IST" duration-ms="86313">
+  <suite started-at="2023-12-12T19:40:42 IST" name="Suite" finished-at="2023-12-12T19:46:25 IST" duration-ms="342261">
     <groups>
     </groups>
-    <test started-at="2023-12-11T17:18:31 IST" name="Test" finished-at="2023-12-11T17:19:57 IST" duration-ms="86313">
-      <class name="com.dentscribe.testCases_iOS.TestChangePassword">
-        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestChangePassword@28fa541]" started-at="2023-12-11T17:18:31 IST" name="configureAppium" finished-at="2023-12-11T17:18:39 IST" duration-ms="8069" status="PASS">
+    <test started-at="2023-12-12T19:40:42 IST" name="Test" finished-at="2023-12-12T19:46:25 IST" duration-ms="342261">
+      <class name="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-12T19:40:42 IST" name="configureAppium" finished-at="2023-12-12T19:40:58 IST" duration-ms="15268" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configureAppium -->
-        <test-method signature="verifyChangePasswordFromSettingsPage()[pri:1, instance:com.dentscribe.testCases_iOS.TestChangePassword@28fa541]" started-at="2023-12-11T17:18:39 IST" name="verifyChangePasswordFromSettingsPage" finished-at="2023-12-11T17:19:33 IST" duration-ms="54493" status="PASS">
+        <test-method signature="goToCalendarPageAndSelectAppointmentsDate()[pri:1, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-12T19:40:58 IST" name="goToCalendarPageAndSelectAppointmentsDate" finished-at="2023-12-12T19:41:57 IST" duration-ms="58893" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyChangePasswordFromSettingsPage -->
-        <test-method signature="verifyUserShouldNotLoginFromOldPassword()[pri:2, instance:com.dentscribe.testCases_iOS.TestChangePassword@28fa541]" started-at="2023-12-11T17:19:33 IST" name="verifyUserShouldNotLoginFromOldPassword" finished-at="2023-12-11T17:19:42 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestChangePassword.verifyChangePasswordFromSettingsPage" duration-ms="9116" status="PASS">
+        </test-method> <!-- goToCalendarPageAndSelectAppointmentsDate -->
+        <test-method signature="verifyIsPatientPopupAppearingOnStartButtonClick()[pri:2, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-12T19:41:57 IST" name="verifyIsPatientPopupAppearingOnStartButtonClick" finished-at="2023-12-12T19:42:11 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.goToCalendarPageAndSelectAppointmentsDate" duration-ms="14120" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserShouldNotLoginFromOldPassword -->
-        <test-method signature="verifyUserShouldLoginFromNewChangedPassword()[pri:3, instance:com.dentscribe.testCases_iOS.TestChangePassword@28fa541]" started-at="2023-12-11T17:19:42 IST" name="verifyUserShouldLoginFromNewChangedPassword" finished-at="2023-12-11T17:19:57 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestChangePassword.verifyChangePasswordFromSettingsPage" duration-ms="14605" status="PASS">
+        </test-method> <!-- verifyIsPatientPopupAppearingOnStartButtonClick -->
+        <test-method signature="verifyStartRecordingButtonOnPatientDetailsPopupAndClick()[pri:3, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-12T19:42:11 IST" name="verifyStartRecordingButtonOnPatientDetailsPopupAndClick" finished-at="2023-12-12T19:42:32 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyIsPatientPopupAppearingOnStartButtonClick" duration-ms="21717" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserShouldLoginFromNewChangedPassword -->
-      </class> <!-- com.dentscribe.testCases_iOS.TestChangePassword -->
+        </test-method> <!-- verifyStartRecordingButtonOnPatientDetailsPopupAndClick -->
+        <test-method signature="verifyContinueButtonAfterPauseRecording()[pri:4, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-12T19:42:32 IST" name="verifyContinueButtonAfterPauseRecording" finished-at="2023-12-12T19:42:47 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyStartRecordingButtonOnPatientDetailsPopupAndClick" duration-ms="14683" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContinueButtonAfterPauseRecording -->
+        <test-method signature="verifyIsPatientPopupAppearingOnContinueButtonClick()[pri:5, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-12T19:42:47 IST" name="verifyIsPatientPopupAppearingOnContinueButtonClick" finished-at="2023-12-12T19:42:57 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyContinueButtonAfterPauseRecording" duration-ms="9849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIsPatientPopupAppearingOnContinueButtonClick -->
+        <test-method signature="verifyContinueRecordingButtonOnPatientDetailsPopupAndClick()[pri:6, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-12T19:42:57 IST" name="verifyContinueRecordingButtonOnPatientDetailsPopupAndClick" finished-at="2023-12-12T19:43:21 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyIsPatientPopupAppearingOnContinueButtonClick" duration-ms="24133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContinueRecordingButtonOnPatientDetailsPopupAndClick -->
+        <test-method signature="verifyReviewButtonAfterStopRecording()[pri:7, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-12T19:43:21 IST" name="verifyReviewButtonAfterStopRecording" finished-at="2023-12-12T19:44:19 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyContinueRecordingButtonOnPatientDetailsPopupAndClick" duration-ms="58279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyReviewButtonAfterStopRecording -->
+        <test-method signature="verifySoapReportAfterReviewButtonClick()[pri:8, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-12T19:44:19 IST" name="verifySoapReportAfterReviewButtonClick" finished-at="2023-12-12T19:44:22 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyReviewButtonAfterStopRecording" duration-ms="2538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySoapReportAfterReviewButtonClick -->
+        <test-method signature="verifyReviewedButtonForAppointmentAfterSubmitSoapReport()[pri:9, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-12T19:44:22 IST" name="verifyReviewedButtonForAppointmentAfterSubmitSoapReport" finished-at="2023-12-12T19:46:24 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifySoapReportAfterReviewButtonClick" duration-ms="122439" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by AppiumBy.accessibilityId: Dinsmore Ryan Review-button (tried for 120 second(s) with 500 milliseconds interval)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.4', java.version: '20.0.2'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appium:app: //Users//mcl-0048/Desktop//..., appium:automationName: XCuiTest, appium:databaseEnabled: false, appium:deviceName: iPhone 14 Plus, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 16.4, appium:takesScreenshot: true, appium:udid: 2A4A9901-84B0-429C-B765-6C1..., appium:webStorageEnabled: false, platformName: IOS}
+Session ID: ac0f5972-7af1-4edf-b2d1-c7b613241a36]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by AppiumBy.accessibilityId: Dinsmore Ryan Review-button (tried for 120 second(s) with 500 milliseconds interval)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.4', java.version: '20.0.2'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appium:app: //Users//mcl-0048/Desktop//..., appium:automationName: XCuiTest, appium:databaseEnabled: false, appium:deviceName: iPhone 14 Plus, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 16.4, appium:takesScreenshot: true, appium:udid: 2A4A9901-84B0-429C-B765-6C1..., appium:webStorageEnabled: false, platformName: IOS}
+Session ID: ac0f5972-7af1-4edf-b2d1-c7b613241a36
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at com.dentscribe.common.CommonMethods.explicitWait(CommonMethods.java:147)
+at com.dentscribe.pages.ios.CalendarPage.verifyReviewButton(CalendarPage.java:325)
+at com.dentscribe.pages.ios.CalendarPage.verifyClickReviewButtonForAppointment(CalendarPage.java:353)
+at com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyReviewedButtonForAppointmentAfterSubmitSoapReport(TestAllAppointmentStatuses.java:141)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyReviewedButtonForAppointmentAfterSubmitSoapReport -->
+        <test-method signature="verifySoapReportAfterReviewedButtonClick()[pri:10, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-12T19:46:25 IST" name="verifySoapReportAfterReviewedButtonClick" finished-at="2023-12-12T19:46:25 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyReviewedButtonForAppointmentAfterSubmitSoapReport" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestAllAppointmentStatuses.verifySoapReportAfterReviewedButtonClick()[pri:10, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestAllAppointmentStatuses.verifySoapReportAfterReviewedButtonClick()[pri:10, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySoapReportAfterReviewedButtonClick -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestAllAppointmentStatuses -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

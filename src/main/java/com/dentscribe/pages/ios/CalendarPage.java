@@ -48,7 +48,7 @@ public class CalendarPage extends iOSActions {
 	public By rightArrowIconCalendar = AppiumBy.accessibilityId("calendar-display.header.rightArrow");
 	public By leftArrowIconCalendar = AppiumBy.accessibilityId("calendar-display.header.leftArrow");
 	public By monthYearCalendar = AppiumBy.accessibilityId("calendar-display.header.title");
-	public By patientNameOnRecording = By
+	public By patientNameOnPatientDetailsPopup = By
 			.xpath("//XCUIElementTypeStaticText[@name='Name:']//following-sibling::XCUIElementTypeStaticText");
 	public By allowMicOk = By.xpath("//XCUIElementTypeButton[@name='OK']");
 	public By resumeRecording = By.xpath("(//XCUIElementTypeOther[@name='OK'])[2]");
@@ -60,6 +60,11 @@ public class CalendarPage extends iOSActions {
 			"(//XCUIElementTypeOther[@name='Welcome, Android Dev User! search-input'])[4]/XCUIElementTypeOther[1]/XCUIElementTypeOther");
 	public By settingIconButton = AppiumBy.accessibilityId("setting-icon-button");
 	public By continueRecordingButton = AppiumBy.accessibilityId("Continue-recording");
+	
+	public By popupPatientDetails = By.xpath("//XCUIElementTypeStaticText[@name='Patient Details']");
+	public By buttonStartRecording = By.xpath("//XCUIElementTypeOther[@name='Start-recording']");
+	public By buttonContinueRecording = By.xpath("(//XCUIElementTypeOther[@name='Continue-recording'])");
+	public By patientNameBy = By.xpath("//XCUIElementTypeStaticText[@name=' 5:00']");
 
 	// Verify whether Calendar page exists or not
     public void validateCalendarPage()
@@ -93,8 +98,7 @@ public class CalendarPage extends iOSActions {
 
 		try {
 			explicitWait(driver, allowMicOk, 10);
-			click(driver, allowMicOk,  "Ok");
-			// click(driver, resumeRecording,  "OK");
+			click(driver, allowMicOk, "Ok button on allow access to microphone alert");
 
 		} catch (Exception e) {
 			System.out.println("catch while using app");
@@ -120,40 +124,6 @@ public class CalendarPage extends iOSActions {
 		}
 	}
 
-//	// ___________select month and year_____________
-//	public void selectMonthYear(String month, String year, String day) throws InterruptedException {
-//		clickUsingResourceId("rightarrow-icon-button");
-//		Thread.sleep(3000);
-//		String monthYear = getText(inputMonthYear);
-//		String[] data = monthYear.split(" ");
-//		System.out.println(Integer.parseInt(year) + " " + Integer.parseInt(data[1]));
-//		while (Integer.parseInt(year) != Integer.parseInt(data[1])) {
-//			if (Integer.parseInt(year) > Integer.parseInt(data[1])) {
-//				clickUsingResourceId("rightarrow-icon-button");
-//			} else {
-//				clickUsingResourceId("leftarrow-icon-button");
-//			}
-//			data[1] = getText(inputMonthYear).split(" ")[1];
-//
-//		}
-//
-//		int expectedMonth = Month.valueOf(month.toUpperCase()).getValue() - 1;
-//		String monthName = getText(inputMonthYear).split(" ")[0];
-//		int actualMonth = Month.valueOf(monthName.toUpperCase()).getValue() - 1;
-//		while (actualMonth != expectedMonth) {
-//			if (actualMonth < expectedMonth) {
-//				clickUsingResourceId("rightarrow-icon-button");
-//				AndroidBase.wait.until(ExpectedConditions.visibilityOfElementLocated(textFirstDate));
-//			} else {
-//				clickUsingResourceId("leftarrow-icon-button");
-//				AndroidBase.wait.until(ExpectedConditions.visibilityOfElementLocated(textFirstDate));
-//			}
-//			monthName = getText(inputMonthYear).split(" ")[0];
-//			actualMonth = Month.valueOf(monthName.toUpperCase()).getValue() - 1;
-//		}
-//		selectDate(day);
-//	}
-
 	// ___________select month and year_____________
 	public void selectMonthYear(int day, int month, int year) throws InterruptedException {
 		click(driver, rightArrowIcon,  "Right Arrow Icon Button");
@@ -169,24 +139,7 @@ public class CalendarPage extends iOSActions {
 				click(driver, leftArrowIcon,  "Left Arrow Icon Button");
 			}
 			data[1] = getAttribute_ios(inputMonthYear, "label").split(" ")[1];
-
 		}
-
-//			int expectedMonth = Month.valueOf(month.toUpperCase()).getValue() - 1;
-//		String monthName = getText(inputMonthYear).split(" ")[0];
-//		int actualMonth = Month.valueOf(monthName.toUpperCase()).getValue();
-//		while (actualMonth != month - 1) {
-//			if (actualMonth < month - 1) {
-//				// clickUsingResourceId("rightarrow-icon-button");
-//				AndroidBase.wait.until(ExpectedConditions.visibilityOfElementLocated(textFirstDate));
-//			} else {
-//				// clickUsingResourceId("leftarrow-icon-button");
-//				AndroidBase.wait.until(ExpectedConditions.visibilityOfElementLocated(textFirstDate));
-//			}
-//			monthName = getText(inputMonthYear).split(" ")[0];
-//			actualMonth = Month.valueOf(monthName.toUpperCase()).getValue() - 1;
-//		}
-//		// selectDate(day);
 	}
 
 	public int[] getDateMonthYear(String fullDate) {
@@ -204,7 +157,6 @@ public class CalendarPage extends iOSActions {
 		Thread.sleep(3000);
 		String monthYear = getAttribute_ios(monthYearCalendar, "label");
 		String[] data = monthYear.split(" ");
-//			System.out.println(Integer.parseInt(year) + " " + Integer.parseInt(data[1]));
 		while (year != Integer.parseInt(data[1])) {
 			if (year > Integer.parseInt(data[1])) {
 				click(driver, rightArrowIconCalendar,  "Right Arrow Icon Button Calendar");
@@ -214,7 +166,7 @@ public class CalendarPage extends iOSActions {
 			data[1] = getAttribute_ios(monthYearCalendar, "label").split(" ")[1];
 
 		}
-		// int expectedMonth = Month.valueOf(month.toUpperCase()).getValue() - 1;
+		
 		String monthName = getAttribute_ios(monthYearCalendar, "label").split(" ")[0];
 		int actualMonth = Month.valueOf(monthName.toUpperCase()).getValue();
 		while (actualMonth != month - 1) {
@@ -229,42 +181,48 @@ public class CalendarPage extends iOSActions {
 			actualMonth = Month.valueOf(monthName.toUpperCase()).getValue() - 1;
 		}
 		if (day <= 9 && month <= 9) {
-
-			// XCUIElementTypeButton[@name="calendar-display.day_2024-08-06"]
 			click(driver, By.xpath(
 					"//XCUIElementTypeButton[@name='calendar-display.day_" + year + "-0" + month + "-0" + day + "']"),
 					 "day");
 		} else if (day <= 9 && month > 9) {
-			
 			driver.findElement(By.xpath("//XCUIElementTypeButton[@name='calendar-display.day_" + year + "-" + month + "-0" + day + "']")).click();
-			
-//			click(driver, By.xpath(
-//					"//XCUIElementTypeButton[@name='calendar-display.day_" + year + "-" + month + "-0" + day + "']"),
-//					 "day");
 		} else if (day > 9 && month <= 9) {
 			click(driver, By.xpath(
 					"//XCUIElementTypeButton[@name='calendar-display.day_" + year + "-0" + month + "-" + day + "']"),
 					 "day");
 		} else {
-			// XCUIElementTypeButton[@name="calendar-display.day_2023-11-14"]
 			driver.findElement(By.xpath("//XCUIElementTypeButton[@name='calendar-display.day_" + year + "-" + month + "-" + day + "']")).click();
-			// click(driver, By.xpath("//XCUIElementTypeButton[@name='calendar-display.day_"+year+"-"+month+"-"+day+"']"),
-			//  "day");
 		}
 	}
 
 	// ___________click patient which has start button______________
-	public void clickPatient() {
+	public void clickPatient(String buttonName) 
+	{
+		String buttonNameString = null;
+		switch (buttonName) {
+		case "Start":
+			buttonNameString = "Start-button";
+			break;
+		case "Continue":
+			buttonNameString = "Continue-button";
+			break;
+
+		default:
+			ExtentManager.logFailureDetails("Button name could be only Start/Continue");
+			Assert.fail();
+//			break;
+		}
 
 		int i = 1;
 		while (i <= 25) {
-			if (IsElementPresent(driver, By.xpath("(//XCUIElementTypeOther[@name='Start-button'])[" + i + "]"))) {
+			if (IsElementPresent(driver, By.xpath("(//XCUIElementTypeOther[@name='" + buttonNameString + "'])[" + i + "]"))) {
 				try {
-					new WebDriverWait(driver, Duration.ofMillis(100)).until(ExpectedConditions.elementToBeClickable(By.xpath("(//XCUIElementTypeOther[@name='Start-button'])[" + i + "]//parent::XCUIElementTypeOther"))).click();
-					ExtentManager.logInfoDetails("Clicked on : <b> Start </b> button");
+					new WebDriverWait(driver, Duration.ofMillis(100)).until(ExpectedConditions.elementToBeClickable(By.xpath("(//XCUIElementTypeOther[@name='" + buttonNameString + "'])[" + i + "]//parent::XCUIElementTypeOther"))).click();
+					ExtentManager.logInfoDetails("Clicked on appointment : <b> " + buttonName + " </b> button");
 					break;
 				} catch (Exception e) {
 					i++;
+					scrollDownTillElementVisible(driver, patientNameBy);
 				}
 
 			} else {
@@ -273,6 +231,56 @@ public class CalendarPage extends iOSActions {
 		}
 		if (i == 25) {
 			ExtentManager.logFailureDetails("No Appointment is visible");
+			Assert.fail();
+		}
+	}
+	
+	//verify that Is patient details popup opened for same patient
+	public void verifyPatientDetailsPopup()
+	{
+    	if(IsElementPresent(driver, popupPatientDetails))
+    	{
+    		ExtentManager.logInfoDetails("<b>Patient Details popup opened as expected");
+    	}
+    	else {
+			ExtentManager.logFailureDetails("Either patient details popup not exists or not opened or verifying element not found. please check");
+			Assert.fail();
+		}
+	}
+	
+	// ______________click start recording button___________
+	public void startRecordingButtonOnPatientDetailsPopup(String operation) {
+		if (operation == "click") 
+		{
+			click(driver, buttonStartRecording, "Start Recording button on Patient Details popup");
+		} else if (operation == "verify") {
+			if(IsElementPresent(driver, buttonStartRecording))
+			{
+				ExtentManager.logInfoDetails("<b>Start Recording</b> button is displayed on Patient details popup as expected");
+			}
+			else {
+				ExtentManager.logFailureDetails("Start Recording button not found on Patient Details popup");
+				Assert.fail();
+			}
+		}
+	}
+	
+	// ______________click continue recording button___________
+	public void continueRecordingButtonOnPatientDetailsPopup(String operation) {
+		
+		if (operation == "click") 
+		{
+			click(driver, buttonContinueRecording, "Continue Recording button on Patient Details popup");
+		} else if (operation == "verify") 
+		{
+			if(IsElementPresent(driver, buttonContinueRecording))
+			{
+				ExtentManager.logInfoDetails("<b>Continue Recording</b> button is displayed on Patient details popup as expected");
+			}
+			else {
+				ExtentManager.logFailureDetails("Continue Recording button not found on Patient Details popup");
+				Assert.fail();
+			}
 		}
 	}
 
@@ -312,99 +320,88 @@ public class CalendarPage extends iOSActions {
 	}
 
 	// verify patient button name
-	public boolean verifyPatientButton(String patient, String buttonName) {
+	public boolean verifyReviewButton(String patient, String buttonName) {
 
 		explicitWait(driver, AppiumBy.accessibilityId(patient + " Review-button"), 120);
 		return IsElementPresent(driver, AppiumBy.accessibilityId(patient + " Review-button"));
 	}
 
-	public void verifySoapReport(String patientName, By textSoapReport) throws InterruptedException {
-		new ActionsUtiils(driver).pullToRefres(ScrollDirection.UP, 0.15);
-		waitUntilLoaderDisappear(driver);
-		System.out.println("Loading Done");
-
-//		if(IsElementPresent(driver, AppiumBy.accessibilityId(patientName+" Review-button"))) {
-//			for(int i = 1; i<=12; i++) {
-//				try {
-//					driver.findElement(By.xpath("(//XCUIElementTypeOther[@name='"+patientName+" Review-button'])[2]"));
-//					
-//				} catch (Exception e) {
-//					Thread.sleep(10000);  // Using static waits to till the soap report is generating
-//					new ActionsUtiils(driver).pullToRefres(ScrollDirection.UP, 0.15);
-//					waitUntilLoaderDisappear(driver);
-//					System.out.println("Loading Done");
-//				}
-//			}
-//			
-//			assertTrue(verifyPatientButton(patientName, "Review"));
-//			click(driver, By.xpath("(//XCUIElementTypeOther[@name='"+patientName+" Review-button'])[2]"),  "Review");
-//			verifyText(getText(textSoapReport), "SOAP Report", "Soap Report Page");
-//		}
-//		else {
-//			for(int i = 1; i<=12; i++) {
-//				try {
-//					driver.findElement(AppiumBy.accessibilityId(patientName+" Review-button"));
-//				} catch (Exception e) {
-//					Thread.sleep(10000);  // Using static waits to till the soap report is generating
-//					new ActionsUtiils(driver).pullToRefres(ScrollDirection.UP, 0.15);
-//					waitUntilLoaderDisappear(driver);
-//					System.out.println("Loading Done");
-//				}
-//			}
-//			
-//			assertTrue(verifyPatientButton(patientName, "Review"));
-//			click(driver, AppiumBy.accessibilityId(patientName+" Review-button"),  "Review");
-//			verifyText(getText(textSoapReport), "SOAP Report", "Soap Report Page");
-//		}
-
-		for (int i = 1; i <= 25; i++) {
-			try {
-				driver.findElement(AppiumBy.accessibilityId(patientName + " Review-button"));
-			} catch (Exception e) {
-				Thread.sleep(10000); // Using static waits to till the soap report is generating
-				new ActionsUtiils(driver).pullToRefres(ScrollDirection.UP, 0.15);
-				waitUntilLoaderDisappear(driver);
-				System.out.println("Loading Done");
+	public void verifyClickReviewButtonForAppointment(String operation, String patientName) throws InterruptedException 
+	{
+		if (operation == "verify")
+		{
+			new ActionsUtiils(driver).pullToRefres(ScrollDirection.UP, 0.15);
+			waitUntilLoaderDisappear(driver);
+			System.out.println("Loading Done");
+	
+			for (int i = 1; i <= 25; i++) {
+				try {
+					driver.findElement(AppiumBy.accessibilityId(patientName + " Review-button"));
+					ExtentManager.logInfoDetails("<b>Appointment status is now Review button as expected for patient - " + patientName);
+					break;
+				} catch (Exception e) {
+					Thread.sleep(10000); // Using static waits to till the soap report is generating
+					new ActionsUtiils(driver).pullToRefres(ScrollDirection.UP, 0.15);
+					waitUntilLoaderDisappear(driver);
+					System.out.println("Loading Done");
+					scrollDownTillElementVisible(driver, AppiumBy.accessibilityId(patientName + " Review-button"));
+				}
 			}
 		}
-
-		assertTrue(verifyPatientButton(patientName, "Review"));
-		click(driver, AppiumBy.accessibilityId(patientName + " Review-button"),  "Review");
-		verifyText(getText(driver, textSoapReport), "SOAP Report", "Soap Report Page");
-
+		else if (operation == "click")
+		{
+			assertTrue(verifyReviewButton(patientName, "Review"));
+			click(driver, AppiumBy.accessibilityId(patientName + " Review-button"),  "Review button on calendar page");
+		}
+		else {
+			ExtentManager.logFailureDetails("Valid operations for Review button are verify or click. please check");
+			Assert.fail();
+		}
 	}
 	
 
-	// To update the signature in soap report and verify the review button
-	public boolean verifyReviewedButton(String patientName) {
+	// To verify appointment status Reviewed or click in Reviewed button
+	public void verifyClickReviewedButtonForAppointment(String operation, String patientName) 
+	{
 		waitUntilLoaderDisappear(driver);
-		return IsElementPresent(driver, AppiumBy.accessibilityId(patientName + " Reviewed-button"));
-
+		if (operation == "verify")
+		{
+			assertTrue(IsElementPresent(driver, AppiumBy.accessibilityId(patientName + " Reviewed-button")));
+			ExtentManager.logInfoDetails(patientName + ": appointment status is changed to Reviewed as expected");
+		}
+		else if (operation == "click")
+		{
+			click(driver, AppiumBy.accessibilityId(patientName + " Reviewed-button"),  "<b>" + patientName + "<b> : Reviewed Button");
+		}
+		else {
+			ExtentManager.logFailureDetails("Valid operations for Reviewed button are verify or click. please check");
+			Assert.fail();
+		}
 	}
-
-	// To click on Reviewed Button
-	public void clickReviewedButton(String patientName) {
+	
+	// To verify appointment status Continue or click in Reviewed button
+	public void verifyClickContinueButtonForAppointment(String operation, String patientName) 
+	{
 		waitUntilLoaderDisappear(driver);
-		click(driver, AppiumBy.accessibilityId(patientName + " Reviewed-button"),  patientName + ": Reviewed Button");
+		if (operation == "verify")
+		{
+			assertTrue(IsElementPresent(driver, AppiumBy.accessibilityId(patientName + " Continue-button")));
+			ExtentManager.logInfoDetails(patientName + ": appointment status is changed to Continue as expected");
+		}
+		else if (operation == "click")
+		{
+			click(driver, AppiumBy.accessibilityId(patientName + " Continue-button"),  "Continue button of "+patientName+" on calendar view page");
+		}
+		else {
+			ExtentManager.logFailureDetails("Valid operations for Continue button are verify or click. please check");
+			Assert.fail();
+		}
 	}
 	
 	// To click on setting icon button 
 	public void clickSettingIconButton() {
 		waitUntilLoaderDisappear(driver);
 		click(driver, settingIconButton,  "Setting Icon Button on Calender Page");
-	}
-
-	// To verify the Continue button 
-	public boolean verifyContinueButton(String patientName) {
-		waitUntilLoaderDisappear(driver);
-		return IsElementPresent(driver, AppiumBy.accessibilityId(patientName + " Continue-button"));
-	}
-
-	// To click on Continue button
-	public void performClickContinue(String patientName) {
-		waitUntilLoaderDisappear(driver);
-		click(driver, AppiumBy.accessibilityId(patientName + " Continue-button"),  "Continue button of "+patientName+" on calendar view page");
-		
 	}
 	
 	// To click on Continue Recording button

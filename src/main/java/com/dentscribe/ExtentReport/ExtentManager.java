@@ -9,6 +9,7 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.dentscribe.common.CommonVariables;
 
 public class ExtentManager {
 
@@ -18,10 +19,11 @@ public class ExtentManager {
 
 	public static ExtentReports createInsatance() {
 		//To set the path of the report
-		String fileNames = getReportName();			
-		String directory =  "//Users//mcl-0048/Desktop//dentscribe_automation//reports//" ;//System.getProperty("user.dir")+ "\\reports\\";
-		new File(directory).mkdir();
-		path = directory + fileNames;
+		String fileNames = getReportName();
+//		System.out.println("REPORTS PATH IS - " + CommonVariables.reportsPath);
+//		String directory =  "//Users//mcl-0048/Desktop//dentscribe_iOS_automation//reports//" ;//System.getProperty("user.dir")+ "\\reports\\";
+		new File(CommonVariables.reportsPath).mkdir();
+		path = CommonVariables.reportsPath + fileNames;
 
 		ExtentSparkReporter extentSparkReporter= new ExtentSparkReporter(path);
 

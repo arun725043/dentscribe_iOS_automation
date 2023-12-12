@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,35 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">10 methods, 1 failed,  1 skipped,  8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="verifyReviewedButtonForAppointmentAfterSubmitSoapReport">verifyReviewedButtonForAppointmentAfterSubmitSoapReport</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="verifySoapReportAfterReviewedButtonClick">verifySoapReportAfterReviewedButtonClick</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +132,42 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestChangePassword" class="method navigator-link" hash-for-method="verifyChangePasswordFromSettingsPage">verifyChangePasswordFromSettingsPage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="goToCalendarPageAndSelectAppointmentsDate">goToCalendarPageAndSelectAppointmentsDate</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestChangePassword" class="method navigator-link" hash-for-method="verifyUserShouldLoginFromNewChangedPassword">verifyUserShouldLoginFromNewChangedPassword</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="verifyContinueButtonAfterPauseRecording">verifyContinueButtonAfterPauseRecording</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestChangePassword" class="method navigator-link" hash-for-method="verifyUserShouldNotLoginFromOldPassword">verifyUserShouldNotLoginFromOldPassword</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="verifyContinueRecordingButtonOnPatientDetailsPopupAndClick">verifyContinueRecordingButtonOnPatientDetailsPopupAndClick</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="verifyIsPatientPopupAppearingOnContinueButtonClick">verifyIsPatientPopupAppearingOnContinueButtonClick</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="verifyIsPatientPopupAppearingOnStartButtonClick">verifyIsPatientPopupAppearingOnStartButtonClick</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="verifyReviewButtonAfterStopRecording">verifyReviewButtonAfterStopRecording</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="verifySoapReportAfterReviewButtonClick">verifySoapReportAfterReviewButtonClick</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="verifyStartRecordingButtonOnPatientDetailsPopupAndClick">verifyStartRecordingButtonOnPatientDetailsPopupAndClick</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -129,31 +182,115 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.dentscribe.testCases_iOS.TestChangePassword</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestAllAppointmentStatuses</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyChangePasswordFromSettingsPage">
-                  </a> <!-- verifyChangePasswordFromSettingsPage -->
-                  <span class="method-name">verifyChangePasswordFromSettingsPage</span>
+                  <a name="verifyReviewedButtonForAppointmentAfterSubmitSoapReport">
+                  </a> <!-- verifyReviewedButtonForAppointmentAfterSubmitSoapReport -->
+                  <span class="method-name">verifyReviewedButtonForAppointmentAfterSubmitSoapReport</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by AppiumBy.accessibilityId: Dinsmore Ryan Review-button (tried for 120 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.4&apos;, java.version: &apos;20.0.2&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appium:app: //Users//mcl-0048/Desktop//..., appium:automationName: XCuiTest, appium:databaseEnabled: false, appium:deviceName: iPhone 14 Plus, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 16.4, appium:takesScreenshot: true, appium:udid: 2A4A9901-84B0-429C-B765-6C1..., appium:webStorageEnabled: false, platformName: IOS}
+Session ID: ac0f5972-7af1-4edf-b2d1-c7b613241a36
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.dentscribe.common.CommonMethods.explicitWait(CommonMethods.java:147)
+	at com.dentscribe.pages.ios.CalendarPage.verifyReviewButton(CalendarPage.java:325)
+	at com.dentscribe.pages.ios.CalendarPage.verifyClickReviewButtonForAppointment(CalendarPage.java:353)
+	at com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyReviewedButtonForAppointmentAfterSubmitSoapReport(TestAllAppointmentStatuses.java:141)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestAllAppointmentStatuses</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySoapReportAfterReviewedButtonClick">
+                  </a> <!-- verifySoapReportAfterReviewedButtonClick -->
+                  <span class="method-name">verifySoapReportAfterReviewedButtonClick</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestAllAppointmentStatuses.verifySoapReportAfterReviewedButtonClick()[pri:10, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestAllAppointmentStatuses</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="goToCalendarPageAndSelectAppointmentsDate">
+                  </a> <!-- goToCalendarPageAndSelectAppointmentsDate -->
+                  <span class="method-name">goToCalendarPageAndSelectAppointmentsDate</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserShouldLoginFromNewChangedPassword">
-                  </a> <!-- verifyUserShouldLoginFromNewChangedPassword -->
-                  <span class="method-name">verifyUserShouldLoginFromNewChangedPassword</span>
+                  <a name="verifyContinueButtonAfterPauseRecording">
+                  </a> <!-- verifyContinueButtonAfterPauseRecording -->
+                  <span class="method-name">verifyContinueButtonAfterPauseRecording</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserShouldNotLoginFromOldPassword">
-                  </a> <!-- verifyUserShouldNotLoginFromOldPassword -->
-                  <span class="method-name">verifyUserShouldNotLoginFromOldPassword</span>
+                  <a name="verifyContinueRecordingButtonOnPatientDetailsPopupAndClick">
+                  </a> <!-- verifyContinueRecordingButtonOnPatientDetailsPopupAndClick -->
+                  <span class="method-name">verifyContinueRecordingButtonOnPatientDetailsPopupAndClick</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyIsPatientPopupAppearingOnContinueButtonClick">
+                  </a> <!-- verifyIsPatientPopupAppearingOnContinueButtonClick -->
+                  <span class="method-name">verifyIsPatientPopupAppearingOnContinueButtonClick</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyIsPatientPopupAppearingOnStartButtonClick">
+                  </a> <!-- verifyIsPatientPopupAppearingOnStartButtonClick -->
+                  <span class="method-name">verifyIsPatientPopupAppearingOnStartButtonClick</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyReviewButtonAfterStopRecording">
+                  </a> <!-- verifyReviewButtonAfterStopRecording -->
+                  <span class="method-name">verifyReviewButtonAfterStopRecording</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySoapReportAfterReviewButtonClick">
+                  </a> <!-- verifySoapReportAfterReviewButtonClick -->
+                  <span class="method-name">verifySoapReportAfterReviewButtonClick</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyStartRecordingButtonOnPatientDetailsPopupAndClick">
+                  </a> <!-- verifyStartRecordingButtonOnPatientDetailsPopupAndClick -->
+                  <span class="method-name">verifyStartRecordingButtonOnPatientDetailsPopupAndClick</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -161,7 +298,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/mcl-0048/Desktop/dentscribe_automation/testng.xml</span>
+            <span class="header-content">/Users/mcl-0048/Desktop/dentscribe_iOS_automation/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -173,7 +310,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestChangePassword&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestAllAppointmentStatuses&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -213,24 +350,52 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyChangePasswordFromSettingsPage')
-data.setCell(0, 2, 'com.dentscribe.testCases_iOS.TestChangePassword')
-data.setCell(0, 3, 54493);
+data.setCell(0, 1, 'verifyReviewedButtonForAppointmentAfterSubmitSoapReport')
+data.setCell(0, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(0, 3, 122439);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUserShouldLoginFromNewChangedPassword')
-data.setCell(1, 2, 'com.dentscribe.testCases_iOS.TestChangePassword')
-data.setCell(1, 3, 14605);
+data.setCell(1, 1, 'goToCalendarPageAndSelectAppointmentsDate')
+data.setCell(1, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(1, 3, 58893);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyUserShouldNotLoginFromOldPassword')
-data.setCell(2, 2, 'com.dentscribe.testCases_iOS.TestChangePassword')
-data.setCell(2, 3, 9116);
+data.setCell(2, 1, 'verifyReviewButtonAfterStopRecording')
+data.setCell(2, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(2, 3, 58279);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyContinueRecordingButtonOnPatientDetailsPopupAndClick')
+data.setCell(3, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(3, 3, 24133);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyStartRecordingButtonOnPatientDetailsPopupAndClick')
+data.setCell(4, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(4, 3, 21717);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyContinueButtonAfterPauseRecording')
+data.setCell(5, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(5, 3, 14683);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyIsPatientPopupAppearingOnStartButtonClick')
+data.setCell(6, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(6, 3, 14120);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyIsPatientPopupAppearingOnContinueButtonClick')
+data.setCell(7, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(7, 3, 9849);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifySoapReportAfterReviewButtonClick')
+data.setCell(8, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(8, 3, 2538);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifySoapReportAfterReviewedButtonClick')
+data.setCell(9, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(9, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -256,22 +421,52 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestChangePassword</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestAllAppointmentStatuses</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">configureAppium</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">verifyChangePasswordFromSettingsPage</span>
-                <span class="method-start">8073 ms</span>
+                <span class="method-name">goToCalendarPageAndSelectAppointmentsDate</span>
+                <span class="method-start">15271 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyUserShouldNotLoginFromOldPassword</span>
-                <span class="method-start">62575 ms</span>
+                <span class="method-name">verifyIsPatientPopupAppearingOnStartButtonClick</span>
+                <span class="method-start">74177 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyUserShouldLoginFromNewChangedPassword</span>
-                <span class="method-start">71696 ms</span>
+                <span class="method-name">verifyStartRecordingButtonOnPatientDetailsPopupAndClick</span>
+                <span class="method-start">88300 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyContinueButtonAfterPauseRecording</span>
+                <span class="method-start">110022 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyIsPatientPopupAppearingOnContinueButtonClick</span>
+                <span class="method-start">124708 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyContinueRecordingButtonOnPatientDetailsPopupAndClick</span>
+                <span class="method-start">134560 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyReviewButtonAfterStopRecording</span>
+                <span class="method-start">158699 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySoapReportAfterReviewButtonClick</span>
+                <span class="method-start">216983 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyReviewedButtonForAppointmentAfterSubmitSoapReport</span>
+                <span class="method-start">219523 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySoapReportAfterReviewedButtonClick</span>
+                <span class="method-start">342252 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

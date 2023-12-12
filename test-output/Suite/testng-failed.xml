@@ -6,14 +6,21 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.dentscribe.testCases_iOS.TestChangePassword">
+      <class name="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses">
         <methods>
-          <include name="verifyUserShouldLoginFromNewChangedPassword"/>
+          <include name="verifyContinueButtonAfterPauseRecording"/>
+          <include name="verifyIsPatientPopupAppearingOnContinueButtonClick"/>
+          <include name="verifySoapReportAfterReviewButtonClick"/>
+          <include name="goToCalendarPageAndSelectAppointmentsDate"/>
+          <include name="verifySoapReportAfterReviewedButtonClick"/>
           <include name="configureAppium"/>
-          <include name="verifyUserShouldNotLoginFromOldPassword"/>
-          <include name="verifyChangePasswordFromSettingsPage"/>
+          <include name="verifyReviewedButtonForAppointmentAfterSubmitSoapReport"/>
+          <include name="verifyIsPatientPopupAppearingOnStartButtonClick"/>
+          <include name="verifyStartRecordingButtonOnPatientDetailsPopupAndClick"/>
+          <include name="verifyReviewButtonAfterStopRecording"/>
+          <include name="verifyContinueRecordingButtonOnPatientDetailsPopupAndClick"/>
         </methods>
-      </class> <!-- com.dentscribe.testCases_iOS.TestChangePassword -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestAllAppointmentStatuses -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
