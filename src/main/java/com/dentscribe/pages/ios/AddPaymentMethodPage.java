@@ -80,8 +80,6 @@ public class AddPaymentMethodPage extends iOSActions {
 	  performScroll(driver);
 	  click(driver, continueButton, "Continue on add payment method page");
 	  scrollUpTillElementVisible(driver, cardHolderLabel);
-	  //verifyText(driver.findElement(textCardHolderNameIsRequired).getText(), "Cardholder name is required.", "Cardholder name is required. on add payment method page");
-		
 	}
 
 	public void verifyCarddetailsnotcompletedAlert() {

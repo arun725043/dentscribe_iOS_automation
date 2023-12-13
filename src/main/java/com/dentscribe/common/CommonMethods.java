@@ -351,5 +351,10 @@ public class CommonMethods {
 		}
 	}
 	
+	//Wait for minutes
+	public void doRecordingForMinutes(int minutes)
+	{
+		Duration.ofMinutes(minutes);
+	}
 	
 }
