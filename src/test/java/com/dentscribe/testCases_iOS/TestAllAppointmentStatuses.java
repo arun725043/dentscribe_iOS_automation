@@ -41,13 +41,13 @@ public class TestAllAppointmentStatuses extends iOSBase
 		Month month = Month.of(date[1]);     
 
 		month.toString();
- 		click(driver, calendarPage.dropdownCalendar, "Calendar Dropdown");
+ 		click(driver, calendarPage.dropdownIconCalendar, "Calendar Dropdown");
 		ExtentManager.logInfoDetails("Clicked on Calendar dropdown");
 
 		calendarPage.selectMonthYearCalendar(date[0], date[1], date[2]);
 		ExtentManager.logInfoDetails("Day,Month and year is selected successfully");
 		
-		click(driver, calendarPage.doneButton, "Done");
+		click(driver, calendarPage.doneButtonCalendarPopup, "Done");
 	}
 		
 	@Test (priority = 2, dependsOnMethods = { "goToCalendarPageAndSelectAppointmentsDate" })
@@ -127,15 +127,7 @@ public class TestAllAppointmentStatuses extends iOSBase
 	}
 	
 	@Test (priority = 8, dependsOnMethods = { "verifyReviewButtonAfterStopRecording" })
-	public void verifySoapReportAfterReviewButtonClick() throws InterruptedException
-	{
-		// ____________click review button and go to soap report__________________
-		calendarPage.verifyClickReviewButtonForAppointment("click", patientName);
-		soapReportPage.validateSoapReportPage();
-	}
-	
-	@Test (priority = 9, dependsOnMethods = { "verifySoapReportAfterReviewButtonClick" })
-	public void verifyReviewedButtonForAppointmentAfterSubmitSoapReport() throws InterruptedException
+	public void addSignatureInSoapReportAndSubmit() throws InterruptedException
 	{
 		// ____________click review button and go to soap report__________________
 		calendarPage.verifyClickReviewButtonForAppointment("click", patientName);
@@ -147,11 +139,11 @@ public class TestAllAppointmentStatuses extends iOSBase
 		click(driver, soapReportPage.buttonSubmitAdoptSignaturePopup, "Submit button on create signature popup");
 		soapReportPage.scrollTillSubmitButton();
 		click(driver, soapReportPage.reportSubmitButton, "Submit button on soap report page");
-		calendarPage.verifyClickReviewedButtonForAppointment("verify", patientName);
+		calendarPage.validateCalendarPage();
 	}
 	
-	@Test (priority = 10, dependsOnMethods = { "verifyReviewedButtonForAppointmentAfterSubmitSoapReport" })
-	public void verifySoapReportAfterReviewedButtonClick() throws InterruptedException
+	@Test (priority = 9, dependsOnMethods = { "addSignatureInSoapReportAndSubmit" })
+	public void verifyReviewedButtonAndClickToVerifySoapReport() throws InterruptedException
 	{
 		// ____________click reviewed button and go to soap report__________________
 		calendarPage.verifyClickReviewedButtonForAppointment("click", patientName);

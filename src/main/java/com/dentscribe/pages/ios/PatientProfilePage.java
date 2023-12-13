@@ -2,13 +2,17 @@ package com.dentscribe.pages.ios;
 
 import org.dentscribe.utils.iOSActions;
 import org.openqa.selenium.By;
+import org.testng.Assert;
+
+import com.dentscribe.ExtentReport.ExtentManager;
 
 import io.appium.java_client.ios.IOSDriver;
 
 public class PatientProfilePage extends iOSActions{	
 	
 	// Locator
-	public By textPatientProfil = By.xpath("//XCUIElementTypeStaticText[@name='Patient Profile']");
+	public By headerTextPatientProfilePage = By.xpath("//XCUIElementTypeStaticText[@name='Patient Profile']");
+	public By headerTestPastReport = By.xpath("//XCUIElementTypeStaticText[@name='Past SOAP Report']");
 	public By patientName = By.xpath("//XCUIElementTypeStaticText[@name=‘DOB: ‘]//parent::XCUIElementTypeOther//parent::XCUIElementTypeOther//preceding-sibling::XCUIElementTypeOther");
 	public By iconBackPatientProfile = By.xpath("//XCUIElementTypeOther[@name='Patient Profile']/XCUIElementTypeOther");
 	
@@ -19,10 +23,19 @@ public class PatientProfilePage extends iOSActions{
 		super(driver);
 		this.driver = driver;
 	}
-	// To verify that user navigated on patient profile page
-	public void verifyPatientProfileText() {
-		verifyText(getText(driver, textPatientProfil), "Patient Profile", "Patient Profile");
-	}
+	
+	// Verify whether Patient Profile page exists or not
+    public void validatePatientProfilePage()
+    {
+    	if(IsElementPresent(driver, headerTextPatientProfilePage) && IsElementPresent(driver, headerTestPastReport))
+    	{
+    		ExtentManager.logInfoDetails("<b>User is now on Patient Profile page as expected");
+    	}
+    	else {
+			ExtentManager.logFailureDetails("Either Patient Profile page not exists or not opened or Past SOAP Report text not found. please check");
+			Assert.fail();
+		}
+    }
 	
 	// To verify the patient name
 	public boolean verifyPatientName(String name) {
@@ -32,7 +45,7 @@ public class PatientProfilePage extends iOSActions{
 	}
 	
 	// To verify that user navigated on patient search page on Back icon click
-	public void clickPatientProfileBackIcon() {
+	public void clickBackIconPatientProfilePage() {
 		click(driver, iconBackPatientProfile, "Click on Back Icon button on patient profile page");
 	}
 	

@@ -1,19 +1,27 @@
 package com.dentscribe.pages.ios;
 
+import java.time.Duration;
+
 import org.dentscribe.utils.iOSActions;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import com.dentscribe.ExtentReport.ExtentManager;
+
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.ios.IOSDriver;
 
 public class PatientSearchPage extends iOSActions {
 
 	public By inputSearch = By.xpath("//XCUIElementTypeTextField[@name='search-input']");
+	public By iconSettingSearchPage = By.xpath("(//XCUIElementTypeOther[@name='setting-icon-button'])[1]/XCUIElementTypeOther[2]");
 	public By listOfPatient = By.xpath("");
 	public By textWelcome = AppiumBy.accessibilityId("Welcome, Android Dev User!");
-	public By iconSetting= AppiumBy.accessibilityId("setting-icon-button");
 	public By patient = By.xpath("//XCUIElementTypeOther[@name='patient-info-card-click']");
 	public By rightArrowIconButton = By.xpath("(//XCUIElementTypeOther[@name='patient-info-card-click'])[1]/XCUIElementTypeOther[3]/XCUIElementTypeOther/XCUIElementTypeImage");
-	public By dateFormat = By.xpath("//XCUIElementTypeStaticText[@name='Format:- Date (yyyy-mm-dd), Ph No. (1234567890)']");
+	public By noteInputSearch = By.xpath("//XCUIElementTypeStaticText[@name='Format:- Date (yyyy-mm-dd), Ph No. (1234567890)']");
 	public By textNoMatchFound = By.xpath("//XCUIElementTypeStaticText[@name='No Matches found']");
 	
 	IOSDriver driver;
@@ -23,6 +31,32 @@ public class PatientSearchPage extends iOSActions {
 		this.driver = driver;
 	}
 
+	// Verify whether Patient Search page exists or not
+    public void validatePatientSearchPage()
+    {
+    	fetchingPatientLoader();
+    	if(IsElementPresent(driver, inputSearch) || IsElementPresent(driver, noteInputSearch))
+    	{
+    		ExtentManager.logInfoDetails("<b>User is now on Patient Search page as expected");
+    	}
+    	else {
+			ExtentManager.logFailureDetails("Either Patient Search page not exists or not opened or verifying element not found. please check");
+			Assert.fail();
+		}
+    }
+    
+    // ___________fetch patient loader_______
+ 	public void fetchingPatientLoader() {
+ 		try {
+ 			new WebDriverWait(driver, Duration.ofSeconds(10)).until(
+ 					ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@text,'Fetching Patient')]")));
+ 			new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions
+ 					.invisibilityOfElementLocated(By.xpath("//*[contains(@text,'Fetching Patient')]")));
+ 		} catch (Exception e) {
+ 			System.out.println("Loaded");
+ 		}
+ 	}
+    
 	// ______________verify user is able to search patient or not______________
 
 	//________searching the patient___________________

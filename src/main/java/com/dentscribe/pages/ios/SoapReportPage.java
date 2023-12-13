@@ -28,18 +28,21 @@ public class SoapReportPage extends iOSActions{
 	public By headerTextSoapReportPageBy = By.xpath("//XCUIElementTypeStaticText[@name='SOAP Report']");
 	public By noteMsgSoapReportPageBy = By.xpath("//XCUIElementTypeStaticText[@name=' Review and sign the report.']");
 	
+	public By iconBackSoapReportPage = By.xpath("(//XCUIElementTypeOther[@name='SOAP Report'])[4]/XCUIElementTypeOther");
+	public By iconEditSoapReportPage = By.xpath("//XCUIElementTypeOther[@name=' Review and sign the report.']/XCUIElementTypeOther");
+	public By iconSaveSoapReportPage = By.xpath("//XCUIElementTypeOther[@name='']");
+	
 	public By buttonAdoptSignature = AppiumBy.accessibilityId("adopt-signature-button");
-	public By editButton = By.xpath("//XCUIElementTypeOther[@name=' Review and sign the report.']/XCUIElementTypeOther");
 	public By buttonSubmitAdoptSignaturePopup = AppiumBy.accessibilityId("signature-text-submit-button");
 	public By reportSubmitButton = AppiumBy.accessibilityId("report-submit-button");
 	public By textCreateYourSignature = By.xpath("");
 	public By textInitials = By.xpath("");
 
 	public By textSoapReport = By.xpath("//XCUIElementTypeStaticText[@name='SOAP Report']");
+	public By labelSignature = By.xpath("//XCUIElementTypeStaticText[@name='Signature']");
+	public By labelLicense = By.xpath("//XCUIElementTypeStaticText[@name='License']");
 	public By signatureArea = By.xpath("");
 	public By buttonRedraw = By.xpath("");
-	public By soapReportBackButton = By.xpath("(//XCUIElementTypeOther[@name='SOAP Report'])[4]/XCUIElementTypeOther");
-	public By saveButton = By.xpath("//XCUIElementTypeOther[@name='']");
 	public By inputName = By.xpath("//XCUIElementTypeTextField[@name='edit-name-input']");
 	public By inputTitle = By.xpath("//XCUIElementTypeTextField[@name='edit-title-input']");
 	public By inputLicense = By.xpath("//XCUIElementTypeTextField[@name='edit-license-input']");
@@ -70,8 +73,12 @@ public class SoapReportPage extends iOSActions{
 				gestures.scroll(ScrollDirection.DOWN, 0.70);
 			}
 		}
-		
 	}
+	
+	// To perform the back Icon button 
+	 public void clickBackIconSoapReport() {
+		 click(driver, iconBackSoapReportPage, "Back Icon Button on Soap report page");
+	 }
 
 	// To update the first name, title, license
 	public void updateUserDetails() {
@@ -88,21 +95,19 @@ public class SoapReportPage extends iOSActions{
 		performScroll(driver);
 		
 		clear_ios(inputLicense);
-		CommonVariables.license = generateRandomFirstName();
+		CommonVariables.license = GenerateRandomNumber(6);
 		sendKeys(driver, inputLicense, CommonVariables.license, "License on SOAP Report Page");
 		
 		hideKeyboard();
-		
 	}
 
 	// To verify the updated data i.e: first name, title, license
 	public void verifyUpdatedFields() {
 		performScroll(driver);
-		
-		verifyText(getAttribute_ios(inputName, "value"), CommonVariables.firstName, CommonVariables.firstName+" name on soap report page");
-		verifyText(getAttribute_ios(inputTitle, "value"), CommonVariables.title,  CommonVariables.title +" on soap report page");
-		verifyText(getAttribute_ios(inputLicense, "value"), CommonVariables.license, CommonVariables.license+" on soap report page");
-		
+		scrollDownTillElementVisible(driver, labelLicense);
+		verifyText(getAttribute_ios(inputName, "value"), CommonVariables.firstName, CommonVariables.firstName + " name on soap report page");
+		verifyText(getAttribute_ios(inputTitle, "value"), CommonVariables.title,  CommonVariables.title + " on soap report page");
+		verifyText(getAttribute_ios(inputLicense, "value"), CommonVariables.license, CommonVariables.license + " on soap report page");
 	}
 
 	public void scrollTillSubmitButton() {

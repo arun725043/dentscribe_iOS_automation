@@ -34,15 +34,14 @@ public class CalendarPage extends iOSActions {
 
 	public boolean flag = false;
 	public String patientName = null;
-	public By iconSearch = AppiumBy.accessibilityId("search-icon-button");
-	public By iconSettingSearchPage = By.xpath("(//XCUIElementTypeOther[@name='setting-icon-button'])[1]/XCUIElementTypeOther[2]");
-	public By iconSetting_calendar = By.xpath("");
-	public By inputSearch = By.xpath("//XCUIElementTypeTextField[@name='search-input']");
+	
+	public By iconSearchCalendarPage = AppiumBy.accessibilityId("search-icon-button");
+	public By iconSettingCalendarPage = AppiumBy.accessibilityId("setting-icon-button");
 	public By inputMonthYear = AppiumBy.accessibilityId("downarrow-icon-button");
 	public By selectedMonth = By.xpath("//XCUIElementTypeStaticText[@name='month-text']");
 	public By buttonWhileUsingThisApp = By.xpath("");
-	public By doneButton = By.xpath("//XCUIElementTypeOther[@name='calendar-done-button']");
-	public By dropdownCalendar = AppiumBy.accessibilityId("downarrow-icon-button");
+	public By doneButtonCalendarPopup = By.xpath("//XCUIElementTypeOther[@name='calendar-done-button']");
+	public By dropdownIconCalendar = AppiumBy.accessibilityId("downarrow-icon-button");
 	public By rightArrowIcon = AppiumBy.accessibilityId("rightarrow-icon-button");
 	public By leftArrowIcon = AppiumBy.accessibilityId("leftarrow-icon-button");
 	public By rightArrowIconCalendar = AppiumBy.accessibilityId("calendar-display.header.rightArrow");
@@ -55,10 +54,6 @@ public class CalendarPage extends iOSActions {
 	public By errorPopupOk = By.xpath("(//XCUIElementTypeOther[@name=\"OK\"])[2]");
 	public By allowNotificationsPopupBy = By.xpath("//XCUIElementTypeStaticText[@name='DentScribe” Would Like to Send You Notifications']");
 	public By allowButtonNotificationPopupBy = By.xpath("//XCUIElementTypeButton[@name='Allow']");
-
-	public By backButton = By.xpath(
-			"(//XCUIElementTypeOther[@name='Welcome, Android Dev User! search-input'])[4]/XCUIElementTypeOther[1]/XCUIElementTypeOther");
-	public By settingIconButton = AppiumBy.accessibilityId("setting-icon-button");
 	public By continueRecordingButton = AppiumBy.accessibilityId("Continue-recording");
 	
 	public By popupPatientDetails = By.xpath("//XCUIElementTypeStaticText[@name='Patient Details']");
@@ -70,7 +65,7 @@ public class CalendarPage extends iOSActions {
     public void validateCalendarPage()
     {
     	clickAllowButtonOnNotificationsPopup();
-    	if(IsElementPresent(driver, dropdownCalendar) && IsElementPresent(driver, rightArrowIcon))
+    	if(IsElementPresent(driver, dropdownIconCalendar) && IsElementPresent(driver, rightArrowIcon))
     	{
     		ExtentManager.logInfoDetails("<b>User is now on Calendar page as expected");
     	}
@@ -106,22 +101,8 @@ public class CalendarPage extends iOSActions {
 	}
 
 	// _______________verify user is landing on search page or not______________
-	public boolean verifySearchLandingPage() {
-		click(driver, iconSearch,  "Search Icon");
-		fetchingPatientLoader();
-		return IsElementPresent(driver, inputSearch);
-	}
-
-	// ___________fetch patient loader_______
-	public void fetchingPatientLoader() {
-		try {
-			new WebDriverWait(driver, Duration.ofSeconds(10)).until(
-					ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@text,'Fetching Patient')]")));
-			new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions
-					.invisibilityOfElementLocated(By.xpath("//*[contains(@text,'Fetching Patient')]")));
-		} catch (Exception e) {
-			System.out.println("Loaded");
-		}
+	public void clickSearchIconCalendarPage() {
+		click(driver, iconSearchCalendarPage,  "Search Icon");
 	}
 
 	// ___________select month and year_____________
@@ -401,7 +382,7 @@ public class CalendarPage extends iOSActions {
 	// To click on setting icon button 
 	public void clickSettingIconButton() {
 		waitUntilLoaderDisappear(driver);
-		click(driver, settingIconButton,  "Setting Icon Button on Calender Page");
+		click(driver, iconSettingCalendarPage,  "Setting Icon on Calender Page");
 	}
 	
 	// To click on Continue Recording button

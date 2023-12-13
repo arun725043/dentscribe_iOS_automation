@@ -36,7 +36,7 @@ public class iOSBase extends CommonMethods {
 	public SignUpPage  signUpPage;
 	public LoginPage loginPage;
 	public TourPages tourPages;
-	public PatientSearchPage searchPage;
+	public PatientSearchPage patientSearchPage;
 	public CalendarPage calendarPage;
 	public SettingPage settingPage;
 	public PracticeInfoPage practiceInfoPage;
@@ -88,7 +88,7 @@ public class iOSBase extends CommonMethods {
 		signUpPage = new SignUpPage(driver);
 		loginPage = new LoginPage(driver);
 		tourPages = new TourPages(driver);
-		searchPage = new PatientSearchPage(driver);
+		patientSearchPage = new PatientSearchPage(driver);
 		calendarPage = new CalendarPage(driver);
 		settingPage = new SettingPage(driver);
 		practiceInfoPage = new PracticeInfoPage(driver);

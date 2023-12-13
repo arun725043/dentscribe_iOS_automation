@@ -11,12 +11,12 @@ import com.dentscribe.base.iOSBase;
 import Api.GenerateOTP;
 import io.appium.java_client.AppiumBy;
 
-public class TestDoRecordingAndSubmitReportWithoutEditSoapReport extends iOSBase 
+public class TestSoapReportAndPatientProfilePage extends iOSBase 
 {
 	String patientName = null;
 	
 	@Test (priority = 1)
-	public void verifyContinueButtonAfterPauseRecordingThroughPauseButton() throws InterruptedException, IOException 
+	public void verifyIsRecordingPageOpenedForExpectedPatient() throws InterruptedException, IOException 
 	{
 		loginPage.verifyIsApplicationLaunched();
 		
@@ -36,11 +36,11 @@ public class TestDoRecordingAndSubmitReportWithoutEditSoapReport extends iOSBase
 		int[] date = calendarPage.getDateMonthYear(readData("testData", "calendarTestDate"));
 		Month month = Month.of(date[1]);    
 		month.toString();
- 		click(driver, calendarPage.dropdownCalendar, "Calendar Dropdown");
+ 		click(driver, calendarPage.dropdownIconCalendar, "Calendar Dropdown");
 		ExtentManager.logInfoDetails("Clicked on Calendar dropdown");
 		calendarPage.selectMonthYearCalendar(date[0], date[1], date[2]);
 		ExtentManager.logInfoDetails("Day, Month and year is selected successfully");
-		click(driver, calendarPage.doneButton, "Done");
+		click(driver, calendarPage.doneButtonCalendarPopup, "Done");
 
 		// __________________________________Click patient____________________________________________________________
 		waitUntilLoaderDisappear(driver);
@@ -55,46 +55,16 @@ public class TestDoRecordingAndSubmitReportWithoutEditSoapReport extends iOSBase
 		waitUntilLoaderDisappear(driver);
 		System.out.println("Loading Done");
 		calendarPage.clickWhileUsingAppButton();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		recordingPage.validateRecordingPage();
 		
 		// to verify the patient name appear on recording screen;
 		verifyText(getText(driver, AppiumBy.accessibilityId(patientName)), patientName, patientName);
-
-	    // to click on Pause button on recording screen 
-		recordingPage.clickPauseStopButton("pause");
-		
-		// Verify the continue button on calendar view page
-		calendarPage.verifyClickContinueButtonForAppointment("verify", patientName);
+		ExtentManager.logInfoDetails("Recording page successfully opened for patient - <b>" + patientName);
 	}
 	
-	@Test (priority = 2, dependsOnMethods = { "verifyContinueButtonAfterPauseRecordingThroughPauseButton" })
-	public void verifyIsPatientPopupAppearingOnContinueButtonClick()
-	{
-		// __________________________________Click patient____________________________________________________________
-		waitUntilLoaderDisappear(driver);
-		System.out.println("Loading Done");
-		calendarPage.clickPatient("Continue");
-		calendarPage.verifyPatientDetailsPopup();
-		patientName = getText(driver, calendarPage.patientNameOnPatientDetailsPopup);
-		patientName = patientName.trim();
-		ExtentManager.logInfoDetails("Selected patient name - <b>" + patientName + "</b> for recording on calendar view page");
-	}
-	
-	@Test (priority = 3, dependsOnMethods = { "verifyIsPatientPopupAppearingOnContinueButtonClick" })
-	public void verifyContinueRecordingButtonAndClick() throws InterruptedException
-	{
-		calendarPage.continueRecordingButtonOnPatientDetailsPopup("verify");
-		calendarPage.continueRecordingButtonOnPatientDetailsPopup("click");
-		waitUntilLoaderDisappear(driver);
-		System.out.println("Loading Done");
-		calendarPage.clickWhileUsingAppButton();
-		Thread.sleep(5000);
-		recordingPage.validateRecordingPage();
-	}
-	
-	@Test (priority = 4, dependsOnMethods = { "verifyContinueRecordingButtonAndClick" })
-	public void verifyContinueButtonAfterPauseRecordingThroughBackIcon() throws InterruptedException
+	@Test (priority = 2, dependsOnMethods = { "verifyIsRecordingPageOpenedForExpectedPatient" })
+	public void verifyBackIconRecordingPage() throws InterruptedException
 	{	
 		// to click on back icon button 
 		recordingPage.perfromClickBackIconButton();
@@ -118,8 +88,8 @@ public class TestDoRecordingAndSubmitReportWithoutEditSoapReport extends iOSBase
 		calendarPage.verifyClickContinueButtonForAppointment("verify", patientName);
 	}
 	
-	@Test (priority = 5, dependsOnMethods = { "verifyContinueButtonAfterPauseRecordingThroughBackIcon" })
-	public void verifyStopRecordingAfterContinueButtonClick() throws InterruptedException
+	@Test (priority = 3, dependsOnMethods = { "verifyBackIconRecordingPage" })
+	public void verifyIsSoapReportCreated() throws InterruptedException
 	{
 		calendarPage.clickPatient("Continue");
 		calendarPage.continueRecordingButtonOnPatientDetailsPopup("click");
@@ -136,42 +106,75 @@ public class TestDoRecordingAndSubmitReportWithoutEditSoapReport extends iOSBase
 		
 		//verify review button
 		calendarPage.verifyClickReviewButtonForAppointment("verify", patientName);
-	}
-	
-	@Test (priority = 6, dependsOnMethods = { "verifyStopRecordingAfterContinueButtonClick" })
-	public void verifyReviewedButtonForAppointmentWithoutEditSoapReport() throws InterruptedException
-	{
 		// ____________click review button and go to soap report__________________
 		calendarPage.verifyClickReviewButtonForAppointment("click", patientName);
 		soapReportPage.validateSoapReportPage();
-		
-		//_____________Update signature and verified reviewed button________	
-		soapReportPage.scrollToAdoptSignatureButton();
-		click(driver, soapReportPage.buttonAdoptSignature, "Adopt Signature on soap report page");
-		click(driver, soapReportPage.buttonSubmitAdoptSignaturePopup, "Submit");
-		soapReportPage.scrollTillSubmitButton();
-		click(driver, soapReportPage.reportSubmitButton, "Submit button on soap report page");
-		calendarPage.verifyClickReviewedButtonForAppointment("verify", patientName);
 	}
 	
-	@Test (priority = 9, dependsOnMethods = { "verifySoapReportAfterReviewButtonClick" })
+	@Test (priority = 4, dependsOnMethods = { "verifyIsSoapReportCreated" })
 	public void verifyEditIconSoapReport()
 	{
 		//_____________verify edit icon soap report________
-		click(driver, soapReportPage.editButton, "Edit icon on soap report page");
-		assertTrue(IsElementPresent(driver, soapReportPage.saveButton));
+		click(driver, soapReportPage.iconEditSoapReportPage, "Edit icon on Soap report page");
+		assertTrue(IsElementPresent(driver, soapReportPage.iconSaveSoapReportPage));
 		ExtentManager.logInfoDetails("Save icon visible on Edit icon click as expected");
 	}
 	
-	@Test (priority = 10, dependsOnMethods = { "verifyEditIconSoapReport" })
-	public void verifyReviewedButtonAfterUpdateSignatureInSoapReport()
+	@Test (priority = 5, dependsOnMethods = { "verifyEditIconSoapReport" })
+	public void verifyEditSoapReportAndAddSignatureDuringEditableReport() throws InterruptedException
 	{
-		//_____________Update signature and verified reviewed button________
-		click(driver, soapReportPage.buttonAdoptSignature, "Adopt Signature on soap report page");
+		//_____________Update signature and verified reviewed button________	
+		soapReportPage.scrollToAdoptSignatureButton();
+		click(driver, soapReportPage.buttonAdoptSignature, "Adopt Signature on Soap report page");
 		click(driver, soapReportPage.buttonSubmitAdoptSignaturePopup, "Submit");
-		click(driver, soapReportPage.saveButton, "Save Button on soap report page");
-		click(driver, soapReportPage.soapReportBackButton, "Back Icon on report page");
-		
-		calendarPage.verifyClickReviewedButtonForAppointment("verify", patientName);
+		assertTrue(IsElementPresent(driver, soapReportPage.labelSignature));
+		ExtentManager.logInfoDetails("Signature submitted successfully");
 	}
+	
+	@Test (priority = 6, dependsOnMethods = { "verifyEditSoapReportAndAddSignatureDuringEditableReport" })
+	public void updateUserDetailsAndVerifySame()
+	{
+		soapReportPage.updateUserDetails();
+		click(driver, soapReportPage.iconSaveSoapReportPage, "Save icon on Soap report page");
+		assertTrue(IsElementPresent(driver, soapReportPage.iconEditSoapReportPage));
+		ExtentManager.logInfoDetails("Edit icon visible on Save icon click as expected and report submitted");
+		soapReportPage.verifyUpdatedFields();
+	}
+	
+	@Test (priority = 7, dependsOnMethods = { "updateUserDetailsAndVerifySame" })
+	public void verifyBackIconSoapReportAndReviewedButtonForAppointment() throws InterruptedException
+	{
+		soapReportPage.validateSoapReportPage();
+		soapReportPage.clickBackIconSoapReport();
+		calendarPage.validateCalendarPage();
+	}
+	
+	@Test (priority = 8, dependsOnMethods = { "verifyBackIconSoapReportAndReviewedButtonForAppointment" })
+	public void verifyPatientProfilePage()
+	{
+		// search result should be display after searching
+		calendarPage.clickSearchIconCalendarPage();
+		patientSearchPage.validatePatientSearchPage();
+
+		// Search By patientName and verify
+		ExtentManager.logInfoDetails("Searching By name : <b> " + readData("testData", "patientName") + "</b>");
+		patientSearchPage.searchPatient(readData("testData", "patientName"));
+		waitUntilLoaderDisappear(driver);
+		
+		// To click on patient name and verify Profile page
+		patientSearchPage.performClickONPatient();
+		patientProfilePage.validatePatientProfilePage();
+		
+		// To verify the patient name 
+		assertTrue(patientProfilePage.verifyPatientName(readData("testData", "patientName")));
+		ExtentManager.logInfoDetails(readData("testData", "patientName")+": Profile Opened as expected");
+	}
+	
+	@Test (priority = 9, dependsOnMethods = { "verifyPatientProfilePage" })
+	public void verifyBackIconPatientProfilePage() throws InterruptedException
+	{
+		patientProfilePage.clickBackIconPatientProfilePage();
+		patientSearchPage.validatePatientSearchPage();
+	}
+	
 }
