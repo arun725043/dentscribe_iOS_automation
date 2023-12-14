@@ -96,7 +96,7 @@ public class CommonMethods {
 		iOSBase.wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(element))).click();
 	}
 	
-	// creating this override methods: Ios and Adroid click gernericMethod
+	// creating this override methods: iOS and Android click gernericMethod
 	public void click(AppiumDriver driver, By element, String eleName) {
 		
 		new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(driver.findElement(element))).click();
@@ -352,9 +352,10 @@ public class CommonMethods {
 	}
 	
 	//Wait for minutes
-	public void doRecordingForMinutes(int minutes)
+	public void doRecordingForMinutes(AppiumDriver driver, int minutes) throws InterruptedException
 	{
-		Duration.ofMinutes(minutes);
+		int seconds = minutes * 60000;
+		Thread.sleep(seconds);
 	}
 	
 }

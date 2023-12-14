@@ -14,7 +14,7 @@ public class TestRecordingfor10mintsAndGenerateSoapReport extends iOSBase
 {
 	String patientName = null;
 	
-	@Test
+	@Test (priority = 1)
 	public void verifyWhetherSoapReportCreatedFor10mintsRecording() throws InterruptedException, IOException 
 	{
 		loginPage.verifyIsApplicationLaunched();
@@ -38,7 +38,6 @@ public class TestRecordingfor10mintsAndGenerateSoapReport extends iOSBase
  		click(driver, calendarPage.dropdownIconCalendar, "Calendar Dropdown");
 		ExtentManager.logInfoDetails("Clicked on Calendar dropdown");
 		calendarPage.selectMonthYearCalendar(date[0], date[1], date[2]);
-		ExtentManager.logInfoDetails("Day, Month and year is selected successfully");
 		click(driver, calendarPage.doneButtonCalendarPopup, "Done");
 
 		// __________________________________Click patient____________________________________________________________
@@ -56,11 +55,12 @@ public class TestRecordingfor10mintsAndGenerateSoapReport extends iOSBase
 		calendarPage.clickWhileUsingAppButton();
 		Thread.sleep(5000);
 		recordingPage.validateRecordingPage();
-		
+		System.out.println("Recording start at - " + LocalTime.now());
 		ExtentManager.logInfoDetails("Recording start at - " + LocalTime.now());
-		doRecordingForMinutes(10);
-		ExtentManager.logInfoDetails("Clicking Stop button at - " + LocalTime.now());
-		
+		doRecordingForMinutes(driver, 10);
+		System.out.println("About to click Stop button at - " + LocalTime.now());
+		ExtentManager.logInfoDetails("About to click Stop button at - " + LocalTime.now());
+
 		// ___________________________Stop Recording_______________________
 		recordingPage.clickPauseStopButton("stop");
 		waitUntilLoaderDisappear(driver);

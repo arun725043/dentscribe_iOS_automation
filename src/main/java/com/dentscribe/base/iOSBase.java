@@ -66,6 +66,7 @@ public class iOSBase extends CommonMethods {
 		options.setDeviceName(readData("Config", "IOSDeviceName")); // emulator
 		options.setApp("//Users//mcl-0048/Desktop//DentScribe.app");
 		options.setPlatformVersion(readData("Config", "IOSPlatformVersion"));
+		options.setNewCommandTimeout(Duration.ofMinutes(60));
 
 		driver = new IOSDriver(new URL("http://127.0.0.1:4723"), options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

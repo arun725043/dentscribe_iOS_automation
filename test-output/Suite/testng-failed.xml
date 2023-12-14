@@ -20,14 +20,6 @@
           <include name="verifyReviewedButtonAndClickToVerifySoapReport"/>
         </methods>
       </class> <!-- com.dentscribe.testCases_iOS.TestAllAppointmentStatuses -->
-      <class name="com.dentscribe.testCases_iOS.TestPatientSearchPage">
-        <methods>
-          <include name="DS_039_verifySkipLinkTourPages"/>
-          <include name="configureAppium"/>
-          <include name="DS_040_verifyIsPatientSearchPageExists"/>
-          <include name="DS_044_verifyPatientSearchByPatientDOB"/>
-        </methods>
-      </class> <!-- com.dentscribe.testCases_iOS.TestPatientSearchPage -->
       <class name="com.dentscribe.testCases_iOS.TestForgotPassowrdPage">
         <methods>
           <include name="DS_046_verityIsForgotPasswordPageExists"/>

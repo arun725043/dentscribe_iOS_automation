@@ -2,6 +2,8 @@ package com.dentscribe.testCases_iOS;
 
 import java.io.IOException;
 import org.testng.annotations.Test;
+
+import com.dentscribe.ExtentReport.ExtentManager;
 import com.dentscribe.base.iOSBase;
 import Api.GenerateOTP;
 
@@ -42,39 +44,24 @@ public class TestSettingsPage extends iOSBase{
 	}
 	
 	@Test(priority = 3, dependsOnMethods = { "verifyBackIconSettingsPage" })
-	public void verifyHelpOptionsSettingsPage()
-	{
-		// ________________validate Help button at Navbar_____________
-		 settingPage.performClickVerifyHelpIconOnTop();
-		 helpPage.validateHelpPage();
-		 helpPage.performClickONBackIconButton();
-
-		// ________________validate Help button in General Setting_____________
-		 settingPage.performClickOnHelpOtion();
-		 helpPage.validateHelpPage();
-		 helpPage.performClickONBackIconButton();
-	}
-	
-	
-	@Test(priority = 4, dependsOnMethods = { "verifyHelpOptionsSettingsPage" })
 	public void verifyPushNotificationsSwitch() {
 		// To verify the push notifications 
 		settingPage.verifyNotifications("push");
 	}
 	
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void verifySmsNotificationsSwitch() {
 		// To verify the sms notifications 
 		settingPage.verifyNotifications("sms");
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 5)
 	public void verifyEmailNotificationsSwitch() {
 		// To verify the email notifications 
 		settingPage.verifyNotifications("email");
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 6)
 	public void verifyAccountInfoUpdate() {
 		
 		// To change the mobile number 
@@ -93,7 +80,7 @@ public class TestSettingsPage extends iOSBase{
 		settingPage.verifyPhoneNumber(num);
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 7)
 	public void verifyPracticeUpdate() {
 		
 		// To update the city in practice form
@@ -112,7 +99,29 @@ public class TestSettingsPage extends iOSBase{
 		settingPage.verifyUpdatedCity(city);
 	}
 	
-	@Test (priority = 9)
+	@Test(priority = 8)
+	public void verifyHelpOptionsSettingsPage()
+	{
+		// ________________validate Help button at Navbar_____________
+		 settingPage.performClickVerifyHelpIconOnTop();
+		 helpPage.validateHelpPage();
+		 helpPage.performClickONBackIconButton();
+
+		// ________________validate Help button in General Setting_____________
+		 settingPage.performClickOnHelpOtion();
+		 helpPage.validateHelpPage();
+		 helpPage.performClickONBackIconButton();
+	}
+	
+	@Test(priority = 9)
+	public void verifyFAQsInHelpPage()
+	{
+		// ________________verify whether all expected questions available_____________
+		helpPage.verifyFAQsQuestions();
+		ExtentManager.logInfoDetails("All questions are available in Help page as expected");
+	}
+	
+	@Test (priority = 10)
 	public void verifyLogout()
 	{
 		// ___________________click logout________________

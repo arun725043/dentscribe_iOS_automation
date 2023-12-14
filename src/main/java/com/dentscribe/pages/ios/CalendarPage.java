@@ -59,7 +59,7 @@ public class CalendarPage extends iOSActions {
 	public By popupPatientDetails = By.xpath("//XCUIElementTypeStaticText[@name='Patient Details']");
 	public By buttonStartRecording = By.xpath("//XCUIElementTypeOther[@name='Start-recording']");
 	public By buttonContinueRecording = By.xpath("(//XCUIElementTypeOther[@name='Continue-recording'])");
-	public By patientNameBy = By.xpath("//XCUIElementTypeStaticText[@name=' 5:00']");
+	public By goDownToPage = By.xpath("//XCUIElementTypeStaticText[@name=' 5:00']");
 
 	// Verify whether Calendar page exists or not
     public void validateCalendarPage()
@@ -174,6 +174,7 @@ public class CalendarPage extends iOSActions {
 		} else {
 			driver.findElement(By.xpath("//XCUIElementTypeButton[@name='calendar-display.day_" + year + "-" + month + "-" + day + "']")).click();
 		}
+		ExtentManager.logInfoDetails("<b>" + day + "-" + month + "-" + year + "<b> date selected successfully");
 	}
 
 	// ___________click patient which has start button______________
@@ -203,7 +204,7 @@ public class CalendarPage extends iOSActions {
 					break;
 				} catch (Exception e) {
 					i++;
-					scrollDownTillElementVisible(driver, patientNameBy);
+					scrollDownTillElementVisible(driver, goDownToPage);
 				}
 
 			} else {
@@ -321,6 +322,7 @@ public class CalendarPage extends iOSActions {
 					ExtentManager.logInfoDetails("<b>Appointment status is now Review button as expected for patient - " + patientName);
 					break;
 				} catch (Exception e) {
+					System.out.println("Catch Block - " + String.valueOf(i));
 					Thread.sleep(10000); // Using static waits to till the soap report is generating
 					new ActionsUtiils(driver).pullToRefres(ScrollDirection.UP, 0.15);
 					waitUntilLoaderDisappear(driver);
@@ -345,8 +347,10 @@ public class CalendarPage extends iOSActions {
 	public void verifyClickReviewedButtonForAppointment(String operation, String patientName) 
 	{
 		waitUntilLoaderDisappear(driver);
+		scrollDownTillElementVisible(driver, AppiumBy.accessibilityId(patientName + " Reviewed-button"));
 		if (operation == "verify")
 		{
+			
 			assertTrue(IsElementPresent(driver, AppiumBy.accessibilityId(patientName + " Reviewed-button")));
 			ExtentManager.logInfoDetails(patientName + ": appointment status is changed to Reviewed as expected");
 		}
@@ -364,6 +368,7 @@ public class CalendarPage extends iOSActions {
 	public void verifyClickContinueButtonForAppointment(String operation, String patientName) 
 	{
 		waitUntilLoaderDisappear(driver);
+		scrollDownTillElementVisible(driver, AppiumBy.accessibilityId(patientName + " Continue-button"));
 		if (operation == "verify")
 		{
 			assertTrue(IsElementPresent(driver, AppiumBy.accessibilityId(patientName + " Continue-button")));
@@ -371,7 +376,7 @@ public class CalendarPage extends iOSActions {
 		}
 		else if (operation == "click")
 		{
-			click(driver, AppiumBy.accessibilityId(patientName + " Continue-button"),  "Continue button of "+patientName+" on calendar view page");
+			click(driver, AppiumBy.accessibilityId(patientName + " Continue-button"),  "Continue button of " + patientName + " on calendar view page");
 		}
 		else {
 			ExtentManager.logFailureDetails("Valid operations for Continue button are verify or click. please check");

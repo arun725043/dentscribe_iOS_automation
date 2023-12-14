@@ -28,4 +28,11 @@ public class CommonVariables
 	public static String errorMsgWithoutRegisterPractice = "Currently the practice is not authorized. Please contact support.";
 	
 	//success messages
+	
+	
+	//FAQs list questions
+	public static String question1 = "Can I edit my SOAP report?";
+	public static String question2 = "Can I integrate my patient management system with Dentscribe?";
+	public static String question3 = "How do I cancel or pause my subscription?";
+	public static String question4 = "How do I record patient notes?";
 }

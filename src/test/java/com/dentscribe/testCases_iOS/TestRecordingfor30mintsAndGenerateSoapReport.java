@@ -56,11 +56,12 @@ public class TestRecordingfor30mintsAndGenerateSoapReport extends iOSBase
 		calendarPage.clickWhileUsingAppButton();
 		Thread.sleep(5000);
 		recordingPage.validateRecordingPage();
-		
+		System.out.println("Recording start at - " + LocalTime.now());
 		ExtentManager.logInfoDetails("Recording start at - " + LocalTime.now());
-		doRecordingForMinutes(30);
-		ExtentManager.logInfoDetails("Clicking Stop button at - " + LocalTime.now());
-		
+		doRecordingForMinutes(driver, 30);
+		System.out.println("About to click Stop button at - " + LocalTime.now());
+		ExtentManager.logInfoDetails("About to click Stop button at - " + LocalTime.now());
+
 		// ___________________________Stop Recording_______________________
 		recordingPage.clickPauseStopButton("stop");
 		waitUntilLoaderDisappear(driver);

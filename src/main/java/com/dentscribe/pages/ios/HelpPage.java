@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 
 import com.dentscribe.ExtentReport.ExtentManager;
+import com.dentscribe.common.CommonVariables;
 
 import io.appium.java_client.ios.IOSDriver;
 
@@ -20,6 +21,12 @@ public class HelpPage extends iOSActions{
 	public By headerTextHelpPageBy = By.xpath("//XCUIElementTypeStaticText[@name='Help']");
     public By textFaqsBy = By.xpath("//XCUIElementTypeStaticText[@name='FAQs']");
 	public By backIconButton = By.xpath("(//XCUIElementTypeOther[@name='Help'])[4]/XCUIElementTypeOther");
+	
+	// FAQs question locators
+	public static By question1By = By.xpath("//XCUIElementTypeStaticText[@name='" + CommonVariables.question1 + "']");
+	public static By question2By = By.xpath("//XCUIElementTypeStaticText[@name='" + CommonVariables.question2 + "']");
+	public static By question3By = By.xpath("//XCUIElementTypeStaticText[@name='" + CommonVariables.question3 + "']");
+	public static By question4By = By.xpath("//XCUIElementTypeStaticText[@name='" + CommonVariables.question4 + "']");
 	
 	// Verify whether Help page exists or not
     public void validateHelpPage()
@@ -39,6 +46,14 @@ public class HelpPage extends iOSActions{
 		click(driver, backIconButton, "Back Icon Button on Help page");
 	}
 			
-	
+	//verify whether all expected questions are available or not
+	public void verifyFAQsQuestions()
+	{
+		IsElementPresent(driver, question1By);
+		IsElementPresent(driver, question2By);
+		IsElementPresent(driver, question3By);
+		scrollDownTillElementVisible(driver, question4By);
+		IsElementPresent(driver, question4By);
+	}
 			
 }
