@@ -11,7 +11,7 @@ import com.dentscribe.common.CommonMethods;
 import com.dentscribe.pages.ios.ForgotPasswordPage;
 import com.dentscribe.pages.ios.AddPaymentMethodPage;
 import com.dentscribe.pages.ios.CalendarPage;
-import com.dentscribe.pages.ios.EULAPage;
+import com.dentscribe.pages.ios.EulaAgreementPage;
 import com.dentscribe.pages.ios.HelpPage;
 import com.dentscribe.pages.ios.LoginPage;
 import com.dentscribe.pages.ios.ManageSubscriptionPage;
@@ -43,7 +43,7 @@ public class iOSBase extends CommonMethods {
 	public SikkaPage sikkaPage;
 	public ManageSubscriptionPage manageSubscriptionPage;
 	public AddPaymentMethodPage addPaymentMethodPage;
-	public EULAPage eulaPage;
+	public EulaAgreementPage eulaPage;
 	public SoapReportPage soapReportPage;
 	public RecordingPage recordingPage;
 	public HelpPage helpPage;
@@ -66,7 +66,7 @@ public class iOSBase extends CommonMethods {
 		options.setDeviceName(readData("Config", "IOSDeviceName")); // emulator
 		options.setApp("//Users//mcl-0048/Desktop//DentScribe.app");
 		options.setPlatformVersion(readData("Config", "IOSPlatformVersion"));
-		options.setNewCommandTimeout(Duration.ofMinutes(60));
+		options.setNewCommandTimeout(Duration.ofMinutes(90));
 
 		driver = new IOSDriver(new URL("http://127.0.0.1:4723"), options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -96,7 +96,7 @@ public class iOSBase extends CommonMethods {
 		sikkaPage = new SikkaPage(driver);
 		manageSubscriptionPage = new ManageSubscriptionPage(driver);
 		addPaymentMethodPage = new AddPaymentMethodPage(driver);
-		eulaPage = new EULAPage(driver);
+		eulaPage = new EulaAgreementPage(driver);
 		soapReportPage = new SoapReportPage(driver);
 		recordingPage = new RecordingPage(driver);
 		helpPage = new HelpPage(driver);

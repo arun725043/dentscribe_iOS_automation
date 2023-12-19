@@ -6,20 +6,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses">
-        <methods>
-          <include name="addSignatureInSoapReportAndSubmit"/>
-          <include name="verifyContinueButtonAfterPauseRecording"/>
-          <include name="verifyIsPatientPopupAppearingOnContinueButtonClick"/>
-          <include name="goToCalendarPageAndSelectAppointmentsDate"/>
-          <include name="configureAppium"/>
-          <include name="verifyIsPatientPopupAppearingOnStartButtonClick"/>
-          <include name="verifyStartRecordingButtonOnPatientDetailsPopupAndClick"/>
-          <include name="verifyReviewButtonAfterStopRecording"/>
-          <include name="verifyContinueRecordingButtonOnPatientDetailsPopupAndClick"/>
-          <include name="verifyReviewedButtonAndClickToVerifySoapReport"/>
-        </methods>
-      </class> <!-- com.dentscribe.testCases_iOS.TestAllAppointmentStatuses -->
       <class name="com.dentscribe.testCases_iOS.TestForgotPassowrdPage">
         <methods>
           <include name="DS_046_verityIsForgotPasswordPageExists"/>
@@ -27,20 +13,6 @@
           <include name="configureAppium"/>
         </methods>
       </class> <!-- com.dentscribe.testCases_iOS.TestForgotPassowrdPage -->
-      <class name="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage">
-        <methods>
-          <include name="verifyEditSoapReportAndAddSignatureDuringEditableReport"/>
-          <include name="verifyBackIconSoapReportAndReviewedButtonForAppointment"/>
-          <include name="verifyPatientProfilePage"/>
-          <include name="configureAppium"/>
-          <include name="verifyBackIconPatientProfilePage"/>
-          <include name="verifyEditIconSoapReport"/>
-          <include name="updateUserDetailsAndVerifySame"/>
-          <include name="verifyBackIconRecordingPage"/>
-          <include name="verifyIsRecordingPageOpenedForExpectedPatient"/>
-          <include name="verifyIsSoapReportCreated"/>
-        </methods>
-      </class> <!-- com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

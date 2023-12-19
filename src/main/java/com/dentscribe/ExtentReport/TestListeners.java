@@ -1,25 +1,13 @@
 package com.dentscribe.ExtentReport;
 
-import java.io.File;
-
-import java.io.IOException;
-import java.lang.reflect.Field;
 import java.util.Arrays;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.Markup;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.dentscribe.base.iOSBase;
 
 import io.appium.java_client.AppiumDriver;

@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods,   9 passed</span>
+                    <span class="method-stats">99 methods, 1 failed,   98 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestForgotPassowrdPage" class="method navigator-link" hash-for-method="DS_049_verifyForgotPasswordForNotExistsEmailId">DS_049_verifyForgotPasswordForNotExistsEmailId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +118,342 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestLoginPage" class="method navigator-link" hash-for-method="DS_004_verifyIsLoginPageExistsAndItsFields">DS_004_verifyIsLoginPageExistsAndItsFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestLoginPage" class="method navigator-link" hash-for-method="DS_005_verifyLoginWithoutMandatoryFields">DS_005_verifyLoginWithoutMandatoryFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestLoginPage" class="method navigator-link" hash-for-method="DS_006_verifyLoginWithNonExistingUser">DS_006_verifyLoginWithNonExistingUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestLoginPage" class="method navigator-link" hash-for-method="DS_007_verifyLoginWithInvalidPassword">DS_007_verifyLoginWithInvalidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestLoginPage" class="method navigator-link" hash-for-method="DS_008_verifyLoginWithThreeInvalidAttempts">DS_008_verifyLoginWithThreeInvalidAttempts</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestLoginPage" class="method navigator-link" hash-for-method="DS_009_verifyLoginWithValidCredentials">DS_009_verifyLoginWithValidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin" class="method navigator-link" hash-for-method="DS_010_verifyIsSmsVerificationPageExistsAfterLogin">DS_010_verifyIsSmsVerificationPageExistsAfterLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin" class="method navigator-link" hash-for-method="DS_011_verifySmsVerificationWithBlankOtp">DS_011_verifySmsVerificationWithBlankOtp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin" class="method navigator-link" hash-for-method="DS_012_verifySmsVerificationWithWrongOtp">DS_012_verifySmsVerificationWithWrongOtp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin" class="method navigator-link" hash-for-method="DS_013_verifySmsVerificationResendCodeLink">DS_013_verifySmsVerificationResendCodeLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin" class="method navigator-link" hash-for-method="DS_014_verifyWhetherSmsVerificationPageBackIconRedirectToLoginPage">DS_014_verifyWhetherSmsVerificationPageBackIconRedirectToLoginPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin" class="method navigator-link" hash-for-method="DS_015_verifySmsVerificationWithValidOtp">DS_015_verifySmsVerificationWithValidOtp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignUpPage" class="method navigator-link" hash-for-method="DS_016_verifyIsSignupPageExists">DS_016_verifyIsSignupPageExists</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignUpPage" class="method navigator-link" hash-for-method="DS_017_verifySignupWithoutMandatoryFields">DS_017_verifySignupWithoutMandatoryFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignUpPage" class="method navigator-link" hash-for-method="DS_018_verifySignupPageForInvalidEmail">DS_018_verifySignupPageForInvalidEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignUpPage" class="method navigator-link" hash-for-method="DS_019_verifySignupPageForWeakPassword">DS_019_verifySignupPageForWeakPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignUpPage" class="method navigator-link" hash-for-method="DS_020_verifySignupPageForConfirPassowrd">DS_020_verifySignupPageForConfirPassowrd</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignUpPage" class="method navigator-link" hash-for-method="DS_021_verifyExistingAndDuplicateEmailId">DS_021_verifyExistingAndDuplicateEmailId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignUpPage" class="method navigator-link" hash-for-method="DS_022_verifySignupWithOnlyMandatoryFields">DS_022_verifySignupWithOnlyMandatoryFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignUpPage" class="method navigator-link" hash-for-method="DS_023_verifySignupConfirmationPopupButtons">DS_023_verifySignupConfirmationPopupButtons</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup" class="method navigator-link" hash-for-method="DS_024_verifyIsSmsVerificationPageExistsAfterSignup">DS_024_verifyIsSmsVerificationPageExistsAfterSignup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup" class="method navigator-link" hash-for-method="DS_025_verifySmsVerificationWithBlankOtp">DS_025_verifySmsVerificationWithBlankOtp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup" class="method navigator-link" hash-for-method="DS_026_verifySmsVerificationWithWrongOtp">DS_026_verifySmsVerificationWithWrongOtp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup" class="method navigator-link" hash-for-method="DS_027_verifySmsVerificationResendCodeLink">DS_027_verifySmsVerificationResendCodeLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup" class="method navigator-link" hash-for-method="DS_027_verifyWhetherSmsVerificationPageBackIconRedirectToSignupPage">DS_027_verifyWhetherSmsVerificationPageBackIconRedirectToSignupPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice" class="method navigator-link" hash-for-method="DS_028_verifySignupWithNonSupportedPMS">DS_028_verifySignupWithNonSupportedPMS</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup" class="method navigator-link" hash-for-method="DS_028_verifySmsVerificationWithValidOtp">DS_028_verifySmsVerificationWithValidOtp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice" class="method navigator-link" hash-for-method="DS_029_verifySignupWithSupportedPMS">DS_029_verifySignupWithSupportedPMS</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice" class="method navigator-link" hash-for-method="DS_030_verifyWishToContinuePopupBackButton">DS_030_verifyWishToContinuePopupBackButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice" class="method navigator-link" hash-for-method="DS_031_verifyPracticeInfoMandatoryFields">DS_031_verifyPracticeInfoMandatoryFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice" class="method navigator-link" hash-for-method="DS_032_verifyLoginWithoutRegisterPractice">DS_032_verifyLoginWithoutRegisterPractice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestTourPages" class="method navigator-link" hash-for-method="DS_033_verifyIsTourPageExists">DS_033_verifyIsTourPageExists</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestTourPages" class="method navigator-link" hash-for-method="DS_034_verifyNextButtonFromFirstToLastTourPage">DS_034_verifyNextButtonFromFirstToLastTourPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestTourPages" class="method navigator-link" hash-for-method="DS_035_verifyBackButtonFromLastToFirstTourPage">DS_035_verifyBackButtonFromLastToFirstTourPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestTourPages" class="method navigator-link" hash-for-method="DS_036_verifyRightSwipeFromFirstToLastTourPage">DS_036_verifyRightSwipeFromFirstToLastTourPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestTourPages" class="method navigator-link" hash-for-method="DS_037_verifyLeftSwipeFromLastToFirstTourPage">DS_037_verifyLeftSwipeFromLastToFirstTourPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestTourPages" class="method navigator-link" hash-for-method="DS_038_verifyNextButtonOfPatientDatabaseTourPage">DS_038_verifyNextButtonOfPatientDatabaseTourPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestPatientSearchPage" class="method navigator-link" hash-for-method="DS_039_verifySkipLinkTourPages">DS_039_verifySkipLinkTourPages</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestPatientSearchPage" class="method navigator-link" hash-for-method="DS_040_verifyIsPatientSearchPageExists">DS_040_verifyIsPatientSearchPageExists</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestPatientSearchPage" class="method navigator-link" hash-for-method="DS_041_verifyPatientSearchByInvalidData">DS_041_verifyPatientSearchByInvalidData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestPatientSearchPage" class="method navigator-link" hash-for-method="DS_042_verifyPatientSearchByPatientName">DS_042_verifyPatientSearchByPatientName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestPatientSearchPage" class="method navigator-link" hash-for-method="DS_043_verifyPatientSearchByPatientPhoneNumber">DS_043_verifyPatientSearchByPatientPhoneNumber</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestPatientSearchPage" class="method navigator-link" hash-for-method="DS_044_verifyPatientSearchByPatientDOB">DS_044_verifyPatientSearchByPatientDOB</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestPatientSearchPage" class="method navigator-link" hash-for-method="DS_045_verifyPatientSearchByPatientInsurance">DS_045_verifyPatientSearchByPatientInsurance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestForgotPassowrdPage" class="method navigator-link" hash-for-method="DS_046_verityIsForgotPasswordPageExists">DS_046_verityIsForgotPasswordPageExists</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestForgotPassowrdPage" class="method navigator-link" hash-for-method="DS_047_verifyForgotPasswordMandatoryFields">DS_047_verifyForgotPasswordMandatoryFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestForgotPassowrdPage" class="method navigator-link" hash-for-method="DS_048_verifyForgotPasswordForWrongEmailId">DS_048_verifyForgotPasswordForWrongEmailId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestForgotPassowrdPage" class="method navigator-link" hash-for-method="DS_050_verifyForgotPasswordForValidEmailId">DS_050_verifyForgotPasswordForValidEmailId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestForgotPassowrdPage" class="method navigator-link" hash-for-method="DS_051_verifyForgotPasswordBackIcon">DS_051_verifyForgotPasswordBackIcon</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="addSignatureInSoapReportAndSubmit">addSignatureInSoapReportAndSubmit</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan" class="method navigator-link" hash-for-method="createNewUserAndGoToManageSubscriptionPage">createNewUserAndGoToManageSubscriptionPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="goToCalendarPageAndSelectAppointmentsDate">goToCalendarPageAndSelectAppointmentsDate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage" class="method navigator-link" hash-for-method="updateUserDetailsAndVerifySame">updateUserDetailsAndVerifySame</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSettingsPage" class="method navigator-link" hash-for-method="verifyAccountInfoUpdate">verifyAccountInfoUpdate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan" class="method navigator-link" hash-for-method="verifyAddPaymentMethodBackIcon">verifyAddPaymentMethodBackIcon</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan" class="method navigator-link" hash-for-method="verifyAddPaymentMethodMandatoryFields">verifyAddPaymentMethodMandatoryFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage" class="method navigator-link" hash-for-method="verifyBackIconPatientProfilePage">verifyBackIconPatientProfilePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage" class="method navigator-link" hash-for-method="verifyBackIconRecordingPage">verifyBackIconRecordingPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSettingsPage" class="method navigator-link" hash-for-method="verifyBackIconSettingsPage">verifyBackIconSettingsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage" class="method navigator-link" hash-for-method="verifyBackIconSoapReportAndReviewedButtonForAppointment">verifyBackIconSoapReportAndReviewedButtonForAppointment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan" class="method navigator-link" hash-for-method="verifyCanUserBuyPaidPlan">verifyCanUserBuyPaidPlan</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan" class="method navigator-link" hash-for-method="verifyCanUserBuyPaidPlanAfterFreeTrialPlan">verifyCanUserBuyPaidPlanAfterFreeTrialPlan</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan" class="method navigator-link" hash-for-method="verifyCanUserBuyPlanAgain">verifyCanUserBuyPlanAgain</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan" class="method navigator-link" hash-for-method="verifyCanUserCancelSubcription">verifyCanUserCancelSubcription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan" class="method navigator-link" hash-for-method="verifyCanUserTake30DaysFreeTrialPlan">verifyCanUserTake30DaysFreeTrialPlan</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan" class="method navigator-link" hash-for-method="verifyCanUserUpdatePaymentMethod">verifyCanUserUpdatePaymentMethod</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan" class="method navigator-link" hash-for-method="verifyCancelSubscriptionPopup">verifyCancelSubscriptionPopup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestChangePassword" class="method navigator-link" hash-for-method="verifyChangePasswordFromSettingsPage">verifyChangePasswordFromSettingsPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -124,12 +468,82 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan" class="method navigator-link" hash-for-method="verifyCreatePracticeInfo">verifyCreatePracticeInfo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage" class="method navigator-link" hash-for-method="verifyEditIconSoapReport">verifyEditIconSoapReport</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage" class="method navigator-link" hash-for-method="verifyEditSoapReportAndAddSignatureDuringEditableReport">verifyEditSoapReportAndAddSignatureDuringEditableReport</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSettingsPage" class="method navigator-link" hash-for-method="verifyEmailNotificationsSwitch">verifyEmailNotificationsSwitch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan" class="method navigator-link" hash-for-method="verifyEulaAgreementAndAcceptIt">verifyEulaAgreementAndAcceptIt</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSettingsPage" class="method navigator-link" hash-for-method="verifyFAQsInHelpPage">verifyFAQsInHelpPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSettingsPage" class="method navigator-link" hash-for-method="verifyHelpOptionsSettingsPage">verifyHelpOptionsSettingsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="verifyIsPatientPopupAppearingOnContinueButtonClick">verifyIsPatientPopupAppearingOnContinueButtonClick</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="verifyIsPatientPopupAppearingOnStartButtonClick">verifyIsPatientPopupAppearingOnStartButtonClick</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage" class="method navigator-link" hash-for-method="verifyIsRecordingPageOpenedForExpectedPatient">verifyIsRecordingPageOpenedForExpectedPatient</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSettingsPage" class="method navigator-link" hash-for-method="verifyIsSettingsPageExists">verifyIsSettingsPageExists</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage" class="method navigator-link" hash-for-method="verifyIsSoapReportCreated">verifyIsSoapReportCreated</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSettingsPage" class="method navigator-link" hash-for-method="verifyLogout">verifyLogout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage" class="method navigator-link" hash-for-method="verifyPatientProfilePage">verifyPatientProfilePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSettingsPage" class="method navigator-link" hash-for-method="verifyPracticeUpdate">verifyPracticeUpdate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSettingsPage" class="method navigator-link" hash-for-method="verifyPushNotificationsSwitch">verifyPushNotificationsSwitch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -144,7 +558,52 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan" class="method navigator-link" hash-for-method="verifySignupNewUser">verifySignupNewUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan" class="method navigator-link" hash-for-method="verifySikkaWebViewRegistration">verifySikkaWebViewRegistration</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestSettingsPage" class="method navigator-link" hash-for-method="verifySmsNotificationsSwitch">verifySmsNotificationsSwitch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan" class="method navigator-link" hash-for-method="verifySpuInstallPopupAndRefreshData">verifySpuInstallPopupAndRefreshData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" class="method navigator-link" hash-for-method="verifyStartRecordingButtonOnPatientDetailsPopupAndClick">verifyStartRecordingButtonOnPatientDetailsPopupAndClick</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestChangePassword" class="method navigator-link" hash-for-method="verifyUserShouldLoginFromNewChangedPassword">verifyUserShouldLoginFromNewChangedPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestChangePassword" class="method navigator-link" hash-for-method="verifyUserShouldNotLoginFromOldPassword">verifyUserShouldNotLoginFromOldPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestRecordingfor10mintsAndGenerateSoapReport" class="method navigator-link" hash-for-method="verifyWhetherSoapReportCreatedFor10mintsRecording">verifyWhetherSoapReportCreatedFor10mintsRecording</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestRecordingfor30mintsAndGenerateSoapReport" class="method navigator-link" hash-for-method="verifyWhetherSoapReportCreatedFor30mintsRecording">verifyWhetherSoapReportCreatedFor30mintsRecording</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.dentscribe.testCases_iOS.TestRecordingfor50mintsAndGenerateSoapReport" class="method navigator-link" hash-for-method="verifyWhetherSoapReportCreatedFor50mintsRecording">verifyWhetherSoapReportCreatedFor50mintsRecording</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -159,6 +618,184 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestForgotPassowrdPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_049_verifyForgotPasswordForNotExistsEmailId">
+                  </a> <!-- DS_049_verifyForgotPasswordForNotExistsEmailId -->
+                  <span class="method-name">DS_049_verifyForgotPasswordForNotExistsEmailId</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at com.dentscribe.common.CommonMethods.verifyText(CommonMethods.java:304)
+	at com.dentscribe.pages.ios.ForgotPasswordPage.verifyInvalidUserName(ForgotPasswordPage.java:72)
+	at com.dentscribe.testCases_iOS.TestForgotPassowrdPage.DS_049_verifyForgotPasswordForNotExistsEmailId(TestForgotPassowrdPage.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestSettingsPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAccountInfoUpdate">
+                  </a> <!-- verifyAccountInfoUpdate -->
+                  <span class="method-name">verifyAccountInfoUpdate</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyBackIconSettingsPage">
+                  </a> <!-- verifyBackIconSettingsPage -->
+                  <span class="method-name">verifyBackIconSettingsPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEmailNotificationsSwitch">
+                  </a> <!-- verifyEmailNotificationsSwitch -->
+                  <span class="method-name">verifyEmailNotificationsSwitch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyFAQsInHelpPage">
+                  </a> <!-- verifyFAQsInHelpPage -->
+                  <span class="method-name">verifyFAQsInHelpPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyHelpOptionsSettingsPage">
+                  </a> <!-- verifyHelpOptionsSettingsPage -->
+                  <span class="method-name">verifyHelpOptionsSettingsPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyIsSettingsPageExists">
+                  </a> <!-- verifyIsSettingsPageExists -->
+                  <span class="method-name">verifyIsSettingsPageExists</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogout">
+                  </a> <!-- verifyLogout -->
+                  <span class="method-name">verifyLogout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPracticeUpdate">
+                  </a> <!-- verifyPracticeUpdate -->
+                  <span class="method-name">verifyPracticeUpdate</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPushNotificationsSwitch">
+                  </a> <!-- verifyPushNotificationsSwitch -->
+                  <span class="method-name">verifyPushNotificationsSwitch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySmsNotificationsSwitch">
+                  </a> <!-- verifySmsNotificationsSwitch -->
+                  <span class="method-name">verifySmsNotificationsSwitch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCanUserBuyPaidPlan">
+                  </a> <!-- verifyCanUserBuyPaidPlan -->
+                  <span class="method-name">verifyCanUserBuyPaidPlan</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCanUserBuyPlanAgain">
+                  </a> <!-- verifyCanUserBuyPlanAgain -->
+                  <span class="method-name">verifyCanUserBuyPlanAgain</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCanUserCancelSubcription">
+                  </a> <!-- verifyCanUserCancelSubcription -->
+                  <span class="method-name">verifyCanUserCancelSubcription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCanUserUpdatePaymentMethod">
+                  </a> <!-- verifyCanUserUpdatePaymentMethod -->
+                  <span class="method-name">verifyCanUserUpdatePaymentMethod</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCancelSubscriptionPopup">
+                  </a> <!-- verifyCancelSubscriptionPopup -->
+                  <span class="method-name">verifyCancelSubscriptionPopup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCreatePracticeInfo">
+                  </a> <!-- verifyCreatePracticeInfo -->
+                  <span class="method-name">verifyCreatePracticeInfo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEulaAgreementAndAcceptIt">
+                  </a> <!-- verifyEulaAgreementAndAcceptIt -->
+                  <span class="method-name">verifyEulaAgreementAndAcceptIt</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySignupNewUser">
+                  </a> <!-- verifySignupNewUser -->
+                  <span class="method-name">verifySignupNewUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySikkaWebViewRegistration">
+                  </a> <!-- verifySikkaWebViewRegistration -->
+                  <span class="method-name">verifySikkaWebViewRegistration</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySpuInstallPopupAndRefreshData">
+                  </a> <!-- verifySpuInstallPopupAndRefreshData -->
+                  <span class="method-name">verifySpuInstallPopupAndRefreshData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -230,6 +867,601 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createNewUserAndGoToManageSubscriptionPage">
+                  </a> <!-- createNewUserAndGoToManageSubscriptionPage -->
+                  <span class="method-name">createNewUserAndGoToManageSubscriptionPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddPaymentMethodBackIcon">
+                  </a> <!-- verifyAddPaymentMethodBackIcon -->
+                  <span class="method-name">verifyAddPaymentMethodBackIcon</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddPaymentMethodMandatoryFields">
+                  </a> <!-- verifyAddPaymentMethodMandatoryFields -->
+                  <span class="method-name">verifyAddPaymentMethodMandatoryFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCanUserBuyPaidPlanAfterFreeTrialPlan">
+                  </a> <!-- verifyCanUserBuyPaidPlanAfterFreeTrialPlan -->
+                  <span class="method-name">verifyCanUserBuyPaidPlanAfterFreeTrialPlan</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCanUserTake30DaysFreeTrialPlan">
+                  </a> <!-- verifyCanUserTake30DaysFreeTrialPlan -->
+                  <span class="method-name">verifyCanUserTake30DaysFreeTrialPlan</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_010_verifyIsSmsVerificationPageExistsAfterLogin">
+                  </a> <!-- DS_010_verifyIsSmsVerificationPageExistsAfterLogin -->
+                  <span class="method-name">DS_010_verifyIsSmsVerificationPageExistsAfterLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_011_verifySmsVerificationWithBlankOtp">
+                  </a> <!-- DS_011_verifySmsVerificationWithBlankOtp -->
+                  <span class="method-name">DS_011_verifySmsVerificationWithBlankOtp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_012_verifySmsVerificationWithWrongOtp">
+                  </a> <!-- DS_012_verifySmsVerificationWithWrongOtp -->
+                  <span class="method-name">DS_012_verifySmsVerificationWithWrongOtp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_013_verifySmsVerificationResendCodeLink">
+                  </a> <!-- DS_013_verifySmsVerificationResendCodeLink -->
+                  <span class="method-name">DS_013_verifySmsVerificationResendCodeLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_014_verifyWhetherSmsVerificationPageBackIconRedirectToLoginPage">
+                  </a> <!-- DS_014_verifyWhetherSmsVerificationPageBackIconRedirectToLoginPage -->
+                  <span class="method-name">DS_014_verifyWhetherSmsVerificationPageBackIconRedirectToLoginPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_015_verifySmsVerificationWithValidOtp">
+                  </a> <!-- DS_015_verifySmsVerificationWithValidOtp -->
+                  <span class="method-name">DS_015_verifySmsVerificationWithValidOtp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_028_verifySignupWithNonSupportedPMS">
+                  </a> <!-- DS_028_verifySignupWithNonSupportedPMS -->
+                  <span class="method-name">DS_028_verifySignupWithNonSupportedPMS</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_029_verifySignupWithSupportedPMS">
+                  </a> <!-- DS_029_verifySignupWithSupportedPMS -->
+                  <span class="method-name">DS_029_verifySignupWithSupportedPMS</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_030_verifyWishToContinuePopupBackButton">
+                  </a> <!-- DS_030_verifyWishToContinuePopupBackButton -->
+                  <span class="method-name">DS_030_verifyWishToContinuePopupBackButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_031_verifyPracticeInfoMandatoryFields">
+                  </a> <!-- DS_031_verifyPracticeInfoMandatoryFields -->
+                  <span class="method-name">DS_031_verifyPracticeInfoMandatoryFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_032_verifyLoginWithoutRegisterPractice">
+                  </a> <!-- DS_032_verifyLoginWithoutRegisterPractice -->
+                  <span class="method-name">DS_032_verifyLoginWithoutRegisterPractice</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestRecordingfor50mintsAndGenerateSoapReport</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyWhetherSoapReportCreatedFor50mintsRecording">
+                  </a> <!-- verifyWhetherSoapReportCreatedFor50mintsRecording -->
+                  <span class="method-name">verifyWhetherSoapReportCreatedFor50mintsRecording</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestChangePassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyChangePasswordFromSettingsPage">
+                  </a> <!-- verifyChangePasswordFromSettingsPage -->
+                  <span class="method-name">verifyChangePasswordFromSettingsPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserShouldLoginFromNewChangedPassword">
+                  </a> <!-- verifyUserShouldLoginFromNewChangedPassword -->
+                  <span class="method-name">verifyUserShouldLoginFromNewChangedPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserShouldNotLoginFromOldPassword">
+                  </a> <!-- verifyUserShouldNotLoginFromOldPassword -->
+                  <span class="method-name">verifyUserShouldNotLoginFromOldPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestRecordingfor30mintsAndGenerateSoapReport</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyWhetherSoapReportCreatedFor30mintsRecording">
+                  </a> <!-- verifyWhetherSoapReportCreatedFor30mintsRecording -->
+                  <span class="method-name">verifyWhetherSoapReportCreatedFor30mintsRecording</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_024_verifyIsSmsVerificationPageExistsAfterSignup">
+                  </a> <!-- DS_024_verifyIsSmsVerificationPageExistsAfterSignup -->
+                  <span class="method-name">DS_024_verifyIsSmsVerificationPageExistsAfterSignup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_025_verifySmsVerificationWithBlankOtp">
+                  </a> <!-- DS_025_verifySmsVerificationWithBlankOtp -->
+                  <span class="method-name">DS_025_verifySmsVerificationWithBlankOtp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_026_verifySmsVerificationWithWrongOtp">
+                  </a> <!-- DS_026_verifySmsVerificationWithWrongOtp -->
+                  <span class="method-name">DS_026_verifySmsVerificationWithWrongOtp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_027_verifySmsVerificationResendCodeLink">
+                  </a> <!-- DS_027_verifySmsVerificationResendCodeLink -->
+                  <span class="method-name">DS_027_verifySmsVerificationResendCodeLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_027_verifyWhetherSmsVerificationPageBackIconRedirectToSignupPage">
+                  </a> <!-- DS_027_verifyWhetherSmsVerificationPageBackIconRedirectToSignupPage -->
+                  <span class="method-name">DS_027_verifyWhetherSmsVerificationPageBackIconRedirectToSignupPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_028_verifySmsVerificationWithValidOtp">
+                  </a> <!-- DS_028_verifySmsVerificationWithValidOtp -->
+                  <span class="method-name">DS_028_verifySmsVerificationWithValidOtp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestLoginPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_004_verifyIsLoginPageExistsAndItsFields">
+                  </a> <!-- DS_004_verifyIsLoginPageExistsAndItsFields -->
+                  <span class="method-name">DS_004_verifyIsLoginPageExistsAndItsFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_005_verifyLoginWithoutMandatoryFields">
+                  </a> <!-- DS_005_verifyLoginWithoutMandatoryFields -->
+                  <span class="method-name">DS_005_verifyLoginWithoutMandatoryFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_006_verifyLoginWithNonExistingUser">
+                  </a> <!-- DS_006_verifyLoginWithNonExistingUser -->
+                  <span class="method-name">DS_006_verifyLoginWithNonExistingUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_007_verifyLoginWithInvalidPassword">
+                  </a> <!-- DS_007_verifyLoginWithInvalidPassword -->
+                  <span class="method-name">DS_007_verifyLoginWithInvalidPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_008_verifyLoginWithThreeInvalidAttempts">
+                  </a> <!-- DS_008_verifyLoginWithThreeInvalidAttempts -->
+                  <span class="method-name">DS_008_verifyLoginWithThreeInvalidAttempts</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_009_verifyLoginWithValidCredentials">
+                  </a> <!-- DS_009_verifyLoginWithValidCredentials -->
+                  <span class="method-name">DS_009_verifyLoginWithValidCredentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestForgotPassowrdPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_046_verityIsForgotPasswordPageExists">
+                  </a> <!-- DS_046_verityIsForgotPasswordPageExists -->
+                  <span class="method-name">DS_046_verityIsForgotPasswordPageExists</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_047_verifyForgotPasswordMandatoryFields">
+                  </a> <!-- DS_047_verifyForgotPasswordMandatoryFields -->
+                  <span class="method-name">DS_047_verifyForgotPasswordMandatoryFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_048_verifyForgotPasswordForWrongEmailId">
+                  </a> <!-- DS_048_verifyForgotPasswordForWrongEmailId -->
+                  <span class="method-name">DS_048_verifyForgotPasswordForWrongEmailId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_050_verifyForgotPasswordForValidEmailId">
+                  </a> <!-- DS_050_verifyForgotPasswordForValidEmailId -->
+                  <span class="method-name">DS_050_verifyForgotPasswordForValidEmailId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_051_verifyForgotPasswordBackIcon">
+                  </a> <!-- DS_051_verifyForgotPasswordBackIcon -->
+                  <span class="method-name">DS_051_verifyForgotPasswordBackIcon</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestPatientSearchPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_039_verifySkipLinkTourPages">
+                  </a> <!-- DS_039_verifySkipLinkTourPages -->
+                  <span class="method-name">DS_039_verifySkipLinkTourPages</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_040_verifyIsPatientSearchPageExists">
+                  </a> <!-- DS_040_verifyIsPatientSearchPageExists -->
+                  <span class="method-name">DS_040_verifyIsPatientSearchPageExists</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_041_verifyPatientSearchByInvalidData">
+                  </a> <!-- DS_041_verifyPatientSearchByInvalidData -->
+                  <span class="method-name">DS_041_verifyPatientSearchByInvalidData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_042_verifyPatientSearchByPatientName">
+                  </a> <!-- DS_042_verifyPatientSearchByPatientName -->
+                  <span class="method-name">DS_042_verifyPatientSearchByPatientName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_043_verifyPatientSearchByPatientPhoneNumber">
+                  </a> <!-- DS_043_verifyPatientSearchByPatientPhoneNumber -->
+                  <span class="method-name">DS_043_verifyPatientSearchByPatientPhoneNumber</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_044_verifyPatientSearchByPatientDOB">
+                  </a> <!-- DS_044_verifyPatientSearchByPatientDOB -->
+                  <span class="method-name">DS_044_verifyPatientSearchByPatientDOB</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_045_verifyPatientSearchByPatientInsurance">
+                  </a> <!-- DS_045_verifyPatientSearchByPatientInsurance -->
+                  <span class="method-name">DS_045_verifyPatientSearchByPatientInsurance</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestRecordingfor10mintsAndGenerateSoapReport</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyWhetherSoapReportCreatedFor10mintsRecording">
+                  </a> <!-- verifyWhetherSoapReportCreatedFor10mintsRecording -->
+                  <span class="method-name">verifyWhetherSoapReportCreatedFor10mintsRecording</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestSignUpPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_016_verifyIsSignupPageExists">
+                  </a> <!-- DS_016_verifyIsSignupPageExists -->
+                  <span class="method-name">DS_016_verifyIsSignupPageExists</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_017_verifySignupWithoutMandatoryFields">
+                  </a> <!-- DS_017_verifySignupWithoutMandatoryFields -->
+                  <span class="method-name">DS_017_verifySignupWithoutMandatoryFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_018_verifySignupPageForInvalidEmail">
+                  </a> <!-- DS_018_verifySignupPageForInvalidEmail -->
+                  <span class="method-name">DS_018_verifySignupPageForInvalidEmail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_019_verifySignupPageForWeakPassword">
+                  </a> <!-- DS_019_verifySignupPageForWeakPassword -->
+                  <span class="method-name">DS_019_verifySignupPageForWeakPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_020_verifySignupPageForConfirPassowrd">
+                  </a> <!-- DS_020_verifySignupPageForConfirPassowrd -->
+                  <span class="method-name">DS_020_verifySignupPageForConfirPassowrd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_021_verifyExistingAndDuplicateEmailId">
+                  </a> <!-- DS_021_verifyExistingAndDuplicateEmailId -->
+                  <span class="method-name">DS_021_verifyExistingAndDuplicateEmailId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_022_verifySignupWithOnlyMandatoryFields">
+                  </a> <!-- DS_022_verifySignupWithOnlyMandatoryFields -->
+                  <span class="method-name">DS_022_verifySignupWithOnlyMandatoryFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_023_verifySignupConfirmationPopupButtons">
+                  </a> <!-- DS_023_verifySignupConfirmationPopupButtons -->
+                  <span class="method-name">DS_023_verifySignupConfirmationPopupButtons</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateUserDetailsAndVerifySame">
+                  </a> <!-- updateUserDetailsAndVerifySame -->
+                  <span class="method-name">updateUserDetailsAndVerifySame</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyBackIconPatientProfilePage">
+                  </a> <!-- verifyBackIconPatientProfilePage -->
+                  <span class="method-name">verifyBackIconPatientProfilePage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyBackIconRecordingPage">
+                  </a> <!-- verifyBackIconRecordingPage -->
+                  <span class="method-name">verifyBackIconRecordingPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyBackIconSoapReportAndReviewedButtonForAppointment">
+                  </a> <!-- verifyBackIconSoapReportAndReviewedButtonForAppointment -->
+                  <span class="method-name">verifyBackIconSoapReportAndReviewedButtonForAppointment</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEditIconSoapReport">
+                  </a> <!-- verifyEditIconSoapReport -->
+                  <span class="method-name">verifyEditIconSoapReport</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEditSoapReportAndAddSignatureDuringEditableReport">
+                  </a> <!-- verifyEditSoapReportAndAddSignatureDuringEditableReport -->
+                  <span class="method-name">verifyEditSoapReportAndAddSignatureDuringEditableReport</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyIsRecordingPageOpenedForExpectedPatient">
+                  </a> <!-- verifyIsRecordingPageOpenedForExpectedPatient -->
+                  <span class="method-name">verifyIsRecordingPageOpenedForExpectedPatient</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyIsSoapReportCreated">
+                  </a> <!-- verifyIsSoapReportCreated -->
+                  <span class="method-name">verifyIsSoapReportCreated</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPatientProfilePage">
+                  </a> <!-- verifyPatientProfilePage -->
+                  <span class="method-name">verifyPatientProfilePage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.dentscribe.testCases_iOS.TestTourPages</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_033_verifyIsTourPageExists">
+                  </a> <!-- DS_033_verifyIsTourPageExists -->
+                  <span class="method-name">DS_033_verifyIsTourPageExists</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_034_verifyNextButtonFromFirstToLastTourPage">
+                  </a> <!-- DS_034_verifyNextButtonFromFirstToLastTourPage -->
+                  <span class="method-name">DS_034_verifyNextButtonFromFirstToLastTourPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_035_verifyBackButtonFromLastToFirstTourPage">
+                  </a> <!-- DS_035_verifyBackButtonFromLastToFirstTourPage -->
+                  <span class="method-name">DS_035_verifyBackButtonFromLastToFirstTourPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_036_verifyRightSwipeFromFirstToLastTourPage">
+                  </a> <!-- DS_036_verifyRightSwipeFromFirstToLastTourPage -->
+                  <span class="method-name">DS_036_verifyRightSwipeFromFirstToLastTourPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_037_verifyLeftSwipeFromLastToFirstTourPage">
+                  </a> <!-- DS_037_verifyLeftSwipeFromLastToFirstTourPage -->
+                  <span class="method-name">DS_037_verifyLeftSwipeFromLastToFirstTourPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DS_038_verifyNextButtonOfPatientDatabaseTourPage">
+                  </a> <!-- DS_038_verifyNextButtonOfPatientDatabaseTourPage -->
+                  <span class="method-name">DS_038_verifyNextButtonOfPatientDatabaseTourPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -245,7 +1477,23 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan&quot;/&gt;
       &lt;class name=&quot;com.dentscribe.testCases_iOS.TestAllAppointmentStatuses&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestLoginPage&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestSignUpPage&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestTourPages&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestPatientSearchPage&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestForgotPassowrdPage&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestSettingsPage&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestChangePassword&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestRecordingfor10mintsAndGenerateSoapReport&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestRecordingfor30mintsAndGenerateSoapReport&quot;/&gt;
+      &lt;class name=&quot;com.dentscribe.testCases_iOS.TestRecordingfor50mintsAndGenerateSoapReport&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -259,7 +1507,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (17 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -285,48 +1533,408 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(9);
+data.addRows(99);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'goToCalendarPageAndSelectAppointmentsDate')
-data.setCell(0, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
-data.setCell(0, 3, 56896);
+data.setCell(0, 1, 'verifyWhetherSoapReportCreatedFor50mintsRecording')
+data.setCell(0, 2, 'com.dentscribe.testCases_iOS.TestRecordingfor50mintsAndGenerateSoapReport')
+data.setCell(0, 3, 3175436);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyReviewButtonAfterStopRecording')
-data.setCell(1, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
-data.setCell(1, 3, 47815);
+data.setCell(1, 1, 'verifyWhetherSoapReportCreatedFor30mintsRecording')
+data.setCell(1, 2, 'com.dentscribe.testCases_iOS.TestRecordingfor30mintsAndGenerateSoapReport')
+data.setCell(1, 3, 1970844);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyContinueRecordingButtonOnPatientDetailsPopupAndClick')
-data.setCell(2, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
-data.setCell(2, 3, 24362);
+data.setCell(2, 1, 'verifyWhetherSoapReportCreatedFor10mintsRecording')
+data.setCell(2, 2, 'com.dentscribe.testCases_iOS.TestRecordingfor10mintsAndGenerateSoapReport')
+data.setCell(2, 3, 778462);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'addSignatureInSoapReportAndSubmit')
-data.setCell(3, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
-data.setCell(3, 3, 22586);
+data.setCell(3, 1, 'createNewUserAndGoToManageSubscriptionPage')
+data.setCell(3, 2, 'com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan')
+data.setCell(3, 3, 341197);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyStartRecordingButtonOnPatientDetailsPopupAndClick')
-data.setCell(4, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
-data.setCell(4, 3, 21899);
+data.setCell(4, 1, 'verifySikkaWebViewRegistration')
+data.setCell(4, 2, 'com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan')
+data.setCell(4, 3, 194137);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyIsPatientPopupAppearingOnStartButtonClick')
-data.setCell(5, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
-data.setCell(5, 3, 21664);
+data.setCell(5, 1, 'verifyIsRecordingPageOpenedForExpectedPatient')
+data.setCell(5, 2, 'com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage')
+data.setCell(5, 3, 105701);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyContinueButtonAfterPauseRecording')
-data.setCell(6, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
-data.setCell(6, 3, 14309);
+data.setCell(6, 1, 'verifyCanUserUpdatePaymentMethod')
+data.setCell(6, 2, 'com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan')
+data.setCell(6, 3, 77107);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyIsPatientPopupAppearingOnContinueButtonClick')
-data.setCell(7, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
-data.setCell(7, 3, 9842);
+data.setCell(7, 1, 'verifySignupNewUser')
+data.setCell(7, 2, 'com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan')
+data.setCell(7, 3, 68763);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyReviewedButtonAndClickToVerifySoapReport')
-data.setCell(8, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
-data.setCell(8, 3, 7516);
+data.setCell(8, 1, 'verifyIsSoapReportCreated')
+data.setCell(8, 2, 'com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage')
+data.setCell(8, 3, 67531);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'goToCalendarPageAndSelectAppointmentsDate')
+data.setCell(9, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(9, 3, 64130);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyChangePasswordFromSettingsPage')
+data.setCell(10, 2, 'com.dentscribe.testCases_iOS.TestChangePassword')
+data.setCell(10, 3, 53368);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyPatientProfilePage')
+data.setCell(11, 2, 'com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage')
+data.setCell(11, 3, 52891);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyCanUserBuyPaidPlan')
+data.setCell(12, 2, 'com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan')
+data.setCell(12, 3, 52294);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyReviewButtonAfterStopRecording')
+data.setCell(13, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(13, 3, 48979);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'DS_024_verifyIsSmsVerificationPageExistsAfterSignup')
+data.setCell(14, 2, 'com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup')
+data.setCell(14, 3, 48772);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'DS_028_verifySignupWithNonSupportedPMS')
+data.setCell(15, 2, 'com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice')
+data.setCell(15, 3, 47864);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'DS_021_verifyExistingAndDuplicateEmailId')
+data.setCell(16, 2, 'com.dentscribe.testCases_iOS.TestSignUpPage')
+data.setCell(16, 3, 47594);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'verifyCreatePracticeInfo')
+data.setCell(17, 2, 'com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan')
+data.setCell(17, 3, 41868);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifyCanUserBuyPaidPlanAfterFreeTrialPlan')
+data.setCell(18, 2, 'com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan')
+data.setCell(18, 3, 37675);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'verifyIsSettingsPageExists')
+data.setCell(19, 2, 'com.dentscribe.testCases_iOS.TestSettingsPage')
+data.setCell(19, 3, 36925);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'verifyEulaAgreementAndAcceptIt')
+data.setCell(20, 2, 'com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan')
+data.setCell(20, 3, 32648);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'DS_039_verifySkipLinkTourPages')
+data.setCell(21, 2, 'com.dentscribe.testCases_iOS.TestPatientSearchPage')
+data.setCell(21, 3, 29405);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'DS_015_verifySmsVerificationWithValidOtp')
+data.setCell(22, 2, 'com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin')
+data.setCell(22, 3, 29146);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'DS_031_verifyPracticeInfoMandatoryFields')
+data.setCell(23, 2, 'com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice')
+data.setCell(23, 3, 29011);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'DS_033_verifyIsTourPageExists')
+data.setCell(24, 2, 'com.dentscribe.testCases_iOS.TestTourPages')
+data.setCell(24, 3, 26752);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'DS_042_verifyPatientSearchByPatientName')
+data.setCell(25, 2, 'com.dentscribe.testCases_iOS.TestPatientSearchPage')
+data.setCell(25, 3, 26286);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'updateUserDetailsAndVerifySame')
+data.setCell(26, 2, 'com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage')
+data.setCell(26, 3, 25242);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'verifyCanUserTake30DaysFreeTrialPlan')
+data.setCell(27, 2, 'com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan')
+data.setCell(27, 3, 23837);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'verifyContinueRecordingButtonOnPatientDetailsPopupAndClick')
+data.setCell(28, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(28, 3, 23813);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'verifyPracticeUpdate')
+data.setCell(29, 2, 'com.dentscribe.testCases_iOS.TestSettingsPage')
+data.setCell(29, 3, 22663);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'DS_027_verifySmsVerificationResendCodeLink')
+data.setCell(30, 2, 'com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup')
+data.setCell(30, 3, 22589);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'DS_013_verifySmsVerificationResendCodeLink')
+data.setCell(31, 2, 'com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin')
+data.setCell(31, 3, 22370);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'DS_045_verifyPatientSearchByPatientInsurance')
+data.setCell(32, 2, 'com.dentscribe.testCases_iOS.TestPatientSearchPage')
+data.setCell(32, 3, 22077);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'verifyStartRecordingButtonOnPatientDetailsPopupAndClick')
+data.setCell(33, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(33, 3, 21967);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'DS_043_verifyPatientSearchByPatientPhoneNumber')
+data.setCell(34, 2, 'com.dentscribe.testCases_iOS.TestPatientSearchPage')
+data.setCell(34, 3, 21807);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'verifyBackIconSettingsPage')
+data.setCell(35, 2, 'com.dentscribe.testCases_iOS.TestSettingsPage')
+data.setCell(35, 3, 20692);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'DS_028_verifySmsVerificationWithValidOtp')
+data.setCell(36, 2, 'com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup')
+data.setCell(36, 3, 20257);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'addSignatureInSoapReportAndSubmit')
+data.setCell(37, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(37, 3, 19570);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'DS_017_verifySignupWithoutMandatoryFields')
+data.setCell(38, 2, 'com.dentscribe.testCases_iOS.TestSignUpPage')
+data.setCell(38, 3, 18773);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'verifyContinueButtonAfterPauseRecording')
+data.setCell(39, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(39, 3, 18601);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'verifyAccountInfoUpdate')
+data.setCell(40, 2, 'com.dentscribe.testCases_iOS.TestSettingsPage')
+data.setCell(40, 3, 18586);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'DS_041_verifyPatientSearchByInvalidData')
+data.setCell(41, 2, 'com.dentscribe.testCases_iOS.TestPatientSearchPage')
+data.setCell(41, 3, 18202);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'DS_040_verifyIsPatientSearchPageExists')
+data.setCell(42, 2, 'com.dentscribe.testCases_iOS.TestPatientSearchPage')
+data.setCell(42, 3, 15943);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'verifyAddPaymentMethodMandatoryFields')
+data.setCell(43, 2, 'com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan')
+data.setCell(43, 3, 15743);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'DS_044_verifyPatientSearchByPatientDOB')
+data.setCell(44, 2, 'com.dentscribe.testCases_iOS.TestPatientSearchPage')
+data.setCell(44, 3, 15160);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'verifyIsPatientPopupAppearingOnStartButtonClick')
+data.setCell(45, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(45, 3, 14125);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'DS_026_verifySmsVerificationWithWrongOtp')
+data.setCell(46, 2, 'com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup')
+data.setCell(46, 3, 13967);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'DS_008_verifyLoginWithThreeInvalidAttempts')
+data.setCell(47, 2, 'com.dentscribe.testCases_iOS.TestLoginPage')
+data.setCell(47, 3, 13965);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'verifyUserShouldLoginFromNewChangedPassword')
+data.setCell(48, 2, 'com.dentscribe.testCases_iOS.TestChangePassword')
+data.setCell(48, 3, 13957);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'verifyBackIconPatientProfilePage')
+data.setCell(49, 2, 'com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage')
+data.setCell(49, 3, 13831);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'verifyHelpOptionsSettingsPage')
+data.setCell(50, 2, 'com.dentscribe.testCases_iOS.TestSettingsPage')
+data.setCell(50, 3, 13676);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'DS_012_verifySmsVerificationWithWrongOtp')
+data.setCell(51, 2, 'com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin')
+data.setCell(51, 3, 13384);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'DS_009_verifyLoginWithValidCredentials')
+data.setCell(52, 2, 'com.dentscribe.testCases_iOS.TestLoginPage')
+data.setCell(52, 3, 13361);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'verifyBackIconSoapReportAndReviewedButtonForAppointment')
+data.setCell(53, 2, 'com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage')
+data.setCell(53, 3, 13007);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'DS_020_verifySignupPageForConfirPassowrd')
+data.setCell(54, 2, 'com.dentscribe.testCases_iOS.TestSignUpPage')
+data.setCell(54, 3, 12751);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'DS_010_verifyIsSmsVerificationPageExistsAfterLogin')
+data.setCell(55, 2, 'com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin')
+data.setCell(55, 3, 12364);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'verifySpuInstallPopupAndRefreshData')
+data.setCell(56, 2, 'com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan')
+data.setCell(56, 3, 12051);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'verifyCanUserCancelSubcription')
+data.setCell(57, 2, 'com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan')
+data.setCell(57, 3, 11746);
+data.setCell(58, 0, 58)
+data.setCell(58, 1, 'verifyCancelSubscriptionPopup')
+data.setCell(58, 2, 'com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan')
+data.setCell(58, 3, 10521);
+data.setCell(59, 0, 59)
+data.setCell(59, 1, 'DS_032_verifyLoginWithoutRegisterPractice')
+data.setCell(59, 2, 'com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice')
+data.setCell(59, 3, 10313);
+data.setCell(60, 0, 60)
+data.setCell(60, 1, 'DS_007_verifyLoginWithInvalidPassword')
+data.setCell(60, 2, 'com.dentscribe.testCases_iOS.TestLoginPage')
+data.setCell(60, 3, 10081);
+data.setCell(61, 0, 61)
+data.setCell(61, 1, 'DS_022_verifySignupWithOnlyMandatoryFields')
+data.setCell(61, 2, 'com.dentscribe.testCases_iOS.TestSignUpPage')
+data.setCell(61, 3, 9958);
+data.setCell(62, 0, 62)
+data.setCell(62, 1, 'DS_006_verifyLoginWithNonExistingUser')
+data.setCell(62, 2, 'com.dentscribe.testCases_iOS.TestLoginPage')
+data.setCell(62, 3, 9463);
+data.setCell(63, 0, 63)
+data.setCell(63, 1, 'verifyIsPatientPopupAppearingOnContinueButtonClick')
+data.setCell(63, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(63, 3, 9354);
+data.setCell(64, 0, 64)
+data.setCell(64, 1, 'verifyUserShouldNotLoginFromOldPassword')
+data.setCell(64, 2, 'com.dentscribe.testCases_iOS.TestChangePassword')
+data.setCell(64, 3, 9345);
+data.setCell(65, 0, 65)
+data.setCell(65, 1, 'DS_018_verifySignupPageForInvalidEmail')
+data.setCell(65, 2, 'com.dentscribe.testCases_iOS.TestSignUpPage')
+data.setCell(65, 3, 9287);
+data.setCell(66, 0, 66)
+data.setCell(66, 1, 'DS_019_verifySignupPageForWeakPassword')
+data.setCell(66, 2, 'com.dentscribe.testCases_iOS.TestSignUpPage')
+data.setCell(66, 3, 8074);
+data.setCell(67, 0, 67)
+data.setCell(67, 1, 'DS_038_verifyNextButtonOfPatientDatabaseTourPage')
+data.setCell(67, 2, 'com.dentscribe.testCases_iOS.TestTourPages')
+data.setCell(67, 3, 7983);
+data.setCell(68, 0, 68)
+data.setCell(68, 1, 'DS_050_verifyForgotPasswordForValidEmailId')
+data.setCell(68, 2, 'com.dentscribe.testCases_iOS.TestForgotPassowrdPage')
+data.setCell(68, 3, 7950);
+data.setCell(69, 0, 69)
+data.setCell(69, 1, 'verifyReviewedButtonAndClickToVerifySoapReport')
+data.setCell(69, 2, 'com.dentscribe.testCases_iOS.TestAllAppointmentStatuses')
+data.setCell(69, 3, 7335);
+data.setCell(70, 0, 70)
+data.setCell(70, 1, 'verifyCanUserBuyPlanAgain')
+data.setCell(70, 2, 'com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan')
+data.setCell(70, 3, 6631);
+data.setCell(71, 0, 71)
+data.setCell(71, 1, 'DS_037_verifyLeftSwipeFromLastToFirstTourPage')
+data.setCell(71, 2, 'com.dentscribe.testCases_iOS.TestTourPages')
+data.setCell(71, 3, 6191);
+data.setCell(72, 0, 72)
+data.setCell(72, 1, 'DS_036_verifyRightSwipeFromFirstToLastTourPage')
+data.setCell(72, 2, 'com.dentscribe.testCases_iOS.TestTourPages')
+data.setCell(72, 3, 6113);
+data.setCell(73, 0, 73)
+data.setCell(73, 1, 'verifyEmailNotificationsSwitch')
+data.setCell(73, 2, 'com.dentscribe.testCases_iOS.TestSettingsPage')
+data.setCell(73, 3, 5607);
+data.setCell(74, 0, 74)
+data.setCell(74, 1, 'verifyBackIconRecordingPage')
+data.setCell(74, 2, 'com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage')
+data.setCell(74, 3, 5598);
+data.setCell(75, 0, 75)
+data.setCell(75, 1, 'verifySmsNotificationsSwitch')
+data.setCell(75, 2, 'com.dentscribe.testCases_iOS.TestSettingsPage')
+data.setCell(75, 3, 5587);
+data.setCell(76, 0, 76)
+data.setCell(76, 1, 'verifyPushNotificationsSwitch')
+data.setCell(76, 2, 'com.dentscribe.testCases_iOS.TestSettingsPage')
+data.setCell(76, 3, 5573);
+data.setCell(77, 0, 77)
+data.setCell(77, 1, 'DS_023_verifySignupConfirmationPopupButtons')
+data.setCell(77, 2, 'com.dentscribe.testCases_iOS.TestSignUpPage')
+data.setCell(77, 3, 5499);
+data.setCell(78, 0, 78)
+data.setCell(78, 1, 'DS_048_verifyForgotPasswordForWrongEmailId')
+data.setCell(78, 2, 'com.dentscribe.testCases_iOS.TestForgotPassowrdPage')
+data.setCell(78, 3, 4548);
+data.setCell(79, 0, 79)
+data.setCell(79, 1, 'DS_049_verifyForgotPasswordForNotExistsEmailId')
+data.setCell(79, 2, 'com.dentscribe.testCases_iOS.TestForgotPassowrdPage')
+data.setCell(79, 3, 4509);
+data.setCell(80, 0, 80)
+data.setCell(80, 1, 'DS_034_verifyNextButtonFromFirstToLastTourPage')
+data.setCell(80, 2, 'com.dentscribe.testCases_iOS.TestTourPages')
+data.setCell(80, 3, 4481);
+data.setCell(81, 0, 81)
+data.setCell(81, 1, 'DS_035_verifyBackButtonFromLastToFirstTourPage')
+data.setCell(81, 2, 'com.dentscribe.testCases_iOS.TestTourPages')
+data.setCell(81, 3, 4391);
+data.setCell(82, 0, 82)
+data.setCell(82, 1, 'verifyFAQsInHelpPage')
+data.setCell(82, 2, 'com.dentscribe.testCases_iOS.TestSettingsPage')
+data.setCell(82, 3, 4113);
+data.setCell(83, 0, 83)
+data.setCell(83, 1, 'DS_029_verifySignupWithSupportedPMS')
+data.setCell(83, 2, 'com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice')
+data.setCell(83, 3, 3120);
+data.setCell(84, 0, 84)
+data.setCell(84, 1, 'verifyLogout')
+data.setCell(84, 2, 'com.dentscribe.testCases_iOS.TestSettingsPage')
+data.setCell(84, 3, 2237);
+data.setCell(85, 0, 85)
+data.setCell(85, 1, 'DS_030_verifyWishToContinuePopupBackButton')
+data.setCell(85, 2, 'com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice')
+data.setCell(85, 3, 2073);
+data.setCell(86, 0, 86)
+data.setCell(86, 1, 'verifyEditSoapReportAndAddSignatureDuringEditableReport')
+data.setCell(86, 2, 'com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage')
+data.setCell(86, 3, 1989);
+data.setCell(87, 0, 87)
+data.setCell(87, 1, 'DS_046_verityIsForgotPasswordPageExists')
+data.setCell(87, 2, 'com.dentscribe.testCases_iOS.TestForgotPassowrdPage')
+data.setCell(87, 3, 1546);
+data.setCell(88, 0, 88)
+data.setCell(88, 1, 'verifyAddPaymentMethodBackIcon')
+data.setCell(88, 2, 'com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan')
+data.setCell(88, 3, 1401);
+data.setCell(89, 0, 89)
+data.setCell(89, 1, 'DS_016_verifyIsSignupPageExists')
+data.setCell(89, 2, 'com.dentscribe.testCases_iOS.TestSignUpPage')
+data.setCell(89, 3, 1364);
+data.setCell(90, 0, 90)
+data.setCell(90, 1, 'DS_014_verifyWhetherSmsVerificationPageBackIconRedirectToLoginPage')
+data.setCell(90, 2, 'com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin')
+data.setCell(90, 3, 1319);
+data.setCell(91, 0, 91)
+data.setCell(91, 1, 'DS_027_verifyWhetherSmsVerificationPageBackIconRedirectToSignupPage')
+data.setCell(91, 2, 'com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup')
+data.setCell(91, 3, 1303);
+data.setCell(92, 0, 92)
+data.setCell(92, 1, 'DS_011_verifySmsVerificationWithBlankOtp')
+data.setCell(92, 2, 'com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin')
+data.setCell(92, 3, 1240);
+data.setCell(93, 0, 93)
+data.setCell(93, 1, 'DS_025_verifySmsVerificationWithBlankOtp')
+data.setCell(93, 2, 'com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup')
+data.setCell(93, 3, 1201);
+data.setCell(94, 0, 94)
+data.setCell(94, 1, 'DS_004_verifyIsLoginPageExistsAndItsFields')
+data.setCell(94, 2, 'com.dentscribe.testCases_iOS.TestLoginPage')
+data.setCell(94, 3, 1179);
+data.setCell(95, 0, 95)
+data.setCell(95, 1, 'DS_051_verifyForgotPasswordBackIcon')
+data.setCell(95, 2, 'com.dentscribe.testCases_iOS.TestForgotPassowrdPage')
+data.setCell(95, 3, 1145);
+data.setCell(96, 0, 96)
+data.setCell(96, 1, 'DS_005_verifyLoginWithoutMandatoryFields')
+data.setCell(96, 2, 'com.dentscribe.testCases_iOS.TestLoginPage')
+data.setCell(96, 3, 975);
+data.setCell(97, 0, 97)
+data.setCell(97, 1, 'verifyEditIconSoapReport')
+data.setCell(97, 2, 'com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage')
+data.setCell(97, 3, 707);
+data.setCell(98, 0, 98)
+data.setCell(98, 1, 'DS_047_verifyForgotPasswordMandatoryFields')
+data.setCell(98, 2, 'com.dentscribe.testCases_iOS.TestForgotPassowrdPage')
+data.setCell(98, 3, 641);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 2 hours</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -352,46 +1960,520 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestAllAppointmentStatuses</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">configureAppium</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">verifySignupNewUser</span>
+                <span class="method-start">13245 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCreatePracticeInfo</span>
+                <span class="method-start">82017 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySikkaWebViewRegistration</span>
+                <span class="method-start">123892 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySpuInstallPopupAndRefreshData</span>
+                <span class="method-start">318036 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyEulaAgreementAndAcceptIt</span>
+                <span class="method-start">330092 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCanUserBuyPaidPlan</span>
+                <span class="method-start">362746 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCancelSubscriptionPopup</span>
+                <span class="method-start">415047 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCanUserCancelSubcription</span>
+                <span class="method-start">425576 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCanUserUpdatePaymentMethod</span>
+                <span class="method-start">437329 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCanUserBuyPlanAgain</span>
+                <span class="method-start">514444 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">521094 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createNewUserAndGoToManageSubscriptionPage</span>
+                <span class="method-start">527865 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAddPaymentMethodMandatoryFields</span>
+                <span class="method-start">869070 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAddPaymentMethodBackIcon</span>
+                <span class="method-start">884820 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCanUserTake30DaysFreeTrialPlan</span>
+                <span class="method-start">886224 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCanUserBuyPaidPlanAfterFreeTrialPlan</span>
+                <span class="method-start">910065 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestAllAppointmentStatuses</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">947745 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
                 <span class="method-name">goToCalendarPageAndSelectAppointmentsDate</span>
-                <span class="method-start">12419 ms</span>
+                <span class="method-start">954296 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyIsPatientPopupAppearingOnStartButtonClick</span>
-                <span class="method-start">69328 ms</span>
+                <span class="method-start">1018431 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyStartRecordingButtonOnPatientDetailsPopupAndClick</span>
-                <span class="method-start">90997 ms</span>
+                <span class="method-start">1032560 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyContinueButtonAfterPauseRecording</span>
-                <span class="method-start">112902 ms</span>
+                <span class="method-start">1054534 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyIsPatientPopupAppearingOnContinueButtonClick</span>
-                <span class="method-start">127216 ms</span>
+                <span class="method-start">1073139 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyContinueRecordingButtonOnPatientDetailsPopupAndClick</span>
-                <span class="method-start">137064 ms</span>
+                <span class="method-start">1082496 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyReviewButtonAfterStopRecording</span>
-                <span class="method-start">161432 ms</span>
+                <span class="method-start">1106314 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addSignatureInSoapReportAndSubmit</span>
-                <span class="method-start">209253 ms</span>
+                <span class="method-start">1155299 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyReviewedButtonAndClickToVerifySoapReport</span>
-                <span class="method-start">231845 ms</span>
+                <span class="method-start">1174874 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">1182216 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyIsRecordingPageOpenedForExpectedPatient</span>
+                <span class="method-start">1189475 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyBackIconRecordingPage</span>
+                <span class="method-start">1295181 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyIsSoapReportCreated</span>
+                <span class="method-start">1300782 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyEditIconSoapReport</span>
+                <span class="method-start">1368320 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyEditSoapReportAndAddSignatureDuringEditableReport</span>
+                <span class="method-start">1369029 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateUserDetailsAndVerifySame</span>
+                <span class="method-start">1371020 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyBackIconSoapReportAndReviewedButtonForAppointment</span>
+                <span class="method-start">1396267 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPatientProfilePage</span>
+                <span class="method-start">1409278 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyBackIconPatientProfilePage</span>
+                <span class="method-start">1462182 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestLoginPage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">1476020 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">DS_004_verifyIsLoginPageExistsAndItsFields</span>
+                <span class="method-start">1483110 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_005_verifyLoginWithoutMandatoryFields</span>
+                <span class="method-start">1484291 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_006_verifyLoginWithNonExistingUser</span>
+                <span class="method-start">1485268 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_007_verifyLoginWithInvalidPassword</span>
+                <span class="method-start">1494737 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_008_verifyLoginWithThreeInvalidAttempts</span>
+                <span class="method-start">1504823 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_009_verifyLoginWithValidCredentials</span>
+                <span class="method-start">1518799 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">1532165 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">DS_010_verifyIsSmsVerificationPageExistsAfterLogin</span>
+                <span class="method-start">1539383 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_011_verifySmsVerificationWithBlankOtp</span>
+                <span class="method-start">1551756 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_012_verifySmsVerificationWithWrongOtp</span>
+                <span class="method-start">1552998 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_013_verifySmsVerificationResendCodeLink</span>
+                <span class="method-start">1566389 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_014_verifyWhetherSmsVerificationPageBackIconRedirectToLoginPage</span>
+                <span class="method-start">1588766 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_015_verifySmsVerificationWithValidOtp</span>
+                <span class="method-start">1590087 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestSignUpPage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">1619237 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">DS_016_verifyIsSignupPageExists</span>
+                <span class="method-start">1625979 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_017_verifySignupWithoutMandatoryFields</span>
+                <span class="method-start">1627348 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_018_verifySignupPageForInvalidEmail</span>
+                <span class="method-start">1646124 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_019_verifySignupPageForWeakPassword</span>
+                <span class="method-start">1655419 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_020_verifySignupPageForConfirPassowrd</span>
+                <span class="method-start">1663498 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_021_verifyExistingAndDuplicateEmailId</span>
+                <span class="method-start">1676253 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_022_verifySignupWithOnlyMandatoryFields</span>
+                <span class="method-start">1723857 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_023_verifySignupConfirmationPopupButtons</span>
+                <span class="method-start">1733819 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">1739319 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">DS_024_verifyIsSmsVerificationPageExistsAfterSignup</span>
+                <span class="method-start">1746416 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_025_verifySmsVerificationWithBlankOtp</span>
+                <span class="method-start">1795195 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_026_verifySmsVerificationWithWrongOtp</span>
+                <span class="method-start">1796398 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_027_verifySmsVerificationResendCodeLink</span>
+                <span class="method-start">1810369 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_027_verifyWhetherSmsVerificationPageBackIconRedirectToSignupPage</span>
+                <span class="method-start">1832963 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_028_verifySmsVerificationWithValidOtp</span>
+                <span class="method-start">1834269 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">1854532 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">DS_028_verifySignupWithNonSupportedPMS</span>
+                <span class="method-start">1861247 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_029_verifySignupWithSupportedPMS</span>
+                <span class="method-start">1909117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_030_verifyWishToContinuePopupBackButton</span>
+                <span class="method-start">1912239 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_031_verifyPracticeInfoMandatoryFields</span>
+                <span class="method-start">1914316 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_032_verifyLoginWithoutRegisterPractice</span>
+                <span class="method-start">1943330 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestTourPages</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">1953647 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">DS_033_verifyIsTourPageExists</span>
+                <span class="method-start">1960562 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_034_verifyNextButtonFromFirstToLastTourPage</span>
+                <span class="method-start">1987322 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_035_verifyBackButtonFromLastToFirstTourPage</span>
+                <span class="method-start">1991805 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_036_verifyRightSwipeFromFirstToLastTourPage</span>
+                <span class="method-start">1996200 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_037_verifyLeftSwipeFromLastToFirstTourPage</span>
+                <span class="method-start">2002314 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_038_verifyNextButtonOfPatientDatabaseTourPage</span>
+                <span class="method-start">2008507 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestPatientSearchPage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">2016493 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">DS_039_verifySkipLinkTourPages</span>
+                <span class="method-start">2023249 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_040_verifyIsPatientSearchPageExists</span>
+                <span class="method-start">2052663 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_041_verifyPatientSearchByInvalidData</span>
+                <span class="method-start">2068615 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_042_verifyPatientSearchByPatientName</span>
+                <span class="method-start">2086822 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_043_verifyPatientSearchByPatientPhoneNumber</span>
+                <span class="method-start">2113115 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_044_verifyPatientSearchByPatientDOB</span>
+                <span class="method-start">2134927 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_045_verifyPatientSearchByPatientInsurance</span>
+                <span class="method-start">2150094 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestForgotPassowrdPage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">2172178 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">DS_046_verityIsForgotPasswordPageExists</span>
+                <span class="method-start">2178989 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_047_verifyForgotPasswordMandatoryFields</span>
+                <span class="method-start">2180536 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_048_verifyForgotPasswordForWrongEmailId</span>
+                <span class="method-start">2181179 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">DS_049_verifyForgotPasswordForNotExistsEmailId</span>
+                <span class="method-start">2185733 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_050_verifyForgotPasswordForValidEmailId</span>
+                <span class="method-start">2190543 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DS_051_verifyForgotPasswordBackIcon</span>
+                <span class="method-start">2198496 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestSettingsPage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">2199645 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyIsSettingsPageExists</span>
+                <span class="method-start">2206357 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyBackIconSettingsPage</span>
+                <span class="method-start">2243292 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPushNotificationsSwitch</span>
+                <span class="method-start">2263992 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySmsNotificationsSwitch</span>
+                <span class="method-start">2269567 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyEmailNotificationsSwitch</span>
+                <span class="method-start">2275155 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAccountInfoUpdate</span>
+                <span class="method-start">2280769 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPracticeUpdate</span>
+                <span class="method-start">2299361 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyHelpOptionsSettingsPage</span>
+                <span class="method-start">2322028 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyFAQsInHelpPage</span>
+                <span class="method-start">2335707 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyLogout</span>
+                <span class="method-start">2339822 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestChangePassword</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">2342060 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyChangePasswordFromSettingsPage</span>
+                <span class="method-start">2350024 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyUserShouldNotLoginFromOldPassword</span>
+                <span class="method-start">2403397 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyUserShouldLoginFromNewChangedPassword</span>
+                <span class="method-start">2412747 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestRecordingfor10mintsAndGenerateSoapReport</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">2426709 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyWhetherSoapReportCreatedFor10mintsRecording</span>
+                <span class="method-start">2433724 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestRecordingfor30mintsAndGenerateSoapReport</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">3212191 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyWhetherSoapReportCreatedFor30mintsRecording</span>
+                <span class="method-start">3219125 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.dentscribe.testCases_iOS.TestRecordingfor50mintsAndGenerateSoapReport</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">5189974 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyWhetherSoapReportCreatedFor50mintsRecording</span>
+                <span class="method-start">5198730 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

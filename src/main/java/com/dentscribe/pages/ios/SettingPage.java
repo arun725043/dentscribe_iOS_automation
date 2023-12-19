@@ -102,6 +102,7 @@ public class SettingPage extends iOSActions {
 	
 	// to click on help option on general settings 
 	public void performClickOnHelpOtion() {
+		scrollUpTillElementVisible(driver, helpOptionUnderGeneralSettings);
 		click(driver, helpOptionUnderGeneralSettings, "Help Option User General Settings");
 	}
 	

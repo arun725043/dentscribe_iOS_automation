@@ -32,7 +32,7 @@ public class TestRecordingfor50mintsAndGenerateSoapReport extends iOSBase
 		// __________________________________Select date______________________________________________________________
 		waitUntilLoaderDisappear(driver);
 		System.out.println("Loading Done");
-		int[] date = calendarPage.getDateMonthYear(readData("testData", "calendarTestDate"));
+		int[] date = calendarPage.getDateMonthYear(readData("testData", "longAppointmentsDate"));
 		Month month = Month.of(date[1]);    
 		month.toString();
  		click(driver, calendarPage.dropdownIconCalendar, "Calendar Dropdown");

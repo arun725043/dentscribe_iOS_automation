@@ -6,16 +6,10 @@
 	</listeners>
 	<test thread-count="1" name="Test">
 		<classes>
-			
-			<class name="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" />
-			
-			<!-- 
-			<class name="com.dentscribe.testCases_iOS.TestRecordingfor30mintsAndGenerateSoapReport" />
-			<class name="com.dentscribe.testCases_iOS.TestRecordingfor50mintsAndGenerateSoapReport" />
-			-->
+		
 			
 			<!-- DONE TES CASES-->
-			<!-- 
+			
 			<class name="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan" />
 			<class name="com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan" />
 			<class name="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses" />
@@ -31,7 +25,9 @@
 			<class name="com.dentscribe.testCases_iOS.TestSettingsPage" />
 			<class name="com.dentscribe.testCases_iOS.TestChangePassword" />
 			<class name="com.dentscribe.testCases_iOS.TestRecordingfor10mintsAndGenerateSoapReport" />
-			-->
+			<class name="com.dentscribe.testCases_iOS.TestRecordingfor30mintsAndGenerateSoapReport" /> 
+			<class name="com.dentscribe.testCases_iOS.TestRecordingfor50mintsAndGenerateSoapReport" />
+		
 
 		</classes>
 	</test>

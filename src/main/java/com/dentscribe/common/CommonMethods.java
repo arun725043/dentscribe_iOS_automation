@@ -118,12 +118,12 @@ public class CommonMethods {
 //		return new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
 	}
 	
-	// return text of ios elements
+	// return text of iOS elements
 	public String getText_ios(By locator) {
 		return iOSBase.wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
 	}
 	
-	// creating this override methods: Ios and Android sendKeys gernericMethod
+	// creating this override methods: iOS and Android sendKeys gernericMethod
 	public static void sendKeys(AppiumDriver driver, By element, String value, String inputField) {
 		
 		WebElement inputEle = driver.findElement(element);

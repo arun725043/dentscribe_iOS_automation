@@ -3,8 +3,6 @@ package com.dentscribe.testCases_iOS;
 import static org.testng.Assert.assertFalse;
 
 import java.io.IOException;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
 import org.testng.annotations.Test;
 import com.dentscribe.ExtentReport.ExtentManager;
 import com.dentscribe.base.iOSBase;
@@ -23,7 +21,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 		// ____________________Application launched____________________
 		loginPage.verifyIsApplicationLaunched();
 		
-		// ____________________click on Sign Up page and verify it____________________
+		// ____________________click on Sign Up tab and verify it____________________
 		click(driver, signUpPage.signupButton, "Sign Up");
 		signUpPage.validateSignUpPage();
 		
@@ -66,8 +64,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 	}
 	
 	@Test(priority = 4, dependsOnMethods = { "verifySikkaWebViewRegistration" })
-	public void verifySpuInstallPopupAndRefreshData()
-			throws IOException, InterruptedException, UnsupportedAudioFileException, LineUnavailableException {		
+	public void verifySpuInstallPopupAndRefreshData() throws IOException, InterruptedException {		
 		// ________________login application and verify SPU install popup____________
 		loginPage.loginApplication(emailId, CommonVariables.actualPass, "spu popup");
 		
@@ -77,8 +74,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 	}
 
 	@Test(priority = 5, dependsOnMethods = { "verifySpuInstallPopupAndRefreshData" })
-	public void verifyEulaAgreementAndAcceptIt()
-			throws IOException, InterruptedException, UnsupportedAudioFileException, LineUnavailableException {
+	public void verifyEulaAgreementPageAndAcceptAgreement() throws IOException, InterruptedException {
 		// __________________________________Login into Application__________________________________________________
 		loginPage.loginApplication(emailId, CommonVariables.actualPass, "sms page");
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());
@@ -90,8 +86,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 	}
 
 	@Test(priority = 6, dependsOnMethods = { "verifyEulaAgreementAndAcceptIt" })
-	public void verifyCanUserBuyPaidPlan()
-			throws IOException, InterruptedException, UnsupportedAudioFileException, LineUnavailableException {
+	public void verifyCanUserBuyPaidPlan() throws InterruptedException {
 
 		// To verify 'Manage Your Subscription' screen appear
 		manageSubscriptionPage.validateManageSubscriptionPage();
@@ -161,6 +156,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 		loginPage.loginApplication(emailId, CommonVariables.actualPass, "sms page");
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());
 		click(driver, loginPage.continueButtonSMSVerification, "Continue Button on SMS Verification page");
+		tourPages.validateTourPageCalendarScheduleView();
 		
 		// To skip the tour page and go to calendar view page
 		tourPages.skipTourPages();
@@ -193,7 +189,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 	}
 	
 	@Test(priority = 10, dependsOnMethods = { "verifyCanUserUpdatePaymentMethod" })
-	public void verifyCanUserBuyPlanAgain() throws IOException, InterruptedException 
+	public void verifyCanUserBuyPaidPlanAgainAfterCancelOnce() throws IOException, InterruptedException 
 	{		
 		//select the subscription plan
 		manageSubscriptionPage.selectPlan("paid");

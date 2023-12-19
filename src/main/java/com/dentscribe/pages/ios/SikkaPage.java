@@ -39,7 +39,7 @@ public class SikkaPage extends iOSActions{
 	public By signatureRequired = By.xpath("//XCUIElementTypeStaticText[@name='Signature Required']");
 	public By mouseIcon = By.xpath("//XCUIElementTypeStaticText[@name='Please use your mouse to Sign']");
 	
-	// ________verify whether sikka webview opened or not_________
+	// ________verify whether Sikka WebView opened or not_________
 	public void validateSikkaWebViewPage()
 	{
 		if (IsElementPresent(driver, registerButton) || IsElementPresent(driver, proceedButton))

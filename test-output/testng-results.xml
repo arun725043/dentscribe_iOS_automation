@@ -1,53 +1,549 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="99" passed="98" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-14T18:42:06 IST" name="Suite" finished-at="2023-12-14T18:46:06 IST" duration-ms="239375">
+  <suite started-at="2023-12-19T11:11:56 IST" name="Suite" finished-at="2023-12-19T13:31:30 IST" duration-ms="8374183">
     <groups>
     </groups>
-    <test started-at="2023-12-14T18:42:06 IST" name="Test" finished-at="2023-12-14T18:46:06 IST" duration-ms="239375">
-      <class name="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses">
-        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-14T18:42:06 IST" name="configureAppium" finished-at="2023-12-14T18:42:19 IST" duration-ms="12414" status="PASS">
+    <test started-at="2023-12-19T11:11:56 IST" name="Test" finished-at="2023-12-19T13:31:30 IST" duration-ms="8374183">
+      <class name="com.dentscribe.testCases_iOS.TestForgotPassowrdPage">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestForgotPassowrdPage@78bad03b]" started-at="2023-12-19T11:48:08 IST" name="configureAppium" finished-at="2023-12-19T11:48:15 IST" duration-ms="6810" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configureAppium -->
-        <test-method signature="goToCalendarPageAndSelectAppointmentsDate()[pri:1, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-14T18:42:19 IST" name="goToCalendarPageAndSelectAppointmentsDate" finished-at="2023-12-14T18:43:16 IST" duration-ms="56896" status="PASS">
+        <test-method signature="DS_046_verityIsForgotPasswordPageExists()[pri:1, instance:com.dentscribe.testCases_iOS.TestForgotPassowrdPage@78bad03b]" started-at="2023-12-19T11:48:15 IST" name="DS_046_verityIsForgotPasswordPageExists" finished-at="2023-12-19T11:48:17 IST" duration-ms="1546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_046_verityIsForgotPasswordPageExists -->
+        <test-method signature="DS_047_verifyForgotPasswordMandatoryFields()[pri:2, instance:com.dentscribe.testCases_iOS.TestForgotPassowrdPage@78bad03b]" started-at="2023-12-19T11:48:17 IST" name="DS_047_verifyForgotPasswordMandatoryFields" finished-at="2023-12-19T11:48:17 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestForgotPassowrdPage.DS_046_verityIsForgotPasswordPageExists" duration-ms="641" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_047_verifyForgotPasswordMandatoryFields -->
+        <test-method signature="DS_048_verifyForgotPasswordForWrongEmailId()[pri:3, instance:com.dentscribe.testCases_iOS.TestForgotPassowrdPage@78bad03b]" started-at="2023-12-19T11:48:17 IST" name="DS_048_verifyForgotPasswordForWrongEmailId" finished-at="2023-12-19T11:48:22 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestForgotPassowrdPage.DS_046_verityIsForgotPasswordPageExists" duration-ms="4548" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_048_verifyForgotPasswordForWrongEmailId -->
+        <test-method signature="DS_049_verifyForgotPasswordForNotExistsEmailId()[pri:4, instance:com.dentscribe.testCases_iOS.TestForgotPassowrdPage@78bad03b]" started-at="2023-12-19T11:48:22 IST" name="DS_049_verifyForgotPasswordForNotExistsEmailId" finished-at="2023-12-19T11:48:26 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestForgotPassowrdPage.DS_046_verityIsForgotPasswordPageExists" duration-ms="4509" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.fail(Assert.java:106)
+at com.dentscribe.common.CommonMethods.verifyText(CommonMethods.java:304)
+at com.dentscribe.pages.ios.ForgotPasswordPage.verifyInvalidUserName(ForgotPasswordPage.java:72)
+at com.dentscribe.testCases_iOS.TestForgotPassowrdPage.DS_049_verifyForgotPasswordForNotExistsEmailId(TestForgotPassowrdPage.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_049_verifyForgotPasswordForNotExistsEmailId -->
+        <test-method signature="DS_050_verifyForgotPasswordForValidEmailId()[pri:5, instance:com.dentscribe.testCases_iOS.TestForgotPassowrdPage@78bad03b]" started-at="2023-12-19T11:48:27 IST" name="DS_050_verifyForgotPasswordForValidEmailId" finished-at="2023-12-19T11:48:35 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestForgotPassowrdPage.DS_046_verityIsForgotPasswordPageExists" duration-ms="7950" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_050_verifyForgotPasswordForValidEmailId -->
+        <test-method signature="DS_051_verifyForgotPasswordBackIcon()[pri:6, instance:com.dentscribe.testCases_iOS.TestForgotPassowrdPage@78bad03b]" started-at="2023-12-19T11:48:35 IST" name="DS_051_verifyForgotPasswordBackIcon" finished-at="2023-12-19T11:48:36 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestForgotPassowrdPage.DS_046_verityIsForgotPasswordPageExists" duration-ms="1145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_051_verifyForgotPasswordBackIcon -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestForgotPassowrdPage -->
+      <class name="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage@277bc3a5]" started-at="2023-12-19T11:31:38 IST" name="configureAppium" finished-at="2023-12-19T11:31:45 IST" duration-ms="7255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="verifyIsRecordingPageOpenedForExpectedPatient()[pri:1, instance:com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage@277bc3a5]" started-at="2023-12-19T11:31:45 IST" name="verifyIsRecordingPageOpenedForExpectedPatient" finished-at="2023-12-19T11:33:31 IST" duration-ms="105701" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIsRecordingPageOpenedForExpectedPatient -->
+        <test-method signature="verifyBackIconRecordingPage()[pri:2, instance:com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage@277bc3a5]" started-at="2023-12-19T11:33:31 IST" name="verifyBackIconRecordingPage" finished-at="2023-12-19T11:33:37 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage.verifyIsRecordingPageOpenedForExpectedPatient" duration-ms="5598" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBackIconRecordingPage -->
+        <test-method signature="verifyIsSoapReportCreated()[pri:3, instance:com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage@277bc3a5]" started-at="2023-12-19T11:33:37 IST" name="verifyIsSoapReportCreated" finished-at="2023-12-19T11:34:44 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage.verifyBackIconRecordingPage" duration-ms="67531" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIsSoapReportCreated -->
+        <test-method signature="verifyEditIconSoapReport()[pri:4, instance:com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage@277bc3a5]" started-at="2023-12-19T11:34:44 IST" name="verifyEditIconSoapReport" finished-at="2023-12-19T11:34:45 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage.verifyIsSoapReportCreated" duration-ms="707" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEditIconSoapReport -->
+        <test-method signature="verifyEditSoapReportAndAddSignatureDuringEditableReport()[pri:5, instance:com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage@277bc3a5]" started-at="2023-12-19T11:34:45 IST" name="verifyEditSoapReportAndAddSignatureDuringEditableReport" finished-at="2023-12-19T11:34:47 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage.verifyEditIconSoapReport" duration-ms="1989" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEditSoapReportAndAddSignatureDuringEditableReport -->
+        <test-method signature="updateUserDetailsAndVerifySame()[pri:6, instance:com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage@277bc3a5]" started-at="2023-12-19T11:34:47 IST" name="updateUserDetailsAndVerifySame" finished-at="2023-12-19T11:35:12 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage.verifyEditSoapReportAndAddSignatureDuringEditableReport" duration-ms="25242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserDetailsAndVerifySame -->
+        <test-method signature="verifyBackIconSoapReportAndReviewedButtonForAppointment()[pri:7, instance:com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage@277bc3a5]" started-at="2023-12-19T11:35:12 IST" name="verifyBackIconSoapReportAndReviewedButtonForAppointment" finished-at="2023-12-19T11:35:25 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage.updateUserDetailsAndVerifySame" duration-ms="13007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBackIconSoapReportAndReviewedButtonForAppointment -->
+        <test-method signature="verifyPatientProfilePage()[pri:8, instance:com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage@277bc3a5]" started-at="2023-12-19T11:35:25 IST" name="verifyPatientProfilePage" finished-at="2023-12-19T11:36:18 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage.verifyBackIconSoapReportAndReviewedButtonForAppointment" duration-ms="52891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPatientProfilePage -->
+        <test-method signature="verifyBackIconPatientProfilePage()[pri:9, instance:com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage@277bc3a5]" started-at="2023-12-19T11:36:18 IST" name="verifyBackIconPatientProfilePage" finished-at="2023-12-19T11:36:32 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage.verifyPatientProfilePage" duration-ms="13831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBackIconPatientProfilePage -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage -->
+      <class name="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin@252c6cdb]" started-at="2023-12-19T11:37:28 IST" name="configureAppium" finished-at="2023-12-19T11:37:35 IST" duration-ms="7217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="DS_010_verifyIsSmsVerificationPageExistsAfterLogin()[pri:1, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin@252c6cdb]" started-at="2023-12-19T11:37:35 IST" name="DS_010_verifyIsSmsVerificationPageExistsAfterLogin" finished-at="2023-12-19T11:37:48 IST" duration-ms="12364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_010_verifyIsSmsVerificationPageExistsAfterLogin -->
+        <test-method signature="DS_011_verifySmsVerificationWithBlankOtp()[pri:2, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin@252c6cdb]" started-at="2023-12-19T11:37:48 IST" name="DS_011_verifySmsVerificationWithBlankOtp" finished-at="2023-12-19T11:37:49 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin.DS_010_verifyIsSmsVerificationPageExistsAfterLogin" duration-ms="1240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_011_verifySmsVerificationWithBlankOtp -->
+        <test-method signature="DS_012_verifySmsVerificationWithWrongOtp()[pri:3, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin@252c6cdb]" started-at="2023-12-19T11:37:49 IST" name="DS_012_verifySmsVerificationWithWrongOtp" finished-at="2023-12-19T11:38:02 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin.DS_011_verifySmsVerificationWithBlankOtp" duration-ms="13384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_012_verifySmsVerificationWithWrongOtp -->
+        <test-method signature="DS_013_verifySmsVerificationResendCodeLink()[pri:4, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin@252c6cdb]" started-at="2023-12-19T11:38:02 IST" name="DS_013_verifySmsVerificationResendCodeLink" finished-at="2023-12-19T11:38:25 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin.DS_012_verifySmsVerificationWithWrongOtp" duration-ms="22370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_013_verifySmsVerificationResendCodeLink -->
+        <test-method signature="DS_014_verifyWhetherSmsVerificationPageBackIconRedirectToLoginPage()[pri:5, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin@252c6cdb]" started-at="2023-12-19T11:38:25 IST" name="DS_014_verifyWhetherSmsVerificationPageBackIconRedirectToLoginPage" finished-at="2023-12-19T11:38:26 IST" duration-ms="1319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_014_verifyWhetherSmsVerificationPageBackIconRedirectToLoginPage -->
+        <test-method signature="DS_015_verifySmsVerificationWithValidOtp()[pri:6, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin@252c6cdb]" started-at="2023-12-19T11:38:26 IST" name="DS_015_verifySmsVerificationWithValidOtp" finished-at="2023-12-19T11:38:55 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin.DS_014_verifyWhetherSmsVerificationPageBackIconRedirectToLoginPage" duration-ms="29146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_015_verifySmsVerificationWithValidOtp -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterLogin -->
+      <class name="com.dentscribe.testCases_iOS.TestSignUpPage">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestSignUpPage@61c87f1b]" started-at="2023-12-19T11:38:55 IST" name="configureAppium" finished-at="2023-12-19T11:39:02 IST" duration-ms="6741" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="DS_016_verifyIsSignupPageExists()[pri:1, instance:com.dentscribe.testCases_iOS.TestSignUpPage@61c87f1b]" started-at="2023-12-19T11:39:02 IST" name="DS_016_verifyIsSignupPageExists" finished-at="2023-12-19T11:39:03 IST" duration-ms="1364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_016_verifyIsSignupPageExists -->
+        <test-method signature="DS_017_verifySignupWithoutMandatoryFields()[pri:2, instance:com.dentscribe.testCases_iOS.TestSignUpPage@61c87f1b]" started-at="2023-12-19T11:39:03 IST" name="DS_017_verifySignupWithoutMandatoryFields" finished-at="2023-12-19T11:39:22 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSignUpPage.DS_016_verifyIsSignupPageExists" duration-ms="18773" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_017_verifySignupWithoutMandatoryFields -->
+        <test-method signature="DS_018_verifySignupPageForInvalidEmail()[pri:3, instance:com.dentscribe.testCases_iOS.TestSignUpPage@61c87f1b]" started-at="2023-12-19T11:39:22 IST" name="DS_018_verifySignupPageForInvalidEmail" finished-at="2023-12-19T11:39:31 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSignUpPage.DS_016_verifyIsSignupPageExists" duration-ms="9287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_018_verifySignupPageForInvalidEmail -->
+        <test-method signature="DS_019_verifySignupPageForWeakPassword()[pri:4, instance:com.dentscribe.testCases_iOS.TestSignUpPage@61c87f1b]" started-at="2023-12-19T11:39:31 IST" name="DS_019_verifySignupPageForWeakPassword" finished-at="2023-12-19T11:39:40 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSignUpPage.DS_016_verifyIsSignupPageExists" duration-ms="8074" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_019_verifySignupPageForWeakPassword -->
+        <test-method signature="DS_020_verifySignupPageForConfirPassowrd()[pri:5, instance:com.dentscribe.testCases_iOS.TestSignUpPage@61c87f1b]" started-at="2023-12-19T11:39:40 IST" name="DS_020_verifySignupPageForConfirPassowrd" finished-at="2023-12-19T11:39:52 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSignUpPage.DS_016_verifyIsSignupPageExists" duration-ms="12751" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_020_verifySignupPageForConfirPassowrd -->
+        <test-method signature="DS_021_verifyExistingAndDuplicateEmailId()[pri:6, instance:com.dentscribe.testCases_iOS.TestSignUpPage@61c87f1b]" started-at="2023-12-19T11:39:52 IST" name="DS_021_verifyExistingAndDuplicateEmailId" finished-at="2023-12-19T11:40:40 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSignUpPage.DS_016_verifyIsSignupPageExists" duration-ms="47594" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_021_verifyExistingAndDuplicateEmailId -->
+        <test-method signature="DS_022_verifySignupWithOnlyMandatoryFields()[pri:7, instance:com.dentscribe.testCases_iOS.TestSignUpPage@61c87f1b]" started-at="2023-12-19T11:40:40 IST" name="DS_022_verifySignupWithOnlyMandatoryFields" finished-at="2023-12-19T11:40:50 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSignUpPage.DS_016_verifyIsSignupPageExists" duration-ms="9958" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_022_verifySignupWithOnlyMandatoryFields -->
+        <test-method signature="DS_023_verifySignupConfirmationPopupButtons()[pri:8, instance:com.dentscribe.testCases_iOS.TestSignUpPage@61c87f1b]" started-at="2023-12-19T11:40:50 IST" name="DS_023_verifySignupConfirmationPopupButtons" finished-at="2023-12-19T11:40:55 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSignUpPage.DS_016_verifyIsSignupPageExists" duration-ms="5499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_023_verifySignupConfirmationPopupButtons -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestSignUpPage -->
+      <class name="com.dentscribe.testCases_iOS.TestPatientSearchPage">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestPatientSearchPage@70a24f9]" started-at="2023-12-19T11:45:33 IST" name="configureAppium" finished-at="2023-12-19T11:45:39 IST" duration-ms="6755" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="DS_039_verifySkipLinkTourPages()[pri:1, instance:com.dentscribe.testCases_iOS.TestPatientSearchPage@70a24f9]" started-at="2023-12-19T11:45:39 IST" name="DS_039_verifySkipLinkTourPages" finished-at="2023-12-19T11:46:09 IST" duration-ms="29405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_039_verifySkipLinkTourPages -->
+        <test-method signature="DS_040_verifyIsPatientSearchPageExists()[pri:2, instance:com.dentscribe.testCases_iOS.TestPatientSearchPage@70a24f9]" started-at="2023-12-19T11:46:09 IST" name="DS_040_verifyIsPatientSearchPageExists" finished-at="2023-12-19T11:46:25 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestPatientSearchPage.DS_039_verifySkipLinkTourPages" duration-ms="15943" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_040_verifyIsPatientSearchPageExists -->
+        <test-method signature="DS_041_verifyPatientSearchByInvalidData()[pri:3, instance:com.dentscribe.testCases_iOS.TestPatientSearchPage@70a24f9]" started-at="2023-12-19T11:46:25 IST" name="DS_041_verifyPatientSearchByInvalidData" finished-at="2023-12-19T11:46:43 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestPatientSearchPage.DS_040_verifyIsPatientSearchPageExists" duration-ms="18202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_041_verifyPatientSearchByInvalidData -->
+        <test-method signature="DS_042_verifyPatientSearchByPatientName()[pri:4, instance:com.dentscribe.testCases_iOS.TestPatientSearchPage@70a24f9]" started-at="2023-12-19T11:46:43 IST" name="DS_042_verifyPatientSearchByPatientName" finished-at="2023-12-19T11:47:09 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestPatientSearchPage.DS_040_verifyIsPatientSearchPageExists" duration-ms="26286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_042_verifyPatientSearchByPatientName -->
+        <test-method signature="DS_043_verifyPatientSearchByPatientPhoneNumber()[pri:5, instance:com.dentscribe.testCases_iOS.TestPatientSearchPage@70a24f9]" started-at="2023-12-19T11:47:09 IST" name="DS_043_verifyPatientSearchByPatientPhoneNumber" finished-at="2023-12-19T11:47:31 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestPatientSearchPage.DS_040_verifyIsPatientSearchPageExists" duration-ms="21807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_043_verifyPatientSearchByPatientPhoneNumber -->
+        <test-method signature="DS_044_verifyPatientSearchByPatientDOB()[pri:6, instance:com.dentscribe.testCases_iOS.TestPatientSearchPage@70a24f9]" started-at="2023-12-19T11:47:31 IST" name="DS_044_verifyPatientSearchByPatientDOB" finished-at="2023-12-19T11:47:46 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestPatientSearchPage.DS_040_verifyIsPatientSearchPageExists" duration-ms="15160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_044_verifyPatientSearchByPatientDOB -->
+        <test-method signature="DS_045_verifyPatientSearchByPatientInsurance()[pri:7, instance:com.dentscribe.testCases_iOS.TestPatientSearchPage@70a24f9]" started-at="2023-12-19T11:47:46 IST" name="DS_045_verifyPatientSearchByPatientInsurance" finished-at="2023-12-19T11:48:08 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestPatientSearchPage.DS_040_verifyIsPatientSearchPageExists" duration-ms="22077" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_045_verifyPatientSearchByPatientInsurance -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestPatientSearchPage -->
+      <class name="com.dentscribe.testCases_iOS.TestRecordingfor50mintsAndGenerateSoapReport">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestRecordingfor50mintsAndGenerateSoapReport@100eeedc]" started-at="2023-12-19T12:38:26 IST" name="configureAppium" finished-at="2023-12-19T12:38:35 IST" duration-ms="8755" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="verifyWhetherSoapReportCreatedFor50mintsRecording()[pri:0, instance:com.dentscribe.testCases_iOS.TestRecordingfor50mintsAndGenerateSoapReport@100eeedc]" started-at="2023-12-19T12:38:35 IST" name="verifyWhetherSoapReportCreatedFor50mintsRecording" finished-at="2023-12-19T13:31:30 IST" duration-ms="3175436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherSoapReportCreatedFor50mintsRecording -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestRecordingfor50mintsAndGenerateSoapReport -->
+      <class name="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan@749d7c01]" started-at="2023-12-19T11:11:56 IST" name="configureAppium" finished-at="2023-12-19T11:12:09 IST" duration-ms="13239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="verifySignupNewUser()[pri:1, instance:com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan@749d7c01]" started-at="2023-12-19T11:12:09 IST" name="verifySignupNewUser" finished-at="2023-12-19T11:13:18 IST" duration-ms="68763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignupNewUser -->
+        <test-method signature="verifyCreatePracticeInfo()[pri:2, instance:com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan@749d7c01]" started-at="2023-12-19T11:13:18 IST" name="verifyCreatePracticeInfo" finished-at="2023-12-19T11:14:00 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan.verifySignupNewUser" duration-ms="41868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreatePracticeInfo -->
+        <test-method signature="verifySikkaWebViewRegistration()[pri:3, instance:com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan@749d7c01]" started-at="2023-12-19T11:14:00 IST" name="verifySikkaWebViewRegistration" finished-at="2023-12-19T11:17:14 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan.verifyCreatePracticeInfo" duration-ms="194137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySikkaWebViewRegistration -->
+        <test-method signature="verifySpuInstallPopupAndRefreshData()[pri:4, instance:com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan@749d7c01]" started-at="2023-12-19T11:17:14 IST" name="verifySpuInstallPopupAndRefreshData" finished-at="2023-12-19T11:17:26 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan.verifySikkaWebViewRegistration" duration-ms="12051" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySpuInstallPopupAndRefreshData -->
+        <test-method signature="verifyEulaAgreementAndAcceptIt()[pri:5, instance:com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan@749d7c01]" started-at="2023-12-19T11:17:26 IST" name="verifyEulaAgreementAndAcceptIt" finished-at="2023-12-19T11:17:59 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan.verifySpuInstallPopupAndRefreshData" duration-ms="32648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEulaAgreementAndAcceptIt -->
+        <test-method signature="verifyCanUserBuyPaidPlan()[pri:6, instance:com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan@749d7c01]" started-at="2023-12-19T11:17:59 IST" name="verifyCanUserBuyPaidPlan" finished-at="2023-12-19T11:18:51 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan.verifyEulaAgreementAndAcceptIt" duration-ms="52294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCanUserBuyPaidPlan -->
+        <test-method signature="verifyCancelSubscriptionPopup()[pri:7, instance:com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan@749d7c01]" started-at="2023-12-19T11:18:51 IST" name="verifyCancelSubscriptionPopup" finished-at="2023-12-19T11:19:02 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan.verifyCanUserBuyPaidPlan" duration-ms="10521" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCancelSubscriptionPopup -->
+        <test-method signature="verifyCanUserCancelSubcription()[pri:8, instance:com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan@749d7c01]" started-at="2023-12-19T11:19:02 IST" name="verifyCanUserCancelSubcription" finished-at="2023-12-19T11:19:13 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan.verifyCancelSubscriptionPopup" duration-ms="11746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCanUserCancelSubcription -->
+        <test-method signature="verifyCanUserUpdatePaymentMethod()[pri:9, instance:com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan@749d7c01]" started-at="2023-12-19T11:19:13 IST" name="verifyCanUserUpdatePaymentMethod" finished-at="2023-12-19T11:20:30 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan.verifyCanUserCancelSubcription" duration-ms="77107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCanUserUpdatePaymentMethod -->
+        <test-method signature="verifyCanUserBuyPlanAgain()[pri:10, instance:com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan@749d7c01]" started-at="2023-12-19T11:20:30 IST" name="verifyCanUserBuyPlanAgain" finished-at="2023-12-19T11:20:37 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan.verifyCanUserUpdatePaymentMethod" duration-ms="6631" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCanUserBuyPlanAgain -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan -->
+      <class name="com.dentscribe.testCases_iOS.TestSettingsPage">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestSettingsPage@26101efc]" started-at="2023-12-19T11:48:36 IST" name="configureAppium" finished-at="2023-12-19T11:48:42 IST" duration-ms="6711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="verifyIsSettingsPageExists()[pri:1, instance:com.dentscribe.testCases_iOS.TestSettingsPage@26101efc]" started-at="2023-12-19T11:48:42 IST" name="verifyIsSettingsPageExists" finished-at="2023-12-19T11:49:19 IST" duration-ms="36925" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIsSettingsPageExists -->
+        <test-method signature="verifyBackIconSettingsPage()[pri:2, instance:com.dentscribe.testCases_iOS.TestSettingsPage@26101efc]" started-at="2023-12-19T11:49:19 IST" name="verifyBackIconSettingsPage" finished-at="2023-12-19T11:49:40 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSettingsPage.verifyIsSettingsPageExists" duration-ms="20692" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBackIconSettingsPage -->
+        <test-method signature="verifyPushNotificationsSwitch()[pri:3, instance:com.dentscribe.testCases_iOS.TestSettingsPage@26101efc]" started-at="2023-12-19T11:49:40 IST" name="verifyPushNotificationsSwitch" finished-at="2023-12-19T11:49:46 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSettingsPage.verifyBackIconSettingsPage" duration-ms="5573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPushNotificationsSwitch -->
+        <test-method signature="verifySmsNotificationsSwitch()[pri:4, instance:com.dentscribe.testCases_iOS.TestSettingsPage@26101efc]" started-at="2023-12-19T11:49:46 IST" name="verifySmsNotificationsSwitch" finished-at="2023-12-19T11:49:51 IST" duration-ms="5587" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySmsNotificationsSwitch -->
+        <test-method signature="verifyEmailNotificationsSwitch()[pri:5, instance:com.dentscribe.testCases_iOS.TestSettingsPage@26101efc]" started-at="2023-12-19T11:49:51 IST" name="verifyEmailNotificationsSwitch" finished-at="2023-12-19T11:49:57 IST" duration-ms="5607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmailNotificationsSwitch -->
+        <test-method signature="verifyAccountInfoUpdate()[pri:6, instance:com.dentscribe.testCases_iOS.TestSettingsPage@26101efc]" started-at="2023-12-19T11:49:57 IST" name="verifyAccountInfoUpdate" finished-at="2023-12-19T11:50:15 IST" duration-ms="18586" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAccountInfoUpdate -->
+        <test-method signature="verifyPracticeUpdate()[pri:7, instance:com.dentscribe.testCases_iOS.TestSettingsPage@26101efc]" started-at="2023-12-19T11:50:15 IST" name="verifyPracticeUpdate" finished-at="2023-12-19T11:50:38 IST" duration-ms="22663" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPracticeUpdate -->
+        <test-method signature="verifyHelpOptionsSettingsPage()[pri:8, instance:com.dentscribe.testCases_iOS.TestSettingsPage@26101efc]" started-at="2023-12-19T11:50:38 IST" name="verifyHelpOptionsSettingsPage" finished-at="2023-12-19T11:50:52 IST" duration-ms="13676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHelpOptionsSettingsPage -->
+        <test-method signature="verifyFAQsInHelpPage()[pri:9, instance:com.dentscribe.testCases_iOS.TestSettingsPage@26101efc]" started-at="2023-12-19T11:50:52 IST" name="verifyFAQsInHelpPage" finished-at="2023-12-19T11:50:56 IST" duration-ms="4113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFAQsInHelpPage -->
+        <test-method signature="verifyLogout()[pri:10, instance:com.dentscribe.testCases_iOS.TestSettingsPage@26101efc]" started-at="2023-12-19T11:50:56 IST" name="verifyLogout" finished-at="2023-12-19T11:50:58 IST" duration-ms="2237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogout -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestSettingsPage -->
+      <class name="com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan@750e2d33]" started-at="2023-12-19T11:20:37 IST" name="configureAppium" finished-at="2023-12-19T11:20:44 IST" duration-ms="6771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="createNewUserAndGoToManageSubscriptionPage()[pri:1, instance:com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan@750e2d33]" started-at="2023-12-19T11:20:44 IST" name="createNewUserAndGoToManageSubscriptionPage" finished-at="2023-12-19T11:26:25 IST" duration-ms="341197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewUserAndGoToManageSubscriptionPage -->
+        <test-method signature="verifyAddPaymentMethodMandatoryFields()[pri:2, instance:com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan@750e2d33]" started-at="2023-12-19T11:26:25 IST" name="verifyAddPaymentMethodMandatoryFields" finished-at="2023-12-19T11:26:41 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan.createNewUserAndGoToManageSubscriptionPage" duration-ms="15743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddPaymentMethodMandatoryFields -->
+        <test-method signature="verifyAddPaymentMethodBackIcon()[pri:3, instance:com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan@750e2d33]" started-at="2023-12-19T11:26:41 IST" name="verifyAddPaymentMethodBackIcon" finished-at="2023-12-19T11:26:42 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan.verifyAddPaymentMethodMandatoryFields" duration-ms="1401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddPaymentMethodBackIcon -->
+        <test-method signature="verifyCanUserTake30DaysFreeTrialPlan()[pri:4, instance:com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan@750e2d33]" started-at="2023-12-19T11:26:42 IST" name="verifyCanUserTake30DaysFreeTrialPlan" finished-at="2023-12-19T11:27:06 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan.createNewUserAndGoToManageSubscriptionPage" duration-ms="23837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCanUserTake30DaysFreeTrialPlan -->
+        <test-method signature="verifyCanUserBuyPaidPlanAfterFreeTrialPlan()[pri:5, instance:com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan@750e2d33]" started-at="2023-12-19T11:27:06 IST" name="verifyCanUserBuyPaidPlanAfterFreeTrialPlan" finished-at="2023-12-19T11:27:44 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan.verifyCanUserTake30DaysFreeTrialPlan" duration-ms="37675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCanUserBuyPaidPlanAfterFreeTrialPlan -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestCreateUserTakeFreePlanAndBuyPaidPlan -->
+      <class name="com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice@29b8df5]" started-at="2023-12-19T11:42:51 IST" name="configureAppium" finished-at="2023-12-19T11:42:57 IST" duration-ms="6714" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="DS_028_verifySignupWithNonSupportedPMS()[pri:1, instance:com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice@29b8df5]" started-at="2023-12-19T11:42:57 IST" name="DS_028_verifySignupWithNonSupportedPMS" finished-at="2023-12-19T11:43:45 IST" duration-ms="47864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_028_verifySignupWithNonSupportedPMS -->
+        <test-method signature="DS_029_verifySignupWithSupportedPMS()[pri:2, instance:com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice@29b8df5]" started-at="2023-12-19T11:43:45 IST" name="DS_029_verifySignupWithSupportedPMS" finished-at="2023-12-19T11:43:48 IST" duration-ms="3120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_029_verifySignupWithSupportedPMS -->
+        <test-method signature="DS_030_verifyWishToContinuePopupBackButton()[pri:3, instance:com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice@29b8df5]" started-at="2023-12-19T11:43:48 IST" name="DS_030_verifyWishToContinuePopupBackButton" finished-at="2023-12-19T11:43:50 IST" duration-ms="2073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_030_verifyWishToContinuePopupBackButton -->
+        <test-method signature="DS_031_verifyPracticeInfoMandatoryFields()[pri:4, instance:com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice@29b8df5]" started-at="2023-12-19T11:43:50 IST" name="DS_031_verifyPracticeInfoMandatoryFields" finished-at="2023-12-19T11:44:19 IST" duration-ms="29011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_031_verifyPracticeInfoMandatoryFields -->
+        <test-method signature="DS_032_verifyLoginWithoutRegisterPractice()[pri:5, instance:com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice@29b8df5]" started-at="2023-12-19T11:44:19 IST" name="DS_032_verifyLoginWithoutRegisterPractice" finished-at="2023-12-19T11:44:30 IST" duration-ms="10313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_032_verifyLoginWithoutRegisterPractice -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice -->
+      <class name="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@359e27d2]" started-at="2023-12-19T11:27:44 IST" name="configureAppium" finished-at="2023-12-19T11:27:50 IST" duration-ms="6550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="goToCalendarPageAndSelectAppointmentsDate()[pri:1, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@359e27d2]" started-at="2023-12-19T11:27:50 IST" name="goToCalendarPageAndSelectAppointmentsDate" finished-at="2023-12-19T11:28:54 IST" duration-ms="64130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToCalendarPageAndSelectAppointmentsDate -->
-        <test-method signature="verifyIsPatientPopupAppearingOnStartButtonClick()[pri:2, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-14T18:43:16 IST" name="verifyIsPatientPopupAppearingOnStartButtonClick" finished-at="2023-12-14T18:43:37 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.goToCalendarPageAndSelectAppointmentsDate" duration-ms="21664" status="PASS">
+        <test-method signature="verifyIsPatientPopupAppearingOnStartButtonClick()[pri:2, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@359e27d2]" started-at="2023-12-19T11:28:54 IST" name="verifyIsPatientPopupAppearingOnStartButtonClick" finished-at="2023-12-19T11:29:09 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.goToCalendarPageAndSelectAppointmentsDate" duration-ms="14125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyIsPatientPopupAppearingOnStartButtonClick -->
-        <test-method signature="verifyStartRecordingButtonOnPatientDetailsPopupAndClick()[pri:3, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-14T18:43:37 IST" name="verifyStartRecordingButtonOnPatientDetailsPopupAndClick" finished-at="2023-12-14T18:43:59 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyIsPatientPopupAppearingOnStartButtonClick" duration-ms="21899" status="PASS">
+        <test-method signature="verifyStartRecordingButtonOnPatientDetailsPopupAndClick()[pri:3, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@359e27d2]" started-at="2023-12-19T11:29:09 IST" name="verifyStartRecordingButtonOnPatientDetailsPopupAndClick" finished-at="2023-12-19T11:29:31 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyIsPatientPopupAppearingOnStartButtonClick" duration-ms="21967" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyStartRecordingButtonOnPatientDetailsPopupAndClick -->
-        <test-method signature="verifyContinueButtonAfterPauseRecording()[pri:4, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-14T18:43:59 IST" name="verifyContinueButtonAfterPauseRecording" finished-at="2023-12-14T18:44:14 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyStartRecordingButtonOnPatientDetailsPopupAndClick" duration-ms="14309" status="PASS">
+        <test-method signature="verifyContinueButtonAfterPauseRecording()[pri:4, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@359e27d2]" started-at="2023-12-19T11:29:31 IST" name="verifyContinueButtonAfterPauseRecording" finished-at="2023-12-19T11:29:49 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyStartRecordingButtonOnPatientDetailsPopupAndClick" duration-ms="18601" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyContinueButtonAfterPauseRecording -->
-        <test-method signature="verifyIsPatientPopupAppearingOnContinueButtonClick()[pri:5, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-14T18:44:14 IST" name="verifyIsPatientPopupAppearingOnContinueButtonClick" finished-at="2023-12-14T18:44:23 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyContinueButtonAfterPauseRecording" duration-ms="9842" status="PASS">
+        <test-method signature="verifyIsPatientPopupAppearingOnContinueButtonClick()[pri:5, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@359e27d2]" started-at="2023-12-19T11:29:49 IST" name="verifyIsPatientPopupAppearingOnContinueButtonClick" finished-at="2023-12-19T11:29:59 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyContinueButtonAfterPauseRecording" duration-ms="9354" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyIsPatientPopupAppearingOnContinueButtonClick -->
-        <test-method signature="verifyContinueRecordingButtonOnPatientDetailsPopupAndClick()[pri:6, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-14T18:44:23 IST" name="verifyContinueRecordingButtonOnPatientDetailsPopupAndClick" finished-at="2023-12-14T18:44:48 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyIsPatientPopupAppearingOnContinueButtonClick" duration-ms="24362" status="PASS">
+        <test-method signature="verifyContinueRecordingButtonOnPatientDetailsPopupAndClick()[pri:6, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@359e27d2]" started-at="2023-12-19T11:29:59 IST" name="verifyContinueRecordingButtonOnPatientDetailsPopupAndClick" finished-at="2023-12-19T11:30:22 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyIsPatientPopupAppearingOnContinueButtonClick" duration-ms="23813" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyContinueRecordingButtonOnPatientDetailsPopupAndClick -->
-        <test-method signature="verifyReviewButtonAfterStopRecording()[pri:7, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-14T18:44:48 IST" name="verifyReviewButtonAfterStopRecording" finished-at="2023-12-14T18:45:36 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyContinueRecordingButtonOnPatientDetailsPopupAndClick" duration-ms="47815" status="PASS">
+        <test-method signature="verifyReviewButtonAfterStopRecording()[pri:7, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@359e27d2]" started-at="2023-12-19T11:30:22 IST" name="verifyReviewButtonAfterStopRecording" finished-at="2023-12-19T11:31:11 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyContinueRecordingButtonOnPatientDetailsPopupAndClick" duration-ms="48979" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyReviewButtonAfterStopRecording -->
-        <test-method signature="addSignatureInSoapReportAndSubmit()[pri:8, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-14T18:45:36 IST" name="addSignatureInSoapReportAndSubmit" finished-at="2023-12-14T18:45:58 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyReviewButtonAfterStopRecording" duration-ms="22586" status="PASS">
+        <test-method signature="addSignatureInSoapReportAndSubmit()[pri:8, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@359e27d2]" started-at="2023-12-19T11:31:11 IST" name="addSignatureInSoapReportAndSubmit" finished-at="2023-12-19T11:31:31 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.verifyReviewButtonAfterStopRecording" duration-ms="19570" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addSignatureInSoapReportAndSubmit -->
-        <test-method signature="verifyReviewedButtonAndClickToVerifySoapReport()[pri:9, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@7d537616]" started-at="2023-12-14T18:45:58 IST" name="verifyReviewedButtonAndClickToVerifySoapReport" finished-at="2023-12-14T18:46:06 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.addSignatureInSoapReportAndSubmit" duration-ms="7516" status="PASS">
+        <test-method signature="verifyReviewedButtonAndClickToVerifySoapReport()[pri:9, instance:com.dentscribe.testCases_iOS.TestAllAppointmentStatuses@359e27d2]" started-at="2023-12-19T11:31:31 IST" name="verifyReviewedButtonAndClickToVerifySoapReport" finished-at="2023-12-19T11:31:38 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestAllAppointmentStatuses.addSignatureInSoapReportAndSubmit" duration-ms="7335" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyReviewedButtonAndClickToVerifySoapReport -->
       </class> <!-- com.dentscribe.testCases_iOS.TestAllAppointmentStatuses -->
+      <class name="com.dentscribe.testCases_iOS.TestLoginPage">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestLoginPage@214fba74]" started-at="2023-12-19T11:36:32 IST" name="configureAppium" finished-at="2023-12-19T11:36:39 IST" duration-ms="7089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="DS_004_verifyIsLoginPageExistsAndItsFields()[pri:1, instance:com.dentscribe.testCases_iOS.TestLoginPage@214fba74]" started-at="2023-12-19T11:36:39 IST" name="DS_004_verifyIsLoginPageExistsAndItsFields" finished-at="2023-12-19T11:36:40 IST" duration-ms="1179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_004_verifyIsLoginPageExistsAndItsFields -->
+        <test-method signature="DS_005_verifyLoginWithoutMandatoryFields()[pri:2, instance:com.dentscribe.testCases_iOS.TestLoginPage@214fba74]" started-at="2023-12-19T11:36:40 IST" name="DS_005_verifyLoginWithoutMandatoryFields" finished-at="2023-12-19T11:36:41 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestLoginPage.DS_004_verifyIsLoginPageExistsAndItsFields" duration-ms="975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_005_verifyLoginWithoutMandatoryFields -->
+        <test-method signature="DS_006_verifyLoginWithNonExistingUser()[pri:3, instance:com.dentscribe.testCases_iOS.TestLoginPage@214fba74]" started-at="2023-12-19T11:36:41 IST" name="DS_006_verifyLoginWithNonExistingUser" finished-at="2023-12-19T11:36:51 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestLoginPage.DS_004_verifyIsLoginPageExistsAndItsFields" duration-ms="9463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_006_verifyLoginWithNonExistingUser -->
+        <test-method signature="DS_007_verifyLoginWithInvalidPassword()[pri:4, instance:com.dentscribe.testCases_iOS.TestLoginPage@214fba74]" started-at="2023-12-19T11:36:51 IST" name="DS_007_verifyLoginWithInvalidPassword" finished-at="2023-12-19T11:37:01 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestLoginPage.DS_004_verifyIsLoginPageExistsAndItsFields" duration-ms="10081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_007_verifyLoginWithInvalidPassword -->
+        <test-method signature="DS_008_verifyLoginWithThreeInvalidAttempts()[pri:5, instance:com.dentscribe.testCases_iOS.TestLoginPage@214fba74]" started-at="2023-12-19T11:37:01 IST" name="DS_008_verifyLoginWithThreeInvalidAttempts" finished-at="2023-12-19T11:37:15 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestLoginPage.DS_004_verifyIsLoginPageExistsAndItsFields" duration-ms="13965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_008_verifyLoginWithThreeInvalidAttempts -->
+        <test-method signature="DS_009_verifyLoginWithValidCredentials()[pri:6, instance:com.dentscribe.testCases_iOS.TestLoginPage@214fba74]" started-at="2023-12-19T11:37:15 IST" name="DS_009_verifyLoginWithValidCredentials" finished-at="2023-12-19T11:37:28 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestLoginPage.DS_004_verifyIsLoginPageExistsAndItsFields" duration-ms="13361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_009_verifyLoginWithValidCredentials -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestLoginPage -->
+      <class name="com.dentscribe.testCases_iOS.TestRecordingfor10mintsAndGenerateSoapReport">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestRecordingfor10mintsAndGenerateSoapReport@18dac12f]" started-at="2023-12-19T11:52:23 IST" name="configureAppium" finished-at="2023-12-19T11:52:30 IST" duration-ms="7014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="verifyWhetherSoapReportCreatedFor10mintsRecording()[pri:1, instance:com.dentscribe.testCases_iOS.TestRecordingfor10mintsAndGenerateSoapReport@18dac12f]" started-at="2023-12-19T11:52:30 IST" name="verifyWhetherSoapReportCreatedFor10mintsRecording" finished-at="2023-12-19T12:05:28 IST" duration-ms="778462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherSoapReportCreatedFor10mintsRecording -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestRecordingfor10mintsAndGenerateSoapReport -->
+      <class name="com.dentscribe.testCases_iOS.TestRecordingfor30mintsAndGenerateSoapReport">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestRecordingfor30mintsAndGenerateSoapReport@36cfe107]" started-at="2023-12-19T12:05:28 IST" name="configureAppium" finished-at="2023-12-19T12:05:35 IST" duration-ms="6933" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="verifyWhetherSoapReportCreatedFor30mintsRecording()[pri:0, instance:com.dentscribe.testCases_iOS.TestRecordingfor30mintsAndGenerateSoapReport@36cfe107]" started-at="2023-12-19T12:05:35 IST" name="verifyWhetherSoapReportCreatedFor30mintsRecording" finished-at="2023-12-19T12:38:26 IST" duration-ms="1970844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherSoapReportCreatedFor30mintsRecording -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestRecordingfor30mintsAndGenerateSoapReport -->
+      <class name="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup@1857fe6c]" started-at="2023-12-19T11:40:55 IST" name="configureAppium" finished-at="2023-12-19T11:41:02 IST" duration-ms="7097" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="DS_024_verifyIsSmsVerificationPageExistsAfterSignup()[pri:1, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup@1857fe6c]" started-at="2023-12-19T11:41:02 IST" name="DS_024_verifyIsSmsVerificationPageExistsAfterSignup" finished-at="2023-12-19T11:41:51 IST" duration-ms="48772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_024_verifyIsSmsVerificationPageExistsAfterSignup -->
+        <test-method signature="DS_025_verifySmsVerificationWithBlankOtp()[pri:2, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup@1857fe6c]" started-at="2023-12-19T11:41:51 IST" name="DS_025_verifySmsVerificationWithBlankOtp" finished-at="2023-12-19T11:41:52 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup.DS_024_verifyIsSmsVerificationPageExistsAfterSignup" duration-ms="1201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_025_verifySmsVerificationWithBlankOtp -->
+        <test-method signature="DS_026_verifySmsVerificationWithWrongOtp()[pri:3, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup@1857fe6c]" started-at="2023-12-19T11:41:52 IST" name="DS_026_verifySmsVerificationWithWrongOtp" finished-at="2023-12-19T11:42:06 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup.DS_024_verifyIsSmsVerificationPageExistsAfterSignup" duration-ms="13967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_026_verifySmsVerificationWithWrongOtp -->
+        <test-method signature="DS_027_verifySmsVerificationResendCodeLink()[pri:4, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup@1857fe6c]" started-at="2023-12-19T11:42:06 IST" name="DS_027_verifySmsVerificationResendCodeLink" finished-at="2023-12-19T11:42:29 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup.DS_024_verifyIsSmsVerificationPageExistsAfterSignup" duration-ms="22589" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_027_verifySmsVerificationResendCodeLink -->
+        <test-method signature="DS_027_verifyWhetherSmsVerificationPageBackIconRedirectToSignupPage()[pri:5, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup@1857fe6c]" started-at="2023-12-19T11:42:29 IST" name="DS_027_verifyWhetherSmsVerificationPageBackIconRedirectToSignupPage" finished-at="2023-12-19T11:42:30 IST" duration-ms="1303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_027_verifyWhetherSmsVerificationPageBackIconRedirectToSignupPage -->
+        <test-method signature="DS_028_verifySmsVerificationWithValidOtp()[pri:6, instance:com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup@1857fe6c]" started-at="2023-12-19T11:42:30 IST" name="DS_028_verifySmsVerificationWithValidOtp" finished-at="2023-12-19T11:42:51 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup.DS_027_verifyWhetherSmsVerificationPageBackIconRedirectToSignupPage" duration-ms="20257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_028_verifySmsVerificationWithValidOtp -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestSmsVerificationPageAfterSignup -->
+      <class name="com.dentscribe.testCases_iOS.TestTourPages">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestTourPages@20890a1a]" started-at="2023-12-19T11:44:30 IST" name="configureAppium" finished-at="2023-12-19T11:44:37 IST" duration-ms="6914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="DS_033_verifyIsTourPageExists()[pri:1, instance:com.dentscribe.testCases_iOS.TestTourPages@20890a1a]" started-at="2023-12-19T11:44:37 IST" name="DS_033_verifyIsTourPageExists" finished-at="2023-12-19T11:45:03 IST" duration-ms="26752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_033_verifyIsTourPageExists -->
+        <test-method signature="DS_034_verifyNextButtonFromFirstToLastTourPage()[pri:2, instance:com.dentscribe.testCases_iOS.TestTourPages@20890a1a]" started-at="2023-12-19T11:45:03 IST" name="DS_034_verifyNextButtonFromFirstToLastTourPage" finished-at="2023-12-19T11:45:08 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestTourPages.DS_033_verifyIsTourPageExists" duration-ms="4481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_034_verifyNextButtonFromFirstToLastTourPage -->
+        <test-method signature="DS_035_verifyBackButtonFromLastToFirstTourPage()[pri:3, instance:com.dentscribe.testCases_iOS.TestTourPages@20890a1a]" started-at="2023-12-19T11:45:08 IST" name="DS_035_verifyBackButtonFromLastToFirstTourPage" finished-at="2023-12-19T11:45:12 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestTourPages.DS_034_verifyNextButtonFromFirstToLastTourPage" duration-ms="4391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_035_verifyBackButtonFromLastToFirstTourPage -->
+        <test-method signature="DS_036_verifyRightSwipeFromFirstToLastTourPage()[pri:4, instance:com.dentscribe.testCases_iOS.TestTourPages@20890a1a]" started-at="2023-12-19T11:45:12 IST" name="DS_036_verifyRightSwipeFromFirstToLastTourPage" finished-at="2023-12-19T11:45:18 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestTourPages.DS_035_verifyBackButtonFromLastToFirstTourPage" duration-ms="6113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_036_verifyRightSwipeFromFirstToLastTourPage -->
+        <test-method signature="DS_037_verifyLeftSwipeFromLastToFirstTourPage()[pri:5, instance:com.dentscribe.testCases_iOS.TestTourPages@20890a1a]" started-at="2023-12-19T11:45:18 IST" name="DS_037_verifyLeftSwipeFromLastToFirstTourPage" finished-at="2023-12-19T11:45:25 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestTourPages.DS_036_verifyRightSwipeFromFirstToLastTourPage" duration-ms="6191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_037_verifyLeftSwipeFromLastToFirstTourPage -->
+        <test-method signature="DS_038_verifyNextButtonOfPatientDatabaseTourPage()[pri:6, instance:com.dentscribe.testCases_iOS.TestTourPages@20890a1a]" started-at="2023-12-19T11:45:25 IST" name="DS_038_verifyNextButtonOfPatientDatabaseTourPage" finished-at="2023-12-19T11:45:33 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestTourPages.DS_037_verifyLeftSwipeFromLastToFirstTourPage" duration-ms="7983" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DS_038_verifyNextButtonOfPatientDatabaseTourPage -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestTourPages -->
+      <class name="com.dentscribe.testCases_iOS.TestChangePassword">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestChangePassword@4e2109fe]" started-at="2023-12-19T11:50:58 IST" name="configureAppium" finished-at="2023-12-19T11:51:06 IST" duration-ms="7964" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="verifyChangePasswordFromSettingsPage()[pri:1, instance:com.dentscribe.testCases_iOS.TestChangePassword@4e2109fe]" started-at="2023-12-19T11:51:06 IST" name="verifyChangePasswordFromSettingsPage" finished-at="2023-12-19T11:51:59 IST" duration-ms="53368" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyChangePasswordFromSettingsPage -->
+        <test-method signature="verifyUserShouldNotLoginFromOldPassword()[pri:2, instance:com.dentscribe.testCases_iOS.TestChangePassword@4e2109fe]" started-at="2023-12-19T11:51:59 IST" name="verifyUserShouldNotLoginFromOldPassword" finished-at="2023-12-19T11:52:09 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestChangePassword.verifyChangePasswordFromSettingsPage" duration-ms="9345" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserShouldNotLoginFromOldPassword -->
+        <test-method signature="verifyUserShouldLoginFromNewChangedPassword()[pri:3, instance:com.dentscribe.testCases_iOS.TestChangePassword@4e2109fe]" started-at="2023-12-19T11:52:09 IST" name="verifyUserShouldLoginFromNewChangedPassword" finished-at="2023-12-19T11:52:23 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestChangePassword.verifyChangePasswordFromSettingsPage" duration-ms="13957" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserShouldLoginFromNewChangedPassword -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestChangePassword -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

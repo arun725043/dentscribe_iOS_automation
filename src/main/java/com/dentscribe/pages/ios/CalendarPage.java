@@ -204,7 +204,7 @@ public class CalendarPage extends iOSActions {
 					break;
 				} catch (Exception e) {
 					i++;
-					scrollDownTillElementVisible(driver, goDownToPage);
+//					scrollDownTillElementVisible(driver, goDownToPage);
 				}
 
 			} else {
@@ -327,7 +327,7 @@ public class CalendarPage extends iOSActions {
 					new ActionsUtiils(driver).pullToRefres(ScrollDirection.UP, 0.15);
 					waitUntilLoaderDisappear(driver);
 					System.out.println("Loading Done");
-					scrollDownTillElementVisible(driver, AppiumBy.accessibilityId(patientName + " Review-button"));
+//					scrollDownTillElementVisible(driver, AppiumBy.accessibilityId(patientName + " Review-button"));
 				}
 			}
 		}

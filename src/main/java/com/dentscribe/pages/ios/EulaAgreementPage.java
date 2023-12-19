@@ -9,11 +9,11 @@ import com.dentscribe.ExtentReport.ExtentManager;
 import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.ios.IOSDriver;
 
-public class EULAPage extends iOSActions{
+public class EulaAgreementPage extends iOSActions{
 	
 	IOSDriver driver;
 	
-	public EULAPage(IOSDriver driver) {
+	public EulaAgreementPage(IOSDriver driver) {
 		super(driver);
 		this.driver = driver;
 	}
@@ -40,24 +40,6 @@ public class EULAPage extends iOSActions{
 	    for(int i = 1; i<=2; i++) {
 	       performScroll(driver);
 	    }
-		
-		//new ActionsUtiils(driver).scroll(ScrollDirection.DOWN, 0.80);
-		//scrollToActiveTheAgreeButton(2);
 		click(driver, continueButton, "Continue");
 	}
-	
-	public void scrollToActiveTheAgreeButton(int n)  {
-        // Java
-        for(int i=0;i<n;i++)
-        {
-            ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of("left", 200, "top", 1000,
-                    "width", 800, "height", 900, "direction", "up", "percent", 0.75));
-            try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-        }
-    }
 }

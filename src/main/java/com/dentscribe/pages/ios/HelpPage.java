@@ -49,11 +49,14 @@ public class HelpPage extends iOSActions{
 	//verify whether all expected questions are available or not
 	public void verifyFAQsQuestions()
 	{
-		IsElementPresent(driver, question1By);
-		IsElementPresent(driver, question2By);
-		IsElementPresent(driver, question3By);
+		scrollDownTillElementVisible(driver, question1By);
+		IsElementPresent(driver, question1By, CommonVariables.question1);
+		scrollDownTillElementVisible(driver, question2By);
+		IsElementPresent(driver, question2By, CommonVariables.question2);
+		scrollDownTillElementVisible(driver, question3By);
+		IsElementPresent(driver, question3By, CommonVariables.question3);
 		scrollDownTillElementVisible(driver, question4By);
-		IsElementPresent(driver, question4By);
+		IsElementPresent(driver, question4By, CommonVariables.question4);
 	}
 			
 }

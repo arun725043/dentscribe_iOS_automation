@@ -116,9 +116,12 @@ public class TestSettingsPage extends iOSBase{
 	@Test(priority = 9)
 	public void verifyFAQsInHelpPage()
 	{
+		settingPage.performClickOnHelpOtion();
+		 helpPage.validateHelpPage();
 		// ________________verify whether all expected questions available_____________
 		helpPage.verifyFAQsQuestions();
 		ExtentManager.logInfoDetails("All questions are available in Help page as expected");
+		helpPage.performClickONBackIconButton();
 	}
 	
 	@Test (priority = 10)

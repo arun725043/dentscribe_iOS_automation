@@ -18,6 +18,7 @@ public class TestAllAppointmentStatuses extends iOSBase
 	 */
 	
 	String patientName = null;
+	String appointmentDateString = readData("testData", "shortAppointmentsDate");
 	
 	@Test (priority = 1)
 	public void goToCalendarPageAndSelectAppointmentsDate() throws InterruptedException, IOException 
@@ -37,7 +38,7 @@ public class TestAllAppointmentStatuses extends iOSBase
 		// __________________________________Select date______________________________________________________________
 		waitUntilLoaderDisappear(driver);
 		System.out.println("Loading Done");
-		int[] date = calendarPage.getDateMonthYear(readData("testData", "calendarTestDate"));
+		int[] date = calendarPage.getDateMonthYear(appointmentDateString);
 		Month month = Month.of(date[1]);     
 
 		month.toString();
@@ -45,7 +46,6 @@ public class TestAllAppointmentStatuses extends iOSBase
 		ExtentManager.logInfoDetails("Clicked on Calendar dropdown");
 
 		calendarPage.selectMonthYearCalendar(date[0], date[1], date[2]);
-		ExtentManager.logInfoDetails("Day,Month and year is selected successfully");
 		
 		click(driver, calendarPage.doneButtonCalendarPopup, "Done");
 	}
@@ -76,7 +76,7 @@ public class TestAllAppointmentStatuses extends iOSBase
 	}
 	
 	@Test (priority = 4, dependsOnMethods = { "verifyStartRecordingButtonOnPatientDetailsPopupAndClick" })
-	public void verifyContinueButtonAfterPauseRecording() throws InterruptedException
+	public void verifyIsAppointmentStatusContinueAfterPauseRecording() throws InterruptedException
 	{
 		Thread.sleep(10000);
 		// to click on Pause button on recording screen 
@@ -113,7 +113,7 @@ public class TestAllAppointmentStatuses extends iOSBase
 	
 	
 	@Test (priority = 7, dependsOnMethods = { "verifyContinueRecordingButtonOnPatientDetailsPopupAndClick" })
-	public void verifyReviewButtonAfterStopRecording() throws InterruptedException
+	public void verifyIsAppointmentStatusReviewAfterStopRecording() throws InterruptedException
 	{
 		Thread.sleep(15000);	//recording time 
 
@@ -143,8 +143,11 @@ public class TestAllAppointmentStatuses extends iOSBase
 	}
 	
 	@Test (priority = 9, dependsOnMethods = { "addSignatureInSoapReportAndSubmit" })
-	public void verifyReviewedButtonAndClickToVerifySoapReport() throws InterruptedException
+	public void verifyIsAppointmentStatusReviewedAndSoapReportAfterClickIt() throws InterruptedException
 	{
+		// Verify the continue button on calendar view page
+		calendarPage.verifyClickReviewedButtonForAppointment("verify", patientName);
+	
 		// ____________click reviewed button and go to soap report__________________
 		calendarPage.verifyClickReviewedButtonForAppointment("click", patientName);
 		soapReportPage.validateSoapReportPage();

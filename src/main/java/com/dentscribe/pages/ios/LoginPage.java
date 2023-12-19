@@ -91,7 +91,7 @@ public class LoginPage extends iOSActions{
 		switch (expectedResult) {
 		case "sms page":
 			verifyText(getText(driver, textSmsVerification), "SMS Verification", "SMS Verification page");
-			ExtentManager.logInfoDetails("User is logged in successfully as expected");
+			ExtentManager.logInfoDetails("User redirected to SMS Verification page successfully as expected");
 			break;
 		case "no record error":
 			verifyText(getAttribute_ios(noUserNamePass, "label"), "No record found for this user", "No record found for this user on login page");
