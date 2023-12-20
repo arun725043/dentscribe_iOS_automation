@@ -86,7 +86,7 @@ public class TestAllAppointmentStatuses extends iOSBase
 		calendarPage.verifyClickContinueButtonForAppointment("verify", patientName);
 	}
 	
-	@Test (priority = 5, dependsOnMethods = { "verifyContinueButtonAfterPauseRecording" })
+	@Test (priority = 5, dependsOnMethods = { "verifyIsAppointmentStatusContinueAfterPauseRecording" })
 	public void verifyIsPatientPopupAppearingOnContinueButtonClick()
 	{
 		// __________________________________Click patient____________________________________________________________
@@ -126,7 +126,7 @@ public class TestAllAppointmentStatuses extends iOSBase
 		calendarPage.verifyClickReviewButtonForAppointment("verify", patientName);
 	}
 	
-	@Test (priority = 8, dependsOnMethods = { "verifyReviewButtonAfterStopRecording" })
+	@Test (priority = 8, dependsOnMethods = { "verifyIsAppointmentStatusReviewAfterStopRecording" })
 	public void addSignatureInSoapReportAndSubmit() throws InterruptedException
 	{
 		// ____________click review button and go to soap report__________________

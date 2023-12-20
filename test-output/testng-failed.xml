@@ -6,13 +6,17 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.dentscribe.testCases_iOS.TestForgotPassowrdPage">
+      <class name="com.dentscribe.testCases_iOS.TestLoginPage">
         <methods>
-          <include name="DS_046_verityIsForgotPasswordPageExists"/>
-          <include name="DS_049_verifyForgotPasswordForNotExistsEmailId"/>
+          <include name="DS_008_verifyLoginWithThreeInvalidAttempts"/>
+          <include name="DS_004_verifyIsLoginPageExistsAndItsFields"/>
           <include name="configureAppium"/>
+          <include name="DS_006_verifyLoginWithNonExistingUser"/>
+          <include name="DS_009_verifyLoginWithValidCredentials"/>
+          <include name="DS_005_verifyLoginWithoutMandatoryFields"/>
+          <include name="DS_007_verifyLoginWithInvalidPassword"/>
         </methods>
-      </class> <!-- com.dentscribe.testCases_iOS.TestForgotPassowrdPage -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestLoginPage -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

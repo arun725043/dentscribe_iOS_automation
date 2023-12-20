@@ -75,13 +75,20 @@ public class TestCreateUserTakeFreePlanAndBuyPaidPlan extends iOSBase
 	}
 	
 	@Test(priority = 2, dependsOnMethods = { "createNewUserAndGoToManageSubscriptionPage" })
-	public void verifyAddPaymentMethodMandatoryFields() throws InterruptedException 
+	public void verifyIsAddPaymentMethodExists() throws InterruptedException 
 	{
 		// To verify 'Manage Your Subscription' screen appear
 		manageSubscriptionPage.validateManageSubscriptionPage();
 		
 		// go to Add Payment Method
 		manageSubscriptionPage.clickAddPaymentButton();
+		addPaymentMethodPage.validateAddPaymentMethodPage();
+	}
+	
+	@Test(priority = 3, dependsOnMethods = { "verifyIsAddPaymentMethodExists" })
+	public void verifyAddPaymentMethodMandatoryFields() throws InterruptedException 
+	{
+		// To verify 'Add Payment Method' screen appear
 		addPaymentMethodPage.validateAddPaymentMethodPage();
 				
 		// To verify the 'card holder name is required'
@@ -94,7 +101,7 @@ public class TestCreateUserTakeFreePlanAndBuyPaidPlan extends iOSBase
 		addPaymentMethodPage.verifyInvalidCard();
 	}
 	
-	@Test(priority = 3, dependsOnMethods = { "verifyAddPaymentMethodMandatoryFields" })
+	@Test(priority = 4, dependsOnMethods = { "verifyAddPaymentMethodMandatoryFields" })
 	public void verifyAddPaymentMethodBackIcon() throws InterruptedException 
 	{
 		// click back icon and verify manage subscription page
@@ -102,7 +109,7 @@ public class TestCreateUserTakeFreePlanAndBuyPaidPlan extends iOSBase
 		manageSubscriptionPage.validateManageSubscriptionPage();
 	}
 
-	@Test(priority = 4, dependsOnMethods = { "createNewUserAndGoToManageSubscriptionPage" })
+	@Test(priority = 5, dependsOnMethods = { "createNewUserAndGoToManageSubscriptionPage" })
 	public void verifyCanUserTake30DaysFreeTrialPlan() throws InterruptedException, IOException 
 	{
 		// To verify 'Manage Your Subscription' screen appear
@@ -133,7 +140,7 @@ public class TestCreateUserTakeFreePlanAndBuyPaidPlan extends iOSBase
 	    settingPage.verifyBuyPlanOnSettingsPage("free");
 	}
 
-	@Test(priority = 5, dependsOnMethods = { "verifyCanUserTake30DaysFreeTrialPlan" })
+	@Test(priority = 6, dependsOnMethods = { "verifyCanUserTake30DaysFreeTrialPlan" })
 	public void verifyCanUserBuyPaidPlanAfterFreeTrialPlan() throws IOException, InterruptedException 
 	{
 		// To click on 'Manage SubsCription' button

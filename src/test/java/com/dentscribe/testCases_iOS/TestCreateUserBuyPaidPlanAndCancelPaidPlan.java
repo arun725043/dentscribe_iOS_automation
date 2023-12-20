@@ -85,7 +85,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 		eulaPage.performScroll_ClickContinueButton();
 	}
 
-	@Test(priority = 6, dependsOnMethods = { "verifyEulaAgreementAndAcceptIt" })
+	@Test(priority = 6, dependsOnMethods = { "verifyEulaAgreementPageAndAcceptAgreement" })
 	public void verifyCanUserBuyPaidPlan() throws InterruptedException {
 
 		// To verify 'Manage Your Subscription' screen appear
