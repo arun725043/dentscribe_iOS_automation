@@ -22,7 +22,7 @@ public class TestPatientSearchPage extends iOSBase {
 		loginPage.verifyIsApplicationLaunched();
 		
 		// Perform Login
-		loginPage.loginApplication(readData("Config", "username"), readData("Config", "password"), "valid");
+		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "valid");
 
 		// To fill the OTP
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());

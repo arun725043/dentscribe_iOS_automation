@@ -21,7 +21,6 @@ public class SettingPage extends iOSActions {
 		this.driver = driver;
 	}
 	
-	public By buttonLogOut = AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == 'Log Out'`]"); 	
 	public By manageSubscriptionButton = By.xpath("//XCUIElementTypeOther[@name='cancel-suscription-button']");	
 	public By cancelButton = AppiumBy.accessibilityId("cancel-suscription-button");
 	public By pushNotificationSwitch = AppiumBy.accessibilityId("push-notification-switch");
@@ -53,6 +52,8 @@ public class SettingPage extends iOSActions {
     public By subscriptionPlan = By.xpath("//XCUIElementTypeStaticText[contains(@name, 'Selected')]");
     public By allFieldsAreMandatoryMessage = AppiumBy.accessibilityId("All fields are mandatory");
     public By closeButtonONCanacaleSubPopup = AppiumBy.accessibilityId("subscription-close-button");
+    public By buttonLogOut = AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == 'Log Out'`]");
+    public By buttonFeedback = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == 'Feedback'`]");
     public By helpIconButtonTop = By.xpath("//XCUIElementTypeOther[@name='Settings']/XCUIElementTypeOther[2]");
 	public By helpOptionUnderGeneralSettings = AppiumBy.accessibilityId("Help-right-arrow");
     
@@ -88,6 +89,11 @@ public class SettingPage extends iOSActions {
 	// To click on Logout
 	public void clickOnLogout() {
 		click(driver, buttonLogOut, "Logout on Setting page");
+	}
+	
+	// To click on Feedback
+	public void clickOnFeedbackOption() {
+		click(driver, buttonFeedback, "Feedback on Setting page");
 	}
 	
 	// To click on 'Manage Subscription'

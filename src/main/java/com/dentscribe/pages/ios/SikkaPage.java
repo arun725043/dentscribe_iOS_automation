@@ -6,6 +6,7 @@ import org.dentscribe.utils.iOSActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.dentscribe.ExtentReport.ExtentManager;
 import com.dentscribe.base.iOSBase;
@@ -48,6 +49,7 @@ public class SikkaPage extends iOSActions{
 		}
 		else {
 			ExtentManager.logFailureDetails("Either expected sikka webview page not opened or verfying elements register/proceed button not found. Please check");
+			Assert.fail();
 		}
 	}
 	

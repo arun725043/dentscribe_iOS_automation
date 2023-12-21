@@ -51,7 +51,7 @@ public class TestCreateUserTakeFreePlanAndBuyPaidPlan extends iOSBase
 		sikkaPage.acceptAgreement();
 		
 		// __________________Fill the confirmation page______________________________
-		sikkaPage.fillExistingSikkaCredentials(readData("Config", "existingSikkaUser"), readData("Config", "existingSikkaPwd"));
+		sikkaPage.fillExistingSikkaCredentials(readData("UserDetails", "existingSikkaUser"), readData("UserDetails", "existingSikkaPwd"));
 		explicitWait(driver, loginPage.noteLoginPage, 120);
 		
 		// ________________login application and verify SPU install popup____________
@@ -102,7 +102,7 @@ public class TestCreateUserTakeFreePlanAndBuyPaidPlan extends iOSBase
 	}
 	
 	@Test(priority = 4, dependsOnMethods = { "verifyAddPaymentMethodMandatoryFields" })
-	public void verifyAddPaymentMethodBackIcon() throws InterruptedException 
+	public void verifyBackIconAddPaymentMethodPage() throws InterruptedException 
 	{
 		// click back icon and verify manage subscription page
 		addPaymentMethodPage.clickBackIconPaymentMethodPage();

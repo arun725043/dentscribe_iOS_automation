@@ -16,7 +16,7 @@ public class TestTourPages extends iOSBase {
 		loginPage.verifyIsApplicationLaunched();
 		
 		// Fill the login form
-		loginPage.loginApplication(readData("Config", "username"), readData("Config", "password"), "valid");
+		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "valid");
 
 		// Fill the OTP and continue
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());

@@ -20,7 +20,7 @@ public class TestRecordingfor30mintsAndGenerateSoapReport extends iOSBase
 		loginPage.verifyIsApplicationLaunched();
 		
 		// __________________________________Login into Application__________________________________________________
-		loginPage.loginApplication(readData("Config", "username"), readData("Config", "password"), "sms page");
+		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "sms page");
 		
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());
 		click(driver, loginPage.continueButtonSMSVerification, "Continue on sms verification page");

@@ -59,7 +59,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 		sikkaPage.acceptAgreement();
 		
 		// __________________Fill the confirmation page______________________________
-		sikkaPage.fillExistingSikkaCredentials(readData("Config", "existingSikkaUser"), readData("Config", "existingSikkaPwd"));
+		sikkaPage.fillExistingSikkaCredentials(readData("UserDetails", "existingSikkaUser"), readData("UserDetails", "existingSikkaPwd"));
 		explicitWait(driver, loginPage.noteLoginPage, 120);
 	}
 	
@@ -131,6 +131,10 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 	@Test(priority = 7, dependsOnMethods = { "verifyCanUserBuyPaidPlan" })
 	public void verifyCancelSubscriptionPopup()
 	{
+		// To save username and password for other test case
+		writeData("UserDetails", "newuser", emailId);
+		writeData("UserDetails", "newpassword", CommonVariables.actualPass);
+				
 		// to verify the all field are mandatory text
 		settingPage.verifyMandatoryFields();
 		

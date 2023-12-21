@@ -9,17 +9,6 @@ appURL=http://127.0.0.1:4723
 emmulator=no
 biometric=off
 
-_____________________user details_________________
-username=diwakar.nitin+auto001@thinksys.com
-password=Kapoor@1234
-mobile=9990417876
-
-//____________sikka_____________
-existingSikkaUser=kapoor.arun+sikka@thinksys.com
-existingSikkaPwd=Kapoor@1234
-
-
-
 ################ App Details for IOS device  ############
 
 IOSDeviceName = iPhone 14 Plus

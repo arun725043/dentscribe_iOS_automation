@@ -12,6 +12,7 @@ import com.dentscribe.pages.ios.ForgotPasswordPage;
 import com.dentscribe.pages.ios.AddPaymentMethodPage;
 import com.dentscribe.pages.ios.CalendarPage;
 import com.dentscribe.pages.ios.EulaAgreementPage;
+import com.dentscribe.pages.ios.FeedbackPage;
 import com.dentscribe.pages.ios.HelpPage;
 import com.dentscribe.pages.ios.LoginPage;
 import com.dentscribe.pages.ios.ManageSubscriptionPage;
@@ -49,6 +50,7 @@ public class iOSBase extends CommonMethods {
 	public HelpPage helpPage;
 	public ForgotPasswordPage forgotPasswordPage;
 	public PatientProfilePage patientProfilePage;
+	public FeedbackPage feedbackPage;
 	
 	// To start the server automatically
 	//@BeforeTest
@@ -102,6 +104,7 @@ public class iOSBase extends CommonMethods {
 		helpPage = new HelpPage(driver);
 		forgotPasswordPage = new ForgotPasswordPage(driver);
 		patientProfilePage = new PatientProfilePage(driver);
+		feedbackPage = new FeedbackPage(driver);
 	}
 
 }

@@ -44,7 +44,7 @@ public class TestForgotPassowrdPage extends iOSBase {
 	public void DS_050_verifyForgotPasswordForValidEmailId() throws InterruptedException
 	{
 		// To verify the for send reset password email
-		forgotPasswordPage.sendResetPasswordEmail(readData("Config", "username"));
+		forgotPasswordPage.sendResetPasswordEmail(readData("UserDetails", "username"));
 	}
 	
 	@Test (priority = 6, dependsOnMethods = { "DS_046_verityIsForgotPasswordPageExists" })

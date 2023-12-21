@@ -35,7 +35,7 @@ public class TestLoginPage extends iOSBase {
 	@Test (priority = 4, dependsOnMethods = { "DS_004_verifyIsLoginPageExistsAndItsFields" })
 	public void DS_007_verifyLoginWithInvalidPassword() throws IOException, InterruptedException
 	{	
-		loginPage.loginApplication(readData("Config", "username"), "kapoor", "invalid error");
+		loginPage.loginApplication(readData("UserDetails", "username"), "kapoor", "invalid error");
 		ExtentManager.logInfoDetails("User is not logged in as expected");
 	}
 	
@@ -43,13 +43,13 @@ public class TestLoginPage extends iOSBase {
 	public void DS_008_verifyLoginWithThreeInvalidAttempts() throws IOException, InterruptedException
 	{	
 		// verify the blocked user
-		loginPage.verifyBlockedUser(readData("Config", "username"), "Test@123");
+		loginPage.verifyBlockedUser(readData("UserDetails", "username"), "Test@123");
 	}
 	
 	@Test (priority = 6, dependsOnMethods = { "DS_004_verifyIsLoginPageExistsAndItsFields" })
 	public void DS_009_verifyLoginWithValidCredentials() throws IOException, InterruptedException
 	{
 		// login with valid credentials
-		loginPage.loginApplication(readData("Config", "username"), readData("Config", "password"), "sms page");
+		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "sms page");
 	}
 }

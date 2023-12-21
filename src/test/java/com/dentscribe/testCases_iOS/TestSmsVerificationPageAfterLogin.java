@@ -16,7 +16,7 @@ public class TestSmsVerificationPageAfterLogin extends iOSBase
 	{
 		loginPage.verifyIsApplicationLaunched();
 		// login with valid credentials
-		loginPage.loginApplication(readData("Config", "username"), readData("Config", "password"), "sms page");
+		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "sms page");
 	}
 	
 	@Test (priority = 2, dependsOnMethods = { "DS_010_verifyIsSmsVerificationPageExistsAfterLogin" })
@@ -57,7 +57,7 @@ public class TestSmsVerificationPageAfterLogin extends iOSBase
 	public void DS_015_verifySmsVerificationWithValidOtp() throws IOException, InterruptedException
 	{
 		// login with valid credentials
-		loginPage.loginApplication(readData("Config", "username"), readData("Config", "password"), "sms page");
+		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "sms page");
 		// To fill the otp
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());
 		click(driver, loginPage.continueButtonSMSVerification, "Continue Button on SMS Verification page");

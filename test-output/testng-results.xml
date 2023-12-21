@@ -1,41 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="5" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-20T16:41:50 IST" name="Suite" finished-at="2023-12-20T16:43:01 IST" duration-ms="70041">
+  <suite started-at="2023-12-21T17:27:18 IST" name="Suite" finished-at="2023-12-21T17:28:38 IST" duration-ms="80542">
     <groups>
     </groups>
-    <test started-at="2023-12-20T16:41:50 IST" name="Test" finished-at="2023-12-20T16:43:01 IST" duration-ms="70041">
-      <class name="com.dentscribe.testCases_iOS.TestLoginPage">
-        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestLoginPage@65af05b2]" started-at="2023-12-20T16:41:50 IST" name="configureAppium" finished-at="2023-12-20T16:42:03 IST" duration-ms="12644" status="PASS">
+    <test started-at="2023-12-21T17:27:18 IST" name="Test" finished-at="2023-12-21T17:28:38 IST" duration-ms="80542">
+      <class name="com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages@11ad095c]" started-at="2023-12-21T17:27:18 IST" name="configureAppium" finished-at="2023-12-21T17:27:24 IST" duration-ms="6529" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configureAppium -->
-        <test-method signature="DS_004_verifyIsLoginPageExistsAndItsFields()[pri:1, instance:com.dentscribe.testCases_iOS.TestLoginPage@65af05b2]" started-at="2023-12-20T16:42:03 IST" name="DS_004_verifyIsLoginPageExistsAndItsFields" finished-at="2023-12-20T16:42:05 IST" duration-ms="2024" status="PASS">
+        <test-method signature="verifyIsFeedbackPageExists()[pri:1, instance:com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages@11ad095c]" started-at="2023-12-21T17:27:24 IST" name="verifyIsFeedbackPageExists" finished-at="2023-12-21T17:28:03 IST" duration-ms="38428" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DS_004_verifyIsLoginPageExistsAndItsFields -->
-        <test-method signature="DS_005_verifyLoginWithoutMandatoryFields()[pri:2, instance:com.dentscribe.testCases_iOS.TestLoginPage@65af05b2]" started-at="2023-12-20T16:42:05 IST" name="DS_005_verifyLoginWithoutMandatoryFields" finished-at="2023-12-20T16:42:06 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestLoginPage.DS_004_verifyIsLoginPageExistsAndItsFields" duration-ms="1134" status="PASS">
+        </test-method> <!-- verifyIsFeedbackPageExists -->
+        <test-method signature="verifyIsExpectedFieldsExistsOnFeedbackPage()[pri:2, instance:com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages@11ad095c]" started-at="2023-12-21T17:28:03 IST" name="verifyIsExpectedFieldsExistsOnFeedbackPage" finished-at="2023-12-21T17:28:09 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages.verifyIsFeedbackPageExists" duration-ms="5851" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DS_005_verifyLoginWithoutMandatoryFields -->
-        <test-method signature="DS_006_verifyLoginWithNonExistingUser()[pri:3, instance:com.dentscribe.testCases_iOS.TestLoginPage@65af05b2]" started-at="2023-12-20T16:42:06 IST" name="DS_006_verifyLoginWithNonExistingUser" finished-at="2023-12-20T16:42:17 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestLoginPage.DS_004_verifyIsLoginPageExistsAndItsFields" duration-ms="10858" status="PASS">
+        </test-method> <!-- verifyIsExpectedFieldsExistsOnFeedbackPage -->
+        <test-method signature="verifyIsNewFeedbackPageExists()[pri:3, instance:com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages@11ad095c]" started-at="2023-12-21T17:28:09 IST" name="verifyIsNewFeedbackPageExists" finished-at="2023-12-21T17:28:10 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages.verifyIsExpectedFieldsExistsOnFeedbackPage" duration-ms="1309" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DS_006_verifyLoginWithNonExistingUser -->
-        <test-method signature="DS_007_verifyLoginWithInvalidPassword()[pri:4, instance:com.dentscribe.testCases_iOS.TestLoginPage@65af05b2]" started-at="2023-12-20T16:42:17 IST" name="DS_007_verifyLoginWithInvalidPassword" finished-at="2023-12-20T16:42:30 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestLoginPage.DS_004_verifyIsLoginPageExistsAndItsFields" duration-ms="12460" status="PASS">
+        </test-method> <!-- verifyIsNewFeedbackPageExists -->
+        <test-method signature="verifyIsExpectedFieldsExistsOnNewFeedbackPage()[pri:4, instance:com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages@11ad095c]" started-at="2023-12-21T17:28:10 IST" name="verifyIsExpectedFieldsExistsOnNewFeedbackPage" finished-at="2023-12-21T17:28:11 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages.verifyIsNewFeedbackPageExists" duration-ms="965" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DS_007_verifyLoginWithInvalidPassword -->
-        <test-method signature="DS_008_verifyLoginWithThreeInvalidAttempts()[pri:5, instance:com.dentscribe.testCases_iOS.TestLoginPage@65af05b2]" started-at="2023-12-20T16:42:30 IST" name="DS_008_verifyLoginWithThreeInvalidAttempts" finished-at="2023-12-20T16:42:46 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestLoginPage.DS_004_verifyIsLoginPageExistsAndItsFields" duration-ms="16732" status="PASS">
+        </test-method> <!-- verifyIsExpectedFieldsExistsOnNewFeedbackPage -->
+        <test-method signature="verifyBackIconNewFeedbackPage()[pri:5, instance:com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages@11ad095c]" started-at="2023-12-21T17:28:11 IST" name="verifyBackIconNewFeedbackPage" finished-at="2023-12-21T17:28:12 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages.verifyIsExpectedFieldsExistsOnNewFeedbackPage" duration-ms="1318" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DS_008_verifyLoginWithThreeInvalidAttempts -->
-        <test-method signature="DS_009_verifyLoginWithValidCredentials()[pri:6, instance:com.dentscribe.testCases_iOS.TestLoginPage@65af05b2]" started-at="2023-12-20T16:42:46 IST" name="DS_009_verifyLoginWithValidCredentials" finished-at="2023-12-20T16:43:01 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestLoginPage.DS_004_verifyIsLoginPageExistsAndItsFields" duration-ms="14139" status="PASS">
+        </test-method> <!-- verifyBackIconNewFeedbackPage -->
+        <test-method signature="createNewFeedbackAndVerify()[pri:6, instance:com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages@11ad095c]" started-at="2023-12-21T17:28:12 IST" name="createNewFeedbackAndVerify" finished-at="2023-12-21T17:28:38 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages.verifyBackIconNewFeedbackPage" duration-ms="25916" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.fail(Assert.java:106)
+at com.dentscribe.pages.ios.FeedbackPage.verifyNewlyAddedFeedback(FeedbackPage.java:108)
+at com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages.createNewFeedbackAndVerify(TestFeedbackAndNewFeedbackPages.java:81)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DS_009_verifyLoginWithValidCredentials -->
-      </class> <!-- com.dentscribe.testCases_iOS.TestLoginPage -->
+        </test-method> <!-- createNewFeedbackAndVerify -->
+        <test-method signature="verifyBackIconFeedbackPage()[pri:7, instance:com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages@11ad095c]" started-at="2023-12-21T17:28:38 IST" name="verifyBackIconFeedbackPage" finished-at="2023-12-21T17:28:38 IST" depends-on-methods="com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages.createNewFeedbackAndVerify" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestFeedbackAndNewFeedbackPages.verifyBackIconFeedbackPage()[pri:7, instance:com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages@11ad095c] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestFeedbackAndNewFeedbackPages.verifyBackIconFeedbackPage()[pri:7, instance:com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages@11ad095c] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBackIconFeedbackPage -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -2,11 +2,9 @@ package com.dentscribe.pages.ios;
 
 import org.dentscribe.utils.iOSActions;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 
 import com.dentscribe.ExtentReport.ExtentManager;
-import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.ios.IOSDriver;
 
 public class EulaAgreementPage extends iOSActions{
