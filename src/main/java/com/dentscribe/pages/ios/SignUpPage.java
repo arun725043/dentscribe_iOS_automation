@@ -167,16 +167,14 @@ public class SignUpPage extends iOSActions {
 		verifyText(getText(driver, textEnterValidCode), "Please enter the valid code.", "Please enter the valid code.");
 	}
 
-	// _________getting random fname,lname,lno,countrycode,countryname_____________
+	// _________getting random fname,lname,licenseno,password, mobile number_______________
 	public String[] getSignupDetail() {
 		String fname = generateRandomFirstName();
 		String lname = genrateRandomLastName();
 		String licenseNo = String.valueOf(GenerateRandomNumber(6));
+		String mobileNumber = readData("testData", "mobile");
 		String pass = "Pass@" + CommonMethods.GenerateRandomNumber(5);
-		String countryCode = readData("testData", "countryCode");
-		String countryName = readData("testData", "countryName");
-		return new String[] { fname, lname, licenseNo, pass, countryCode, countryName };
-
+		return new String[] { fname, lname, mobileNumber, licenseNo, pass };
 	}
 
 	// __________________fill signup form_____________________
@@ -186,7 +184,7 @@ public class SignUpPage extends iOSActions {
 		hideKeyboard();
 		sendKeys(driver, countryCode, "9", "Country Code");
 		click(driver, phoneNumLabel, "Phone Label");
-		sendKeys(driver, inputPhoneNumber, readData("Config", "mobile"), "Phone");
+		sendKeys(driver, inputPhoneNumber, userDetail[2], "Phone");
 		click(driver, phoneNumLabel, "Phone Label");
 	
 		sendKeys(driver, inputEmail, email, "Email");
@@ -195,7 +193,7 @@ public class SignUpPage extends iOSActions {
 		sendKeys(driver, inputTitle, "title" + GenerateRandomNumber(3), "Title");
 		hideKeyboard();
 		performScroll(driver);
-		sendKeys(driver, licenseNumber, userDetail[2], "License Number");
+		sendKeys(driver, licenseNumber, userDetail[3], "License Number");
 		try {
 			click(driver, licenseNumberLabel, "License Number Label");
 		} catch (Exception e) {
@@ -203,14 +201,45 @@ public class SignUpPage extends iOSActions {
 		}
 		performScroll(driver);
 		click(driver, eyeIconPassword, "Eye Icon - Password");
-		sendKeys(driver, inputPassword, userDetail[3], "Password");
-		CommonVariables.actualPass = userDetail[3];
+		sendKeys(driver, inputPassword, userDetail[4], "Password");
+		CommonVariables.actualPass = userDetail[4];
 		hideKeyboard();
-		CommonVariables.actualPass = userDetail[3];
-		sendKeys(driver, CommonLocators.confirmPassowrd_ios, userDetail[3], "Confirm Password");
+		sendKeys(driver, CommonLocators.confirmPassowrd_ios, userDetail[4], "Confirm Password");
 		hideKeyboard();
 		selectPracticeManagementSoftware(pms.toLowerCase());
 		clickContinueButtonSignupPage();
+	}
+	
+	// To verify the existing email id
+	public void verifyExistingEmailId(String[] userDetail, String email, String pms) {
+		scrollUpTillElementVisible(driver, firstNameLabel);
+		sendKeys(driver, inputFirstName, userDetail[0], "First Name");
+		sendKeys(driver, inputLastName, userDetail[1], "Last Name");
+		hideKeyboard();
+		sendKeys(driver, countryCode, "9", "Country Code");
+		click(driver, phoneNumLabel, "Phone Label");
+		sendKeys(driver, inputPhoneNumber, userDetail[2], "Phone");
+		click(driver, phoneNumLabel, "Phone Label");
+	
+		sendKeys(driver, inputEmail, email, "Email");
+		hideKeyboard();
+		performScroll(driver);
+		sendKeys(driver, licenseNumber, userDetail[3], "License Number");
+		try {
+			click(driver, licenseNumberLabel, "License Number Label");
+		} catch (Exception e) {
+			click(driver, titleLabel, "Title");
+		}
+		performScroll(driver);
+		sendKeys(driver, inputPassword, userDetail[4], "Password");
+		hideKeyboard();
+		sendKeys(driver, CommonLocators.confirmPassowrd_ios, userDetail[4], "Confirm Password");
+		hideKeyboard();
+		performScroll(driver);
+		click(driver, continueButtonSignupPageBy, "Continue on Sign Up page");
+		scrollUpTillElementVisible(driver, emailLabel);
+		verifyText(getText(driver, textAlreadyExistingEmailId), "User with email id already exists.", "User with email id already exists. on sign up page");
+		clear_ios(inputEmail);
 	}
 	
 	// to select the practice management software
@@ -294,36 +323,6 @@ public class SignUpPage extends iOSActions {
 		clear_ios(inputPassword);
 		clear_ios(CommonLocators.confirmPassowrd_ios);
 		hideKeyboard();
-	}
-
-	// To verify the existing email id
-	public void verifyExistingEmailId() {
-		scrollUpTillElementVisible(driver, firstNameLabel);
-		sendKeys(driver, inputFirstName, "Test", "First Name");
-		hideKeyboard();
-		sendKeys(driver, countryCode, "9", "Country Code");
-		click(driver, phoneNumLabel, "Phone Label");
-		sendKeys(driver, inputPhoneNumber, readData("Config", "mobile"), "Phone");
-		click(driver, phoneNumLabel, "Phone Label");
-		sendKeys(driver, inputEmail, readData("Config", "username"), "Email");
-		hideKeyboard();
-		performScroll(driver);
-		sendKeys(driver, licenseNumber, "12345", "License Number");
-		try {
-			click(driver, licenseNumberLabel, "License Number Label");
-		} catch (Exception e) {
-			click(driver, titleLabel, "Title");
-		}
-		performScroll(driver);
-		sendKeys(driver, inputPassword, "Test@123", "Password");
-		hideKeyboard();
-		sendKeys(driver, CommonLocators.confirmPassowrd_ios, "Test@123", "Confirm Password");
-		hideKeyboard();
-		performScroll(driver);
-		click(driver, continueButtonSignupPageBy, "Continue on Sign Up page");
-		scrollUpTillElementVisible(driver, emailLabel);
-		verifyText(getText(driver, textAlreadyExistingEmailId), "User with email id already exists.", "User with email id already exists. on sign up page");
-		clear_ios(inputEmail);
 	}
 	
 	// To verify that user is able to create account by only mandatory fields

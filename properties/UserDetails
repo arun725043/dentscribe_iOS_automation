@@ -1,12 +1,11 @@
-//_______________existing user details_______________
-username=diwakar.nitin+auto001@thinksys.com
-password=Kapoor@1234
-mobile=9990417876
-
-//_______________sikka credentials_______________
-existingSikkaUser=kapoor.arun+sikka@thinksys.com
+#properties
+#Thu Dec 21 19:28:49 IST 2023
+//_______________existing=user details_______________
+//_______________newly=created user details_______________
+//_______________sikka=credentials_______________
 existingSikkaPwd=Kapoor@1234
-
-//_______________newly created user details_______________
-newuser=kapoor.arun+5641@thinksys.com
-newpassword=Pass@0933
+existingSikkaUser=kapoor.arun+sikka@thinksys.com
+newpassword=Pass@00066
+newuser=kapoor.arun+2040@thinksys.com
+password=Kapoor@1234
+username=diwakar.nitin+auto001@thinksys.com

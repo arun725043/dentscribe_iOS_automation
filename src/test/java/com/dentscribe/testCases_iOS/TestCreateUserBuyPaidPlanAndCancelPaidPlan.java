@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 import com.dentscribe.ExtentReport.ExtentManager;
 import com.dentscribe.base.iOSBase;
+import com.dentscribe.common.CommonLocators;
 import com.dentscribe.common.CommonMethods;
 import com.dentscribe.common.CommonVariables;
 
@@ -20,6 +21,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 	{
 		// ____________________Application launched____________________
 		loginPage.verifyIsApplicationLaunched();
+		CommonVariables.appVersion = getText(driver, CommonLocators.versionApplicationBy);
 		
 		// ____________________click on Sign Up tab and verify it____________________
 		click(driver, signUpPage.signupButton, "Sign Up");
@@ -46,6 +48,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 		// _________________fill Practice form and navigate to Sikka webview________________________
 		practiceInfoPage.fillPracticeInfo(readData("testData", "state"), readData("testData", "country"));
 		practiceInfoPage.clickContinueButtonPracticeInfo();
+		explicitWait(driver, sikkaPage.registerButton, 120);
 		sikkaPage.validateSikkaWebViewPage();
 	}
 	
@@ -184,9 +187,10 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 
 		// To fill the billing details
 		addPaymentMethodPage.fillBillingDetails("testing");
-
+		
 		// To click 'Continue' button
 		addPaymentMethodPage.clickContinueButtonPaymentMethodPage();
+		explicitWait(driver, manageSubscriptionPage.headerTextSubscriptionPage, 60);
 
 		// To click on continue button on 'Manage Your Subscription'
 		manageSubscriptionPage.validateManageSubscriptionPage();

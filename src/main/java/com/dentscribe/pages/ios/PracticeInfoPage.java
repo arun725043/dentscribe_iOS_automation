@@ -77,7 +77,7 @@ public class PracticeInfoPage extends iOSActions{
 		click(driver, dropdownCountry, "Country Dropdown");
 		click(driver, this.country, "Country");
 		sendKeys(driver, officeNoCountryCode, "9", "Office Phone Number Country Code");
-		sendKeys(driver, inputOfficeMobile, readData("Config", "mobile"), "Office Phone Number");
+		sendKeys(driver, inputOfficeMobile, readData("testData", "mobile"), "Office Phone Number");
 		click(driver, officePhoneNumLabel, "Office Phone Number Label");
 	}
 	

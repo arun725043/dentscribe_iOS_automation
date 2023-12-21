@@ -42,6 +42,7 @@ public class TestCreateUserTakeFreePlanAndBuyPaidPlan extends iOSBase
 		// _________________fill Practice form and navigate to Sikka webview________________________
 		practiceInfoPage.fillPracticeInfo(readData("testData", "state"), readData("testData", "country"));
 		practiceInfoPage.clickContinueButtonPracticeInfo();
+		explicitWait(driver, sikkaPage.registerButton, 120);
 		sikkaPage.validateSikkaWebViewPage();
 	
 		//_______________Click on 'Yes' Radio Button and accept the Terms of Services__________________________
@@ -160,6 +161,7 @@ public class TestCreateUserTakeFreePlanAndBuyPaidPlan extends iOSBase
 
 		// To click 'Continue' button
 		addPaymentMethodPage.clickContinueButtonPaymentMethodPage();
+		explicitWait(driver, manageSubscriptionPage.headerTextSubscriptionPage, 60);
 
 		// To click on continue button on 'Manage Your Subscription'
 		manageSubscriptionPage.validateManageSubscriptionPage();

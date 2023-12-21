@@ -162,7 +162,7 @@ public class SettingPage extends iOSActions {
 	 public String updatePhoneNumber() {
 		 performScroll(driver);
 		 clear_ios(inputPhoneNumber);
-		 String phoneNumber = "9"+GenerateRandomNumber(9);
+		 String phoneNumber = "9" + GenerateRandomNumber(9);
 		 sendKeys(driver, inputPhoneNumber,phoneNumber , "Phone Number");
 		 new ActionsUtiils(driver).scroll(ScrollDirection.DOWN, 0.10);
 		 click(driver, saveButton, "Save Button on setting page");

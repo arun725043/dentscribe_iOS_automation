@@ -18,5 +18,6 @@ public class CommonLocators {
 	public static By continueButtonBy = By.xpath("//XCUIElementTypeOther[@name='Continue']");
 	public static By allowButton_ios = AppiumBy.accessibilityId("Allow");
 	public static By patientInfoLoader = AppiumBy.accessibilityId("loader-view");
+	public static By versionApplicationBy = By.xpath("//XCUIElementTypeStaticText[@name='application-version']");
 
 }

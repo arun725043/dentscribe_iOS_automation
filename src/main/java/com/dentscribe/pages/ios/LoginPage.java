@@ -23,7 +23,7 @@ public class LoginPage extends iOSActions{
 		this.driver = driver;
 	}
 
-	public boolean flag = false;   
+	public boolean flag = false;
 	public By continueButton = By.xpath("//XCUIElementTypeOther[@name='login-continue-button']");
 	public By linkForgotPassword = By.xpath("//XCUIElementTypeOther[@label='forgotpassword-click']");
 	public By linkBiometricBy = By.xpath("//XCUIElementTypeOther[@name='setup-biometrics-click']");

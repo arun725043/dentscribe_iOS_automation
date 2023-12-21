@@ -41,7 +41,7 @@ public class TestSignUpPage extends iOSBase
 	@Test(priority = 6, dependsOnMethods = { "DS_016_verifyIsSignupPageExists" })
 	public void DS_021_verifyExistingAndDuplicateEmailId() {
 		// To validate the existing email id
-		signUpPage.verifyExistingEmailId();
+		signUpPage.verifyExistingEmailId(signUpPage.getSignupDetail(), readData("UserDetails", "username"), "Dentrix");
 	}
 
 	@Test(priority = 7, dependsOnMethods = { "DS_016_verifyIsSignupPageExists" })

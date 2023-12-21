@@ -37,6 +37,7 @@ public class ExtentManager {
 		extent.setSystemInfo("Testing Device", "iOS");
 		extent.setSystemInfo("Device Model", "iPhone 14 Plus");
 		extent.setSystemInfo("iOS Version", "16.4");
+		extent.setSystemInfo("Build Version", CommonVariables.appVersion);
 		return extent;
 	}
 
