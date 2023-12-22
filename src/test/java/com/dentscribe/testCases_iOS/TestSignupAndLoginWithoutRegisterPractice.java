@@ -8,24 +8,27 @@ import com.dentscribe.common.CommonVariables;
 import Api.GenerateOTP;
 
 
-public class TestSignupAndLoginWithoutRegisterPractice extends iOSBase {
+public class TestSignupAndLoginWithoutRegisterPractice extends iOSBase 
+{
 	
 	String emailString = "kapoor.arun+auto" + CommonMethods.GenerateRandomNumber(4) + "@thinksys.com";
+	String pass = "Pass@" + CommonMethods.GenerateRandomNumber(5);
 
 	@Test (priority = 1)
-	public void DS_028_verifySignupWithNonSupportedPMS() throws InterruptedException 
+	public void verifySignupWithNonSupportedPMS() throws InterruptedException 
 	{
 		// ___________Application launched_______________
 		loginPage.verifyIsApplicationLaunched();
 		signUpPage.validateSignUpPage();
 
 		// ________fill form and verify confirmation popup___________
-		signUpPage.fillSignupForm(signUpPage.getSignupDetail(), emailString, "eaglesoft");
+		signUpPage.fillSignupForm(generateRandomFirstName(), genrateRandomLastName(), "9", readData("testData", "mobile"), emailString, 
+				"title" + GenerateRandomNumber(3), String.valueOf(GenerateRandomNumber(6)), pass, pass, "Dentrix");
 		signUpPage.verifyNonSupportedPmsPopupAndClose();
 	}
 	
 	@Test (priority = 2)
-	public void DS_029_verifySignupWithSupportedPMS()
+	public void verifySignupWithSupportedPMS()
 	{
 		signUpPage.selectPracticeManagementSoftware("dentrix");
 		signUpPage.clickContinueButtonSignupPage();
@@ -33,14 +36,14 @@ public class TestSignupAndLoginWithoutRegisterPractice extends iOSBase {
 	}
 	
 	@Test (priority = 3)
-	public void DS_030_verifyWishToContinuePopupBackButton()
+	public void verifyWishToContinuePopupBackButton()
 	{		
 		// _____________verify back button_______________
 		signUpPage.clickConfirmationPopupButton("back");
 	}
 	
 	@Test (priority = 4)
-	public void DS_031_verifyPracticeInfoMandatoryFields()
+	public void verifyPracticeInfoMandatoryFields()
 	{
 		signUpPage.clickContinueButtonSignupPage();
 		signUpPage.clickConfirmationPopupButton("continue");
@@ -53,7 +56,7 @@ public class TestSignupAndLoginWithoutRegisterPractice extends iOSBase {
 	}
 	
 	@Test (priority = 5)
-	public void DS_032_verifyLoginWithoutRegisterPractice()
+	public void verifyLoginWithoutRegisterPractice()
 	{
 		// ________________verify user should not be logged in with these credentials______________
 		click(driver, loginPage.loginButtonBy, "Login Button");

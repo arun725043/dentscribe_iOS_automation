@@ -1,5 +1,7 @@
 package com.dentscribe.pages.ios;
 
+import static org.testng.Assert.assertFalse;
+
 import java.time.Duration;
 import org.dentscribe.utils.iOSActions;
 import org.openqa.selenium.By;
@@ -25,7 +27,7 @@ public class SignUpPage extends iOSActions {
 	public By noteSignupPage = By.xpath("//XCUIElementTypeStaticText[@name='" + CommonVariables.noteMessageSignupPageString + "']");
 	public By inputFirstName = By.xpath("//XCUIElementTypeTextField[@name='firstname-input']");
 	public By inputLastName = By.xpath(" //XCUIElementTypeTextField[@name='lastname-input']");
-	public By countryCode = By.xpath("//XCUIElementTypeOther[@name='United States Telephone input']");
+	public By countryCodeBy = By.xpath("//XCUIElementTypeOther[@name='United States Telephone input']");
 	public By firstNameLabel = By.xpath("//XCUIElementTypeStaticText[@name='First Name']");
 	public By inputPhoneNumber = By.xpath("//XCUIElementTypeTextField[@name='phone-input']");
 	public By inputEmail = By.xpath("//XCUIElementTypeTextField[@name='email-input']");
@@ -48,7 +50,7 @@ public class SignUpPage extends iOSActions {
 	public By smsVerificationContinueButton = By.xpath("//XCUIElementTypeOther[@name='sms-verification-button']");
 	public By textEnterValidCode = By.xpath("//XCUIElementTypeStaticText[@name='Please enter the valid code.']");
 	public By linkResendCode = By.xpath("//XCUIElementTypeOther[@name='resend-code-button']");
-	public By iconBack = By.xpath("(//XCUIElementTypeOther[@name='SMS Verification'])[4]/XCUIElementTypeOther");
+	public By iconBackSmsVerificationPage = By.xpath("(//XCUIElementTypeOther[@name='SMS Verification'])[4]/XCUIElementTypeOther");
 	public By eyeIconPassword = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == ''`][1]");
 	public By eyeIconConfirmPassword = By.xpath("(//XCUIElementTypeStaticText[@name=\"\"])[2]");
 	public By doYouWishToContinue = AppiumBy.accessibilityId("Do you wish to continue?");
@@ -130,8 +132,7 @@ public class SignUpPage extends iOSActions {
 		}
 	}
 
-	// ___________To verify back and continue button functionality on confirmation
-	// popup_____
+	// ___________To verify back and continue button functionality on confirmation PopUp__________
 	public void clickConfirmationPopupButton(String buttonName) {
 		new WebDriverWait(driver, Duration.ofSeconds(30))
 				.until(ExpectedConditions.visibilityOfElementLocated(buttonBack));
@@ -151,8 +152,8 @@ public class SignUpPage extends iOSActions {
 	}
 
 	// To validate the back button on SMS verification screen
-	public void verifyBackIconButton() {
-		click(driver, iconBack, "Back Icon");
+	public void verifyBackIconSmsVerificationPage() {
+		click(driver, iconBackSmsVerificationPage, "Back icon on SMS Verfication page");
 	}
 
 	// To validation with valid Otp
@@ -166,6 +167,15 @@ public class SignUpPage extends iOSActions {
 		click(driver, smsVerificationContinueButton, "Continue on sms verification page");
 		verifyText(getText(driver, textEnterValidCode), "Please enter the valid code.", "Please enter the valid code.");
 	}
+	
+	// _______________verify resend code link________________
+	public void verifyResendCodeLInk() throws InterruptedException
+	{
+		click(driver, linkResendCode, "Resend Code link");
+		Thread.sleep(5000);
+		assertFalse(driver.getPageSource().contains("00:00"));
+		ExtentManager.logInfoDetails("Timer is started again as expected");
+	}
 
 	// _________getting random fname,lname,licenseno,password, mobile number_______________
 	public String[] getSignupDetail() {
@@ -178,22 +188,23 @@ public class SignUpPage extends iOSActions {
 	}
 
 	// __________________fill signup form_____________________
-	public void fillSignupForm(String[] userDetail, String email, String pms) throws InterruptedException {
-		sendKeys(driver, inputFirstName, userDetail[0], "First Name");
-		sendKeys(driver, inputLastName, userDetail[1], "Last Name");
+	public void fillSignupForm(String fname, String lname, String countryCode, String mobileNo, String email, String title, 
+			String licenseNo, String password, String confirmPassword, String pms) throws InterruptedException {
+		sendKeys(driver, inputFirstName, fname, "First Name");
+		sendKeys(driver, inputLastName, lname, "Last Name");
 		hideKeyboard();
-		sendKeys(driver, countryCode, "9", "Country Code");
+		sendKeys(driver, countryCodeBy, countryCode, "Country Code");
 		click(driver, phoneNumLabel, "Phone Label");
-		sendKeys(driver, inputPhoneNumber, userDetail[2], "Phone");
+		sendKeys(driver, inputPhoneNumber, mobileNo, "Phone");
 		click(driver, phoneNumLabel, "Phone Label");
 	
 		sendKeys(driver, inputEmail, email, "Email");
 		CommonVariables.email = email;
 		hideKeyboard();
-		sendKeys(driver, inputTitle, "title" + GenerateRandomNumber(3), "Title");
+		sendKeys(driver, inputTitle, title, "Title");
 		hideKeyboard();
 		performScroll(driver);
-		sendKeys(driver, licenseNumber, userDetail[3], "License Number");
+		sendKeys(driver, licenseNumber, licenseNo, "License Number");
 		try {
 			click(driver, licenseNumberLabel, "License Number Label");
 		} catch (Exception e) {
@@ -201,10 +212,10 @@ public class SignUpPage extends iOSActions {
 		}
 		performScroll(driver);
 		click(driver, eyeIconPassword, "Eye Icon - Password");
-		sendKeys(driver, inputPassword, userDetail[4], "Password");
-		CommonVariables.actualPass = userDetail[4];
+		sendKeys(driver, inputPassword, password, "Password");
+		CommonVariables.actualPass = password;
 		hideKeyboard();
-		sendKeys(driver, CommonLocators.confirmPassowrd_ios, userDetail[4], "Confirm Password");
+		sendKeys(driver, CommonLocators.confirmPassowrd_ios, confirmPassword, "Confirm Password");
 		hideKeyboard();
 		selectPracticeManagementSoftware(pms.toLowerCase());
 		clickContinueButtonSignupPage();
@@ -216,7 +227,7 @@ public class SignUpPage extends iOSActions {
 		sendKeys(driver, inputFirstName, userDetail[0], "First Name");
 		sendKeys(driver, inputLastName, userDetail[1], "Last Name");
 		hideKeyboard();
-		sendKeys(driver, countryCode, "9", "Country Code");
+		sendKeys(driver, countryCodeBy, "9", "Country Code");
 		click(driver, phoneNumLabel, "Phone Label");
 		sendKeys(driver, inputPhoneNumber, userDetail[2], "Phone");
 		click(driver, phoneNumLabel, "Phone Label");

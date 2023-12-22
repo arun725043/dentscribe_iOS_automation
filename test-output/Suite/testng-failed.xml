@@ -6,21 +6,32 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan">
+      <class name="com.dentscribe.testCases_iOS.TestForgotPassowrdPage">
         <methods>
-          <include name="verifyEulaAgreementPageAndAcceptAgreement"/>
-          <include name="verifyCanUserBuyPaidPlan"/>
-          <include name="verifySikkaWebViewRegistration"/>
-          <include name="verifyCancelSubscriptionPopup"/>
-          <include name="verifyCanUserUpdatePaymentMethod"/>
-          <include name="verifyCanUserBuyPaidPlanAgainAfterCancelOnce"/>
+          <include name="DS_046_verityIsForgotPasswordPageExists"/>
+          <include name="DS_049_verifyForgotPasswordForNotExistsEmailId"/>
           <include name="configureAppium"/>
-          <include name="verifyCreatePracticeInfo"/>
-          <include name="verifySignupNewUser"/>
-          <include name="verifyCanUserCancelSubcription"/>
-          <include name="verifySpuInstallPopupAndRefreshData"/>
         </methods>
-      </class> <!-- com.dentscribe.testCases_iOS.TestCreateUserBuyPaidPlanAndCancelPaidPlan -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestForgotPassowrdPage -->
+      <class name="com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages">
+        <methods>
+          <include name="verifyIsNewFeedbackPageExists"/>
+          <include name="verifyIsExpectedFieldsExistsOnFeedbackPage"/>
+          <include name="createNewFeedbackAndVerify"/>
+          <include name="verifyIsFeedbackPageExists"/>
+          <include name="verifyIsExpectedFieldsExistsOnNewFeedbackPage"/>
+          <include name="configureAppium"/>
+          <include name="verifyBackIconFeedbackPage"/>
+          <include name="verifyBackIconNewFeedbackPage"/>
+        </methods>
+      </class> <!-- com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages -->
+      <class name="com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice">
+        <methods>
+          <include name="DS_029_verifySignupWithSupportedPMS"/>
+          <include name="DS_028_verifySignupWithNonSupportedPMS"/>
+          <include name="configureAppium"/>
+        </methods>
+      </class> <!-- com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

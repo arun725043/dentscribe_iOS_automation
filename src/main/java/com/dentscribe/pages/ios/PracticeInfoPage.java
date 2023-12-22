@@ -62,7 +62,7 @@ public class PracticeInfoPage extends iOSActions{
 	}
 		
 	// ______________fill practice info_______________
-	public void fillPracticeInfo(String state, String country) throws InterruptedException {
+	public void fillPracticeInfo(String state, String country, String countryCode, String mobileNo) throws InterruptedException {
 		sendKeys(driver, inputName, CommonMethods.generateRandomFirstName(), "Name");
 		hideKeyboard();
 		sendKeys(driver, inputAddress1, "AddressOne" + CommonMethods.GenerateRandomNumber(5), "Address line 1");
@@ -76,8 +76,8 @@ public class PracticeInfoPage extends iOSActions{
 		sendKeys(driver, inputZip, CommonMethods.GenerateRandomNumber(6), "zip");
 		click(driver, dropdownCountry, "Country Dropdown");
 		click(driver, this.country, "Country");
-		sendKeys(driver, officeNoCountryCode, "9", "Office Phone Number Country Code");
-		sendKeys(driver, inputOfficeMobile, readData("testData", "mobile"), "Office Phone Number");
+		sendKeys(driver, officeNoCountryCode, countryCode, "Office Phone Number Country Code");
+		sendKeys(driver, inputOfficeMobile, mobileNo, "Office Phone Number");
 		click(driver, officePhoneNumLabel, "Office Phone Number Label");
 	}
 	

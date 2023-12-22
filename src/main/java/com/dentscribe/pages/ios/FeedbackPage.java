@@ -6,7 +6,6 @@ import org.testng.Assert;
 
 import com.dentscribe.ExtentReport.ExtentManager;
 
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.ios.IOSDriver;
 
 public class FeedbackPage extends iOSActions{
@@ -90,15 +89,13 @@ public class FeedbackPage extends iOSActions{
 		sendKeys(driver, inputDescriptionBy, description, "Description field textbox");
 		Thread.sleep(10000);
 		clickSubmitButtonNewFeedbackPage();
-//		explicitWait(driver, successMessageBy, 30);
-//		verifyText(getText(driver, successMessageBy), "Feedback has been successfully created", "success message");
 	}
 	
 	// verify submitted feedback
 	public void verifyNewlyAddedFeedback(String title, String description)
-	{
-		String titleTextString = "(//XCUIElementTypeStaticText[@name='" + title +"'])[1]";
-		String descriptionTextString = "(//XCUIElementTypeStaticText[@name='" + description +"'])[2]";
+	{  
+		String titleTextString = "(//XCUIElementTypeStaticText[@name='" + title +"'])";
+		String descriptionTextString = "(//XCUIElementTypeStaticText[@name='" + description +"'])";
 		if (IsElementPresent(driver, By.xpath(titleTextString)) && IsElementPresent(driver, By.xpath(descriptionTextString)))
 		{
 			ExtentManager.logInfoDetails("Both title and description found successfully in feedback list i.e. Feedback submitted successfully as expected");

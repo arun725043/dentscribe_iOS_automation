@@ -14,6 +14,7 @@ import Api.GenerateOTP;
 public class TestCreateUserTakeFreePlanAndBuyPaidPlan extends iOSBase 
 {
 	String emailId = "kapoor.arun+" + CommonMethods.GenerateRandomNumber(4) + "@thinksys.com";
+	String pass = "Pass@" + CommonMethods.GenerateRandomNumber(5);
 
 	@Test(priority = 1)
 	public void createNewUserAndGoToManageSubscriptionPage() throws InterruptedException, IOException 
@@ -26,7 +27,8 @@ public class TestCreateUserTakeFreePlanAndBuyPaidPlan extends iOSBase
 		signUpPage.validateSignUpPage();
 		
 		// ____________________Fill signup form and verify confirmation popup button_________________
-		signUpPage.fillSignupForm(signUpPage.getSignupDetail(), emailId, "Dentrix"); // spelling need to be correct to this method
+		signUpPage.fillSignupForm(generateRandomFirstName(), genrateRandomLastName(), "9", readData("testData", "mobile"), emailId, "title" + GenerateRandomNumber(3), 
+				String.valueOf(GenerateRandomNumber(6)), pass, pass, "Dentrix"); // spelling need to be correct to this method
 		signUpPage.verifyConfirmationPopup();
 
 		//___________Click on Confirmation popup button______________
@@ -40,7 +42,7 @@ public class TestCreateUserTakeFreePlanAndBuyPaidPlan extends iOSBase
 		practiceInfoPage.validatePracticeInfoPage();
 
 		// _________________fill Practice form and navigate to Sikka webview________________________
-		practiceInfoPage.fillPracticeInfo(readData("testData", "state"), readData("testData", "country"));
+		practiceInfoPage.fillPracticeInfo(readData("testData", "state"), readData("testData", "country"), "9", readData("testData", "mobile"));
 		practiceInfoPage.clickContinueButtonPracticeInfo();
 		explicitWait(driver, sikkaPage.registerButton, 120);
 		sikkaPage.validateSikkaWebViewPage();

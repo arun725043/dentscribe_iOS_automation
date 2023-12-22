@@ -7,7 +7,7 @@ import com.dentscribe.base.iOSBase;
 public class TestForgotPassowrdPage extends iOSBase {
 
 	@Test (priority = 1)
-	public void DS_046_verityIsForgotPasswordPageExists() throws InterruptedException 
+	public void verityIsForgotPasswordPageExists() throws InterruptedException 
 	{
 		//__________________Application Launched_____________________
 		loginPage.verifyIsApplicationLaunched();
@@ -19,36 +19,36 @@ public class TestForgotPassowrdPage extends iOSBase {
 		forgotPasswordPage.validateForgotPasswordPage();
 	}
 	
-	@Test (priority = 2, dependsOnMethods = { "DS_046_verityIsForgotPasswordPageExists" })
-	public void DS_047_verifyForgotPasswordMandatoryFields()
+	@Test (priority = 2, dependsOnMethods = { "verityIsForgotPasswordPageExists" })
+	public void verifyForgotPasswordMandatoryFields()
 	{
 		// To verify 'User Name is required' after clicking on continue button without enter email
 		forgotPasswordPage.verifyUserNameIsRequired();
 	}
 	
-	@Test (priority = 3, dependsOnMethods = { "DS_046_verityIsForgotPasswordPageExists" })
-	public void DS_048_verifyForgotPasswordForWrongEmailId()
+	@Test (priority = 3, dependsOnMethods = { "verityIsForgotPasswordPageExists" })
+	public void verifyForgotPasswordForWrongEmailId()
 	{
 		// To verify 'enter valid email' message
 		forgotPasswordPage.verifyWrongUserName("kapoor.arun");
 	}
 	
-	@Test (priority = 4, dependsOnMethods = { "DS_046_verityIsForgotPasswordPageExists" })
-	public void DS_049_verifyForgotPasswordForNotExistsEmailId()
+	@Test (priority = 4, dependsOnMethods = { "verityIsForgotPasswordPageExists" })
+	public void verifyForgotPasswordForNotExistsEmailId()
 	{
 		// To verify 'No record found' error message
 		forgotPasswordPage.verifyInvalidUserName("kapoor@gmail.com");
 	}
 	
-	@Test (priority = 5, dependsOnMethods = { "DS_046_verityIsForgotPasswordPageExists" })
-	public void DS_050_verifyForgotPasswordForValidEmailId() throws InterruptedException
+	@Test (priority = 5, dependsOnMethods = { "verityIsForgotPasswordPageExists" })
+	public void verifyForgotPasswordForValidEmailId() throws InterruptedException
 	{
 		// To verify the for send reset password email
 		forgotPasswordPage.sendResetPasswordEmail(readData("UserDetails", "username"));
 	}
 	
-	@Test (priority = 6, dependsOnMethods = { "DS_046_verityIsForgotPasswordPageExists" })
-	public void DS_051_verifyForgotPasswordBackIcon() throws InterruptedException
+	@Test (priority = 6, dependsOnMethods = { "verityIsForgotPasswordPageExists" })
+	public void verifyForgotPasswordBackIcon() throws InterruptedException
 	{
 		// To verify the back icon
 		forgotPasswordPage.clickBackIconForgotPassword();

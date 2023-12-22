@@ -7,52 +7,52 @@ public class TestSignUpPage extends iOSBase
 {
 	
 	@Test (priority = 1)
-	public void DS_016_verifyIsSignupPageExists()
+	public void verifyIsSignupPageExists()
 	{
 		loginPage.verifyIsApplicationLaunched();
 		signUpPage.validateSignUpPage();
 		
 	}
 	
-	@Test(priority = 2, dependsOnMethods = { "DS_016_verifyIsSignupPageExists" })
-	public void DS_017_verifySignupWithoutMandatoryFields() {
+	@Test(priority = 2, dependsOnMethods = { "verifyIsSignupPageExists" })
+	public void verifySignupWithoutMandatoryFields() {
 		// To verify the sign up mandatory fields
 		signUpPage.verifyMandatoryFields();
 	}
 
-	@Test(priority = 3, dependsOnMethods = { "DS_016_verifyIsSignupPageExists" })
-	public void DS_018_verifySignupPageForInvalidEmail() {
+	@Test(priority = 3, dependsOnMethods = { "verifyIsSignupPageExists" })
+	public void verifySignupPageForInvalidEmail() {
 		// To validate the invalid email id
 		signUpPage.verifyInvalidEmail();
 	}
 
-	@Test(priority = 4, dependsOnMethods = { "DS_016_verifyIsSignupPageExists" })
-	public void DS_019_verifySignupPageForWeakPassword() {
+	@Test(priority = 4, dependsOnMethods = { "verifyIsSignupPageExists" })
+	public void verifySignupPageForWeakPassword() {
 		// To validate the weak password
 		signUpPage.verifyWeakPassword();
 	}
 
-	@Test(priority = 5, dependsOnMethods = { "DS_016_verifyIsSignupPageExists" })
-	public void DS_020_verifySignupPageForConfirPassowrd() {
+	@Test(priority = 5, dependsOnMethods = { "verifyIsSignupPageExists" })
+	public void verifySignupPageForConfirmPassowrd() {
 		// To validate the confirm password match
 		signUpPage.verifyConfirmPasswordMatch();
 	}
 
-	@Test(priority = 6, dependsOnMethods = { "DS_016_verifyIsSignupPageExists" })
-	public void DS_021_verifyExistingAndDuplicateEmailId() {
+	@Test(priority = 6, dependsOnMethods = { "verifyIsSignupPageExists" })
+	public void verifyExistingAndDuplicateEmailId() {
 		// To validate the existing email id
 		signUpPage.verifyExistingEmailId(signUpPage.getSignupDetail(), readData("UserDetails", "username"), "Dentrix");
 	}
 
-	@Test(priority = 7, dependsOnMethods = { "DS_016_verifyIsSignupPageExists" })
-	public void DS_022_verifySignupWithOnlyMandatoryFields() {
+	@Test(priority = 7, dependsOnMethods = { "verifyIsSignupPageExists" })
+	public void verifySignupWithOnlyMandatoryFields() {
 		// To validate that user is able to create the account only using mandatory fields
 		signUpPage.verifyAccountCreateByMandatoryFields();
 		signUpPage.verifyConfirmationPopup();
 	}
 	
-	@Test(priority = 8, dependsOnMethods = { "DS_016_verifyIsSignupPageExists" })
-	public void DS_023_verifySignupConfirmationPopupButtons()
+	@Test(priority = 8, dependsOnMethods = { "verifyIsSignupPageExists" })
+	public void verifySignupConfirmationPopupButtons()
 	{
 		// _____________verify back and continue button_______________
 		signUpPage.clickConfirmationPopupButton("back");

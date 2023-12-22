@@ -9,7 +9,7 @@ import com.dentscribe.base.iOSBase;
 public class TestLoginPage extends iOSBase {
 
 	@Test (priority = 1)
-	public void DS_004_verifyIsLoginPageExistsAndItsFields() throws IOException, InterruptedException 
+	public void verifyIsLoginPageExistsAndItsFields() throws IOException, InterruptedException 
 	{
 		loginPage.verifyIsApplicationLaunched();
 		loginPage.validateLoginPage();
@@ -17,14 +17,14 @@ public class TestLoginPage extends iOSBase {
 		loginPage.verifyHomePageElement();
 	}
 
-	@Test (priority = 2, dependsOnMethods = { "DS_004_verifyIsLoginPageExistsAndItsFields" })
-	public void DS_005_verifyLoginWithoutMandatoryFields()
+	@Test (priority = 2, dependsOnMethods = { "verifyIsLoginPageExistsAndItsFields" })
+	public void verifyLoginWithoutMandatoryFields()
 	{
 		// _______________verify mandatory fields_____________
 		loginPage.verifyLoginMandatoryField();
 	}
 	
-	@Test (priority = 3, dependsOnMethods = { "DS_004_verifyIsLoginPageExistsAndItsFields" })
+	@Test (priority = 3, dependsOnMethods = { "verifyIsLoginPageExistsAndItsFields" })
 	public void DS_006_verifyLoginWithNonExistingUser() throws IOException, InterruptedException
 	{
 		// try to login with invalid credentials
@@ -32,22 +32,22 @@ public class TestLoginPage extends iOSBase {
 		ExtentManager.logInfoDetails("User is not logged in as expected");
 	}
 	
-	@Test (priority = 4, dependsOnMethods = { "DS_004_verifyIsLoginPageExistsAndItsFields" })
-	public void DS_007_verifyLoginWithInvalidPassword() throws IOException, InterruptedException
+	@Test (priority = 4, dependsOnMethods = { "verifyIsLoginPageExistsAndItsFields" })
+	public void verifyLoginWithInvalidPassword() throws IOException, InterruptedException
 	{	
 		loginPage.loginApplication(readData("UserDetails", "username"), "kapoor", "invalid error");
 		ExtentManager.logInfoDetails("User is not logged in as expected");
 	}
 	
-	@Test (priority = 5, dependsOnMethods = { "DS_004_verifyIsLoginPageExistsAndItsFields" })
-	public void DS_008_verifyLoginWithThreeInvalidAttempts() throws IOException, InterruptedException
+	@Test (priority = 5, dependsOnMethods = { "verifyIsLoginPageExistsAndItsFields" })
+	public void verifyLoginWithThreeInvalidAttempts() throws IOException, InterruptedException
 	{	
 		// verify the blocked user
 		loginPage.verifyBlockedUser(readData("UserDetails", "username"), "Test@123");
 	}
 	
-	@Test (priority = 6, dependsOnMethods = { "DS_004_verifyIsLoginPageExistsAndItsFields" })
-	public void DS_009_verifyLoginWithValidCredentials() throws IOException, InterruptedException
+	@Test (priority = 6, dependsOnMethods = { "verifyIsLoginPageExistsAndItsFields" })
+	public void verifyLoginWithValidCredentials() throws IOException, InterruptedException
 	{
 		// login with valid credentials
 		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "sms page");

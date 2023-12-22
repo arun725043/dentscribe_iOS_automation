@@ -16,7 +16,7 @@ import Api.GenerateOTP;
 public class TestPatientSearchPage extends iOSBase {
 
 	@Test (priority = 1)
-	public void DS_039_verifySkipLinkTourPages() throws IOException, InterruptedException 
+	public void verifySkipLinkTourPages() throws IOException, InterruptedException 
 	{
 		//__________________Application Launched_____________________
 		loginPage.verifyIsApplicationLaunched();
@@ -34,21 +34,21 @@ public class TestPatientSearchPage extends iOSBase {
 		calendarPage.validateCalendarPage();
 	}
 	
-	@Test (priority = 2, dependsOnMethods = { "DS_039_verifySkipLinkTourPages" } )
-	public void DS_040_verifyIsPatientSearchPageExists()
+	@Test (priority = 2, dependsOnMethods = { "verifySkipLinkTourPages" } )
+	public void verifyIsPatientSearchPageExists()
 	{
 		// search result should be display after searching
 		calendarPage.clickSearchIconCalendarPage();
 		patientSearchPage.validatePatientSearchPage();
 	}
-	@Test (priority = 3, dependsOnMethods = { "DS_040_verifyIsPatientSearchPageExists" } )
-	public void DS_041_verifyPatientSearchByInvalidData()
+	@Test (priority = 3, dependsOnMethods = { "verifyIsPatientSearchPageExists" } )
+	public void verifyPatientSearchByInvalidData()
 	{
 		// to verify the in valid user
 		patientSearchPage.verifyNoMatchesFound();
 	}
 	
-	@Test (priority = 4, dependsOnMethods = { "DS_040_verifyIsPatientSearchPageExists" } )
+	@Test (priority = 4, dependsOnMethods = { "verifyIsPatientSearchPageExists" } )
 	public void DS_042_verifyPatientSearchByPatientName()
 	{
 		// Search By patientName and verify
@@ -60,8 +60,8 @@ public class TestPatientSearchPage extends iOSBase {
 		ExtentManager.logInfoDetails("Search Result is displayed as per the given input");
 	}
 	
-	@Test (priority = 5, dependsOnMethods = { "DS_040_verifyIsPatientSearchPageExists" } )
-	public void DS_043_verifyPatientSearchByPatientPhoneNumber()
+	@Test (priority = 5, dependsOnMethods = { "verifyIsPatientSearchPageExists" } )
+	public void verifyPatientSearchByPatientPhoneNumber()
 	{
 		// Search By patientMobile and verify
 		ExtentManager.logInfoDetails("Searching By mobile : <b> " + readData("testData", "patientPhone") + "</b>");
@@ -73,8 +73,8 @@ public class TestPatientSearchPage extends iOSBase {
 		ExtentManager.logInfoDetails("Search Result is displayed as per the given input");
 	}
 	
-	@Test (priority = 6, dependsOnMethods = { "DS_040_verifyIsPatientSearchPageExists" } )
-	public void DS_044_verifyPatientSearchByPatientDOB()
+	@Test (priority = 6, dependsOnMethods = { "verifyIsPatientSearchPageExists" } )
+	public void verifyPatientSearchByPatientDOB()
 	{
 		// Search By dob and verify
 		ExtentManager.logInfoDetails("Searching By DOB : <b> " + readData("testData", "dob") + "</b>");
@@ -84,8 +84,8 @@ public class TestPatientSearchPage extends iOSBase {
 		ExtentManager.logInfoDetails("Search Result is displayed as per the given input");
 	}
 
-	@Test (priority = 7, dependsOnMethods = { "DS_040_verifyIsPatientSearchPageExists" } )
-	public void DS_045_verifyPatientSearchByPatientInsurance()
+	@Test (priority = 7, dependsOnMethods = { "verifyIsPatientSearchPageExists" } )
+	public void verifyPatientSearchByPatientInsurance()
 	{
 		// Search By insurance and verify
 		ExtentManager.logInfoDetails("Searching By insurance : <b> " + readData("testData", "insurance") + "</b>");
