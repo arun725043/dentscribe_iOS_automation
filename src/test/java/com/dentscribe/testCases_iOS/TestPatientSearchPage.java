@@ -12,7 +12,6 @@ import com.dentscribe.ExtentReport.ExtentManager;
 import com.dentscribe.base.iOSBase;
 import Api.GenerateOTP;
 
-
 public class TestPatientSearchPage extends iOSBase {
 
 	@Test (priority = 1)

@@ -23,11 +23,11 @@ public class TestSignupAndLoginWithoutRegisterPractice extends iOSBase
 
 		// ________fill form and verify confirmation popup___________
 		signUpPage.fillSignupForm(generateRandomFirstName(), genrateRandomLastName(), "9", readData("testData", "mobile"), emailString, 
-				"title" + GenerateRandomNumber(3), String.valueOf(GenerateRandomNumber(6)), pass, pass, "Dentrix");
+				"title" + GenerateRandomNumber(3), String.valueOf(GenerateRandomNumber(6)), pass, pass, "Eaglesoft");
 		signUpPage.verifyNonSupportedPmsPopupAndClose();
 	}
 	
-	@Test (priority = 2)
+	@Test (priority = 2, dependsOnMethods = { "verifySignupWithNonSupportedPMS" })
 	public void verifySignupWithSupportedPMS()
 	{
 		signUpPage.selectPracticeManagementSoftware("dentrix");
@@ -35,14 +35,14 @@ public class TestSignupAndLoginWithoutRegisterPractice extends iOSBase
 		signUpPage.verifyConfirmationPopup();
 	}
 	
-	@Test (priority = 3)
+	@Test (priority = 3, dependsOnMethods = { "verifySignupWithSupportedPMS" })
 	public void verifyWishToContinuePopupBackButton()
 	{		
 		// _____________verify back button_______________
 		signUpPage.clickConfirmationPopupButton("back");
 	}
 	
-	@Test (priority = 4)
+	@Test (priority = 4, dependsOnMethods = { "verifyWishToContinuePopupBackButton" })
 	public void verifyPracticeInfoMandatoryFields()
 	{
 		signUpPage.clickContinueButtonSignupPage();
@@ -55,7 +55,7 @@ public class TestSignupAndLoginWithoutRegisterPractice extends iOSBase
 		practiceInfoPage.verifyMandatoryFields();
 	}
 	
-	@Test (priority = 5)
+	@Test (priority = 5, dependsOnMethods = { "verifyPracticeInfoMandatoryFields" })
 	public void verifyLoginWithoutRegisterPractice()
 	{
 		// ________________verify user should not be logged in with these credentials______________

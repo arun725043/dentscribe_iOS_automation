@@ -20,7 +20,7 @@
 			<class name="com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice" />
 			<class name="com.dentscribe.testCases_iOS.TestTourPages" />
 			<class name="com.dentscribe.testCases_iOS.TestPatientSearchPage" />
-			<class name="com.dentscribe.testCases_iOS.TestForgotPassowrdPage" />
+			<class name="com.dentscribe.testCases_iOS.TestForgotPasswordPage" />
 			<class name="com.dentscribe.testCases_iOS.TestSettingsPage" />
 			<class name="com.dentscribe.testCases_iOS.TestChangePassword" />
 			<class name="com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages" />

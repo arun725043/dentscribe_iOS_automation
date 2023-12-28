@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import com.dentscribe.base.iOSBase;
 
 
-public class TestForgotPassowrdPage extends iOSBase {
+public class TestForgotPasswordPage extends iOSBase {
 
 	@Test (priority = 1)
 	public void verityIsForgotPasswordPageExists() throws InterruptedException 

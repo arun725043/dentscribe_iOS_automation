@@ -6,32 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.dentscribe.testCases_iOS.TestForgotPassowrdPage">
+      <class name="com.dentscribe.testCases_iOS.TestForgotPasswordPage">
         <methods>
-          <include name="DS_046_verityIsForgotPasswordPageExists"/>
-          <include name="DS_049_verifyForgotPasswordForNotExistsEmailId"/>
           <include name="configureAppium"/>
+          <include name="verifyForgotPasswordForNotExistsEmailId"/>
+          <include name="verityIsForgotPasswordPageExists"/>
         </methods>
-      </class> <!-- com.dentscribe.testCases_iOS.TestForgotPassowrdPage -->
-      <class name="com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages">
-        <methods>
-          <include name="verifyIsNewFeedbackPageExists"/>
-          <include name="verifyIsExpectedFieldsExistsOnFeedbackPage"/>
-          <include name="createNewFeedbackAndVerify"/>
-          <include name="verifyIsFeedbackPageExists"/>
-          <include name="verifyIsExpectedFieldsExistsOnNewFeedbackPage"/>
-          <include name="configureAppium"/>
-          <include name="verifyBackIconFeedbackPage"/>
-          <include name="verifyBackIconNewFeedbackPage"/>
-        </methods>
-      </class> <!-- com.dentscribe.testCases_iOS.TestFeedbackAndNewFeedbackPages -->
-      <class name="com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice">
-        <methods>
-          <include name="DS_029_verifySignupWithSupportedPMS"/>
-          <include name="DS_028_verifySignupWithNonSupportedPMS"/>
-          <include name="configureAppium"/>
-        </methods>
-      </class> <!-- com.dentscribe.testCases_iOS.TestSignupAndLoginWithoutRegisterPractice -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestForgotPasswordPage -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
