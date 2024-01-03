@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 import com.dentscribe.base.iOSBase;
 import com.dentscribe.common.CommonMethods;
+import com.dentscribe.common.CommonVariables;
 
 import Api.GenerateOTP;
 
@@ -18,7 +19,7 @@ public class TestChangePassword extends iOSBase
 		loginPage.verifyIsApplicationLaunched();
 		
 		// Perform Login
-		loginPage.loginApplication(readData("ChangePassword", "username"), readData("ChangePassword", "currentPassword"), "sms page");
+		loginPage.loginApplication(readData(CommonVariables.inputFileChangePassword, "username"), readData(CommonVariables.inputFileChangePassword, "currentPassword"), "sms page");
 
 		// To fill the OTP
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());
@@ -33,7 +34,7 @@ public class TestChangePassword extends iOSBase
 		settingPage.validateSettingsPage();
 		
 		// To update the password and verify login page
-		settingPage.updatePassword(readData("ChangePassword", "currentPassword"), newPasswordString);
+		settingPage.updatePassword(readData(CommonVariables.inputFileChangePassword, "currentPassword"), newPasswordString);
 		loginPage.validateLoginPage();		// To verify that login page appears
 	}
 	
@@ -41,14 +42,14 @@ public class TestChangePassword extends iOSBase
 	public void verifyUserShouldNotLoginFromOldPassword() throws IOException, InterruptedException
 	{
 		// To verify that user is not able to login with invalid id and password
-		loginPage.loginApplication(readData("ChangePassword", "username"), readData("ChangePassword", "oldPassword"), "invalid");
+		loginPage.loginApplication(readData(CommonVariables.inputFileChangePassword, "username"), readData(CommonVariables.inputFileChangePassword, "oldPassword"), "invalid");
 	}
 	
 	@Test(priority = 3, dependsOnMethods = { "verifyChangePasswordFromSettingsPage" })
 	public void verifyUserShouldLoginFromNewChangedPassword() throws IOException, InterruptedException
 	{	
 		// To verify that user is able to login with new id and password
-		loginPage.loginApplication(readData("ChangePassword", "username"), readData("ChangePassword", "currentPassword"), "sms page");
+		loginPage.loginApplication(readData(CommonVariables.inputFileChangePassword, "username"), readData(CommonVariables.inputFileChangePassword, "currentPassword"), "sms page");
 	}
 	
 }

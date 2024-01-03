@@ -22,8 +22,8 @@ public class TestSignupAndLoginWithoutRegisterPractice extends iOSBase
 		signUpPage.validateSignUpPage();
 
 		// ________fill form and verify confirmation popup___________
-		signUpPage.fillSignupForm(generateRandomFirstName(), genrateRandomLastName(), "9", readData("testData", "mobile"), emailString, 
-				"title" + GenerateRandomNumber(3), String.valueOf(GenerateRandomNumber(6)), pass, pass, "Eaglesoft");
+		signUpPage.fillSignupForm(generateRandomFirstName(), genrateRandomLastName(), "9", readData(CommonVariables.inputFileTestData, "mobile"), 
+				emailString, "title" + GenerateRandomNumber(3), String.valueOf(GenerateRandomNumber(6)), pass, pass, "Eaglesoft");
 		signUpPage.verifyNonSupportedPmsPopupAndClose();
 	}
 	

@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 import com.dentscribe.ExtentReport.ExtentManager;
 import com.dentscribe.base.iOSBase;
+import com.dentscribe.common.CommonVariables;
 
 
 public class TestLoginPage extends iOSBase {
@@ -35,7 +36,7 @@ public class TestLoginPage extends iOSBase {
 	@Test (priority = 4, dependsOnMethods = { "verifyIsLoginPageExistsAndItsFields" })
 	public void verifyLoginWithInvalidPassword() throws IOException, InterruptedException
 	{	
-		loginPage.loginApplication(readData("UserDetails", "username"), "kapoor", "invalid error");
+		loginPage.loginApplication(readData(CommonVariables.inputFileUserDetails, "username"), "kapoor", "invalid error");
 		ExtentManager.logInfoDetails("User is not logged in as expected");
 	}
 	
@@ -43,13 +44,13 @@ public class TestLoginPage extends iOSBase {
 	public void verifyLoginWithThreeInvalidAttempts() throws IOException, InterruptedException
 	{	
 		// verify the blocked user
-		loginPage.verifyBlockedUser(readData("UserDetails", "username"), "Test@123");
+		loginPage.verifyBlockedUser(readData(CommonVariables.inputFileUserDetails, "username"), "Test@123");
 	}
 	
 	@Test (priority = 6, dependsOnMethods = { "verifyIsLoginPageExistsAndItsFields" })
 	public void verifyLoginWithValidCredentials() throws IOException, InterruptedException
 	{
 		// login with valid credentials
-		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "sms page");
+		loginPage.loginApplication(readData(CommonVariables.inputFileUserDetails, "username"), readData(CommonVariables.inputFileUserDetails, "password"), "sms page");
 	}
 }

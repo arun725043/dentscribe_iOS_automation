@@ -8,12 +8,15 @@ import java.time.Month;
 import org.testng.annotations.Test;
 import com.dentscribe.ExtentReport.ExtentManager;
 import com.dentscribe.base.iOSBase;
+import com.dentscribe.common.CommonVariables;
+
 import Api.GenerateOTP;
 import io.appium.java_client.AppiumBy;
 
 public class TestSoapReportAndPatientProfilePage extends iOSBase 
 {
 	String patientName = null;
+	String appointmentDateString = readData(CommonVariables.inputFileTestData, "appointmentsDate");
 	
 	@Test (priority = 1)
 	public void verifyIsRecordingPageOpenedForExpectedPatient() throws InterruptedException, IOException 
@@ -21,7 +24,8 @@ public class TestSoapReportAndPatientProfilePage extends iOSBase
 		loginPage.verifyIsApplicationLaunched();
 		
 		// __________________________________Login into Application__________________________________________________
-		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "sms page");
+		loginPage.loginApplication(readData(CommonVariables.inputFileUserDetails, "username"), 
+				readData(CommonVariables.inputFileUserDetails, "password"), "sms page");
 		
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());
 		click(driver, loginPage.continueButtonSMSVerification, "Continue on sms verification page");
@@ -33,7 +37,7 @@ public class TestSoapReportAndPatientProfilePage extends iOSBase
 		// __________________________________Select date______________________________________________________________
 		waitUntilLoaderDisappear(driver);
 		System.out.println("Loading Done");
-		int[] date = calendarPage.getDateMonthYear(readData("testData", "shortAppointmentsDate"));
+		int[] date = calendarPage.getDateMonthYear(appointmentDateString);
 		Month month = Month.of(date[1]);    
 		month.toString();
  		click(driver, calendarPage.dropdownIconCalendar, "Calendar Dropdown");
@@ -157,8 +161,8 @@ public class TestSoapReportAndPatientProfilePage extends iOSBase
 		patientSearchPage.validatePatientSearchPage();
 
 		// Search By patientName and verify
-		ExtentManager.logInfoDetails("Searching By name : <b> " + readData("testData", "patientName") + "</b>");
-		patientSearchPage.searchPatient(readData("testData", "patientName"));
+		ExtentManager.logInfoDetails("Searching By name : <b> " + readData(CommonVariables.inputFileTestData, "patientName") + "</b>");
+		patientSearchPage.searchPatient(readData(CommonVariables.inputFileTestData, "patientName"));
 		waitUntilLoaderDisappear(driver);
 		
 		// To click on patient name and verify Profile page
@@ -166,8 +170,8 @@ public class TestSoapReportAndPatientProfilePage extends iOSBase
 		patientProfilePage.validatePatientProfilePage();
 		
 		// To verify the patient name 
-		assertTrue(patientProfilePage.verifyPatientName(readData("testData", "patientName")));
-		ExtentManager.logInfoDetails(readData("testData", "patientName")+": Profile Opened as expected");
+		assertTrue(patientProfilePage.verifyPatientName(readData(CommonVariables.inputFileTestData, "patientName")));
+		ExtentManager.logInfoDetails(readData(CommonVariables.inputFileTestData, "patientName")+": Profile Opened as expected");
 	}
 	
 	@Test (priority = 9, dependsOnMethods = { "verifyPatientProfilePage" })

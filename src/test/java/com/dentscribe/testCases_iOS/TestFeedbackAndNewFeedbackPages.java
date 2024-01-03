@@ -4,6 +4,8 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import com.dentscribe.base.iOSBase;
+import com.dentscribe.common.CommonVariables;
+
 import Api.GenerateOTP;
 
 public class TestFeedbackAndNewFeedbackPages extends iOSBase
@@ -18,7 +20,8 @@ public class TestFeedbackAndNewFeedbackPages extends iOSBase
 		loginPage.verifyIsApplicationLaunched();
 		
 		// Perform Login
-		loginPage.loginApplication(readData("UserDetails", "newuser"), readData("UserDetails", "newpassword"), "valid");
+		loginPage.loginApplication(readData(CommonVariables.inputFileUserDetails, "newuser"), 
+				readData(CommonVariables.inputFileUserDetails, "newpassword"), "valid");
 
 		// To fill the OTP
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());

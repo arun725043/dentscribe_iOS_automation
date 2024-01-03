@@ -29,7 +29,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 		signUpPage.validateSignUpPage();
 		
 		// ____________________Fill signup form and verify confirmation popup button_________________
-		signUpPage.fillSignupForm(generateRandomFirstName(), genrateRandomLastName(), "9", readData("testData", "mobile"), emailId, "title" + GenerateRandomNumber(3), 
+		signUpPage.fillSignupForm(generateRandomFirstName(), genrateRandomLastName(), "9", readData(CommonVariables.inputFileTestData, "mobile"), emailId, "title" + GenerateRandomNumber(3), 
 				String.valueOf(GenerateRandomNumber(6)), pass, pass, "Dentrix"); // spelling need to be correct to this method
 		signUpPage.verifyConfirmationPopup();
 
@@ -48,7 +48,8 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 	public void verifyCreatePracticeInfo() throws InterruptedException 
 	{
 		// _________________fill Practice form and navigate to Sikka webview________________________
-		practiceInfoPage.fillPracticeInfo(readData("testData", "state"), readData("testData", "country"), "9", readData("testData", "mobile"));
+		practiceInfoPage.fillPracticeInfo(readData(CommonVariables.inputFileTestData, "state"), readData(CommonVariables.inputFileTestData, "country"), 
+				"9", readData(CommonVariables.inputFileTestData, "mobile"));
 		practiceInfoPage.clickContinueButtonPracticeInfo();
 		explicitWait(driver, sikkaPage.registerButton, 120);
 		sikkaPage.validateSikkaWebViewPage();
@@ -64,7 +65,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 		sikkaPage.acceptAgreement();
 		
 		// __________________Fill the confirmation page______________________________
-		sikkaPage.fillExistingSikkaCredentials(readData("UserDetails", "existingSikkaUser"), readData("UserDetails", "existingSikkaPwd"));
+		sikkaPage.fillExistingSikkaCredentials(readData(CommonVariables.inputFileUserDetails, "existingSikkaUser"), readData(CommonVariables.inputFileUserDetails, "existingSikkaPwd"));
 		explicitWait(driver, loginPage.noteLoginPage, 120);
 	}
 	
@@ -74,7 +75,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 		loginPage.loginApplication(emailId, CommonVariables.actualPass, "spu popup");
 		
 		// ________________By pass the manual sikka refresh steps______________
-		GenerateOTP.updateOfficeId(emailId, readData("testData", "dentrix"));
+		GenerateOTP.updateOfficeId(emailId, readData(CommonVariables.inputFileTestData, "dentrix"));
 		ExtentManager.logInfoDetails("Sikka refresh done");
 	}
 
@@ -108,7 +109,8 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 		addPaymentMethodPage.validateAddPaymentMethodPage();
 
 		// To fill the payment details
-		String[] details = { "Testing", readData("testData", "cardNo"), readData("testData", "expiry"), readData("testData", "cvc"), readData("testData", "zipcode") };
+		String[] details = { "Testing", readData(CommonVariables.inputFileTestData, "cardNo"), readData(CommonVariables.inputFileTestData, "expiry"), 
+				readData(CommonVariables.inputFileTestData, "cvc"), readData(CommonVariables.inputFileTestData, "zipcode") };
 		addPaymentMethodPage.fillCardDetails(details);
 
 		// To fill the billing details
@@ -137,8 +139,8 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 	public void verifyCancelSubscriptionPopup()
 	{
 		// To save username and password for other test case
-		writeData("UserDetails", "newuser", emailId);
-		writeData("UserDetails", "newpassword", CommonVariables.actualPass);
+		writeData(CommonVariables.inputFileUserDetails, "newuser", emailId);
+		writeData(CommonVariables.inputFileUserDetails, "newpassword", CommonVariables.actualPass);
 				
 		// to verify the all field are mandatory text
 		settingPage.verifyMandatoryFields();
@@ -184,7 +186,8 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 		addPaymentMethodPage.validateAddPaymentMethodPage();
 
 		// To fill the payment details and verify
-		String[] details = { "Testing", readData("testData", "cardNo"), readData("testData", "expiry"),readData("testData", "cvc"), readData("testData", "zipcode") };
+		String[] details = { "Testing", readData(CommonVariables.inputFileTestData, "cardNo"), readData(CommonVariables.inputFileTestData, "expiry"), 
+				readData(CommonVariables.inputFileTestData, "cvc"), readData(CommonVariables.inputFileTestData, "zipcode") };
 		addPaymentMethodPage.fillCardDetails(details);
 
 		// To fill the billing details

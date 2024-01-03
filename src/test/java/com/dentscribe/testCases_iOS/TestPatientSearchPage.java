@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 import com.dentscribe.ExtentReport.ExtentManager;
 import com.dentscribe.base.iOSBase;
+import com.dentscribe.common.CommonVariables;
+
 import Api.GenerateOTP;
 
 public class TestPatientSearchPage extends iOSBase {
@@ -21,7 +23,8 @@ public class TestPatientSearchPage extends iOSBase {
 		loginPage.verifyIsApplicationLaunched();
 		
 		// Perform Login
-		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "valid");
+		loginPage.loginApplication(readData(CommonVariables.inputFileUserDetails, "username"), 
+				readData(CommonVariables.inputFileUserDetails, "password"), "valid");
 
 		// To fill the OTP
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());
@@ -51,11 +54,11 @@ public class TestPatientSearchPage extends iOSBase {
 	public void DS_042_verifyPatientSearchByPatientName()
 	{
 		// Search By patientName and verify
-		ExtentManager.logInfoDetails("Searching By name : <b> " + readData("testData", "patientName") + "</b>");
-		patientSearchPage.searchPatient(readData("testData", "patientName"));
+		ExtentManager.logInfoDetails("Searching By name : <b> " + readData(CommonVariables.inputFileTestData, "patientName") + "</b>");
+		patientSearchPage.searchPatient(readData(CommonVariables.inputFileTestData, "patientName"));
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//XCUIElementTypeStaticText[@name='"+readData("testData", "patientName")+"'])[1]")));
-		assertTrue(patientSearchPage.verifySearchedPatient(readData("testData", "patientName")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//XCUIElementTypeStaticText[@name='"+readData(CommonVariables.inputFileTestData, "patientName")+"'])[1]")));
+		assertTrue(patientSearchPage.verifySearchedPatient(readData(CommonVariables.inputFileTestData, "patientName")));
 		ExtentManager.logInfoDetails("Search Result is displayed as per the given input");
 	}
 	
@@ -63,12 +66,12 @@ public class TestPatientSearchPage extends iOSBase {
 	public void verifyPatientSearchByPatientPhoneNumber()
 	{
 		// Search By patientMobile and verify
-		ExtentManager.logInfoDetails("Searching By mobile : <b> " + readData("testData", "patientPhone") + "</b>");
-		patientSearchPage.searchPatient(readData("testData", "patientPhone"));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//XCUIElementTypeStaticText[@name=' "+readData("testData", "patientPhone")+"'])[1]")));   	
+		ExtentManager.logInfoDetails("Searching By mobile : <b> " + readData(CommonVariables.inputFileTestData, "patientPhone") + "</b>");
+		patientSearchPage.searchPatient(readData(CommonVariables.inputFileTestData, "patientPhone"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//XCUIElementTypeStaticText[@name=' "+readData(CommonVariables.inputFileTestData, "patientPhone")+"'])[1]")));   	
 
-		String no = driver.findElements(By.xpath("(//XCUIElementTypeStaticText[@name=' "+readData("testData", "patientPhone")+"'])[1]")).get(0).getText();
-		assertEquals(no.trim(), readData("testData", "patientPhone"));
+		String no = driver.findElements(By.xpath("(//XCUIElementTypeStaticText[@name=' "+readData(CommonVariables.inputFileTestData, "patientPhone")+"'])[1]")).get(0).getText();
+		assertEquals(no.trim(), readData(CommonVariables.inputFileTestData, "patientPhone"));
 		ExtentManager.logInfoDetails("Search Result is displayed as per the given input");
 	}
 	
@@ -76,10 +79,10 @@ public class TestPatientSearchPage extends iOSBase {
 	public void verifyPatientSearchByPatientDOB()
 	{
 		// Search By dob and verify
-		ExtentManager.logInfoDetails("Searching By DOB : <b> " + readData("testData", "dob") + "</b>");
-		patientSearchPage.searchPatient(readData("testData", "dob"));
+		ExtentManager.logInfoDetails("Searching By DOB : <b> " + readData(CommonVariables.inputFileTestData, "dob") + "</b>");
+		patientSearchPage.searchPatient(readData(CommonVariables.inputFileTestData, "dob"));
 		
-		assertTrue(patientSearchPage.verifySearchedPatient(readData("testData", "dob")));
+		assertTrue(patientSearchPage.verifySearchedPatient(readData(CommonVariables.inputFileTestData, "dob")));
 		ExtentManager.logInfoDetails("Search Result is displayed as per the given input");
 	}
 
@@ -87,11 +90,11 @@ public class TestPatientSearchPage extends iOSBase {
 	public void verifyPatientSearchByPatientInsurance()
 	{
 		// Search By insurance and verify
-		ExtentManager.logInfoDetails("Searching By insurance : <b> " + readData("testData", "insurance") + "</b>");
-		patientSearchPage.searchPatient(readData("testData", "insurance"));
+		ExtentManager.logInfoDetails("Searching By insurance : <b> " + readData(CommonVariables.inputFileTestData, "insurance") + "</b>");
+		patientSearchPage.searchPatient(readData(CommonVariables.inputFileTestData, "insurance"));
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//XCUIElementTypeStaticText[@name=' "+readData("testData", "insurance")+" '])[1]")));
-		assertTrue(IsElementPresent(driver, By.xpath("(//XCUIElementTypeStaticText[@name=' "+readData("testData", "insurance")+" '])[1]")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//XCUIElementTypeStaticText[@name=' "+readData(CommonVariables.inputFileTestData, "insurance")+" '])[1]")));
+		assertTrue(IsElementPresent(driver, By.xpath("(//XCUIElementTypeStaticText[@name=' "+readData(CommonVariables.inputFileTestData, "insurance")+" '])[1]")));
 		ExtentManager.logInfoDetails("Search Result is displayed as per the given input");
 	}
 }

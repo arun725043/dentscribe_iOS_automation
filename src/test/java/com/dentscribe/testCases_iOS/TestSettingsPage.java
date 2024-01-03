@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 
 import com.dentscribe.ExtentReport.ExtentManager;
 import com.dentscribe.base.iOSBase;
+import com.dentscribe.common.CommonVariables;
+
 import Api.GenerateOTP;
 
 public class TestSettingsPage extends iOSBase{
@@ -16,7 +18,8 @@ public class TestSettingsPage extends iOSBase{
 		loginPage.verifyIsApplicationLaunched();
 		
 		// Perform Login
-		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "valid");
+		loginPage.loginApplication(readData(CommonVariables.inputFileUserDetails, "username"), 
+				readData(CommonVariables.inputFileUserDetails, "password"), "valid");
 
 		// To fill the OTP
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());

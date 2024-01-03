@@ -7,12 +7,14 @@ import java.time.Month;
 import org.testng.annotations.Test;
 import com.dentscribe.ExtentReport.ExtentManager;
 import com.dentscribe.base.iOSBase;
+import com.dentscribe.common.CommonVariables;
 
 import Api.GenerateOTP;
 
 public class TestRecordingfor30mintsAndGenerateSoapReport extends iOSBase 
 {
 	String patientName = null;
+	String appointmentDateString = readData(CommonVariables.inputFileTestData, "appointmentsDate");
 	
 	@Test
 	public void verifyWhetherSoapReportCreatedFor30mintsRecording() throws InterruptedException, IOException 
@@ -20,7 +22,8 @@ public class TestRecordingfor30mintsAndGenerateSoapReport extends iOSBase
 		loginPage.verifyIsApplicationLaunched();
 		
 		// __________________________________Login into Application__________________________________________________
-		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "sms page");
+		loginPage.loginApplication(readData(CommonVariables.inputFileUserDetails, "username"), 
+				readData(CommonVariables.inputFileUserDetails, "password"), "sms page");
 		
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());
 		click(driver, loginPage.continueButtonSMSVerification, "Continue on sms verification page");
@@ -32,7 +35,7 @@ public class TestRecordingfor30mintsAndGenerateSoapReport extends iOSBase
 		// __________________________________Select date______________________________________________________________
 		waitUntilLoaderDisappear(driver);
 		System.out.println("Loading Done");
-		int[] date = calendarPage.getDateMonthYear(readData("testData", "longAppointmentsDate"));
+		int[] date = calendarPage.getDateMonthYear(appointmentDateString);
 		Month month = Month.of(date[1]);    
 		month.toString();
  		click(driver, calendarPage.dropdownIconCalendar, "Calendar Dropdown");

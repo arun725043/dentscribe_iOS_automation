@@ -2,6 +2,7 @@ package com.dentscribe.testCases_iOS;
 
 import org.testng.annotations.Test;
 import com.dentscribe.base.iOSBase;
+import com.dentscribe.common.CommonVariables;
 
 public class TestSignUpPage extends iOSBase 
 {
@@ -41,7 +42,7 @@ public class TestSignUpPage extends iOSBase
 	@Test(priority = 6, dependsOnMethods = { "verifyIsSignupPageExists" })
 	public void verifyExistingAndDuplicateEmailId() {
 		// To validate the existing email id
-		signUpPage.verifyExistingEmailId(signUpPage.getSignupDetail(), readData("UserDetails", "username"), "Dentrix");
+		signUpPage.verifyExistingEmailId(signUpPage.getSignupDetail(), readData(CommonVariables.inputFileUserDetails, "username"), "Dentrix");
 	}
 
 	@Test(priority = 7, dependsOnMethods = { "verifyIsSignupPageExists" })

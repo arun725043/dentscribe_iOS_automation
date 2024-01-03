@@ -9,6 +9,8 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import org.testng.annotations.Test;
 import com.dentscribe.ExtentReport.ExtentManager;
 import com.dentscribe.base.iOSBase;
+import com.dentscribe.common.CommonVariables;
+
 import Api.GenerateOTP;
 
 public class TestAllAppointmentStatuses extends iOSBase 
@@ -18,7 +20,7 @@ public class TestAllAppointmentStatuses extends iOSBase
 	 */
 	
 	String patientName = null;
-	String appointmentDateString = readData("testData", "shortAppointmentsDate");
+	String appointmentDateString = readData(CommonVariables.inputFileTestData, "appointmentsDate");
 	
 	@Test (priority = 1)
 	public void goToCalendarPageAndSelectAppointmentsDate() throws InterruptedException, IOException 
@@ -26,7 +28,7 @@ public class TestAllAppointmentStatuses extends iOSBase
 		loginPage.verifyIsApplicationLaunched();
 		
 		// __________________________________Login into Application__________________________________________________
-		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "sms page");
+		loginPage.loginApplication(readData(CommonVariables.inputFileUserDetails, "username"), readData(CommonVariables.inputFileUserDetails, "password"), "sms page");
 		
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());
 		click(driver, loginPage.continueButtonSMSVerification, "Continue on sms verification page");

@@ -2,6 +2,7 @@ package com.dentscribe.testCases_iOS;
 
 import org.testng.annotations.Test;
 import com.dentscribe.base.iOSBase;
+import com.dentscribe.common.CommonVariables;
 
 
 public class TestForgotPasswordPage extends iOSBase {
@@ -44,7 +45,7 @@ public class TestForgotPasswordPage extends iOSBase {
 	public void verifyForgotPasswordForValidEmailId() throws InterruptedException
 	{
 		// To verify the for send reset password email
-		forgotPasswordPage.sendResetPasswordEmail(readData("UserDetails", "username"));
+		forgotPasswordPage.sendResetPasswordEmail(readData(CommonVariables.inputFileUserDetails, "username"));
 	}
 	
 	@Test (priority = 6, dependsOnMethods = { "verityIsForgotPasswordPageExists" })

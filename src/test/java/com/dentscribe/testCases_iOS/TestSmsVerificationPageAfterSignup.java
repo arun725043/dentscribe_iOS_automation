@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import com.dentscribe.ExtentReport.ExtentManager;
 import com.dentscribe.base.iOSBase;
 import com.dentscribe.common.CommonMethods;
+import com.dentscribe.common.CommonVariables;
 
 import Api.GenerateOTP;
 
@@ -20,7 +21,7 @@ public class TestSmsVerificationPageAfterSignup extends iOSBase {
 		loginPage.verifyIsApplicationLaunched();
 		signUpPage.validateSignUpPage();
 		// ____________________Fill signup form and verify confirmation popup button_________________
-		signUpPage.fillSignupForm(generateRandomFirstName(), genrateRandomLastName(), "9", readData("testData", "mobile"), 
+		signUpPage.fillSignupForm(generateRandomFirstName(), genrateRandomLastName(), "9", readData(CommonVariables.inputFileTestData, "mobile"), 
 				emailId, "title" + GenerateRandomNumber(3), 
 				String.valueOf(GenerateRandomNumber(6)), pass, pass, "Dentrix");
 		signUpPage.verifyConfirmationPopup();

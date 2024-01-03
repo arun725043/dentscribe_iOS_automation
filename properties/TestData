@@ -27,9 +27,8 @@ countryName=India
 mobile=9990417876
 otp=839389
 
-//_____________calendar_____________
-shortAppointmentsDate=14-08-2023
-longAppointmentsDate=15-08-2023
+//_____________calendar (dd-mm-yyyy)_____________
+appointmentsDate=02-02-2023
 
 //_____________PMS SoftwareIds___________
 eaglesoft=D22072

@@ -3,6 +3,8 @@ package com.dentscribe.testCases_iOS;
 import java.io.IOException;
 import org.testng.annotations.Test;
 import com.dentscribe.base.iOSBase;
+import com.dentscribe.common.CommonVariables;
+
 import Api.GenerateOTP;
 
 
@@ -13,7 +15,8 @@ public class TestSmsVerificationPageAfterLogin extends iOSBase
 	{
 		loginPage.verifyIsApplicationLaunched();
 		// login with valid credentials
-		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "sms page");
+		loginPage.loginApplication(readData(CommonVariables.inputFileUserDetails, "username"), 
+				readData(CommonVariables.inputFileUserDetails, "password"), "sms page");
 	}
 	
 	@Test (priority = 2, dependsOnMethods = { "verifyIsSmsVerificationPageExistsAfterLogin" })
@@ -51,7 +54,7 @@ public class TestSmsVerificationPageAfterLogin extends iOSBase
 	public void verifySmsVerificationWithValidOtp() throws IOException, InterruptedException
 	{
 		// login with valid credentials
-		loginPage.loginApplication(readData("UserDetails", "username"), readData("UserDetails", "password"), "sms page");
+		loginPage.loginApplication(readData(CommonVariables.inputFileUserDetails, "username"), readData(CommonVariables.inputFileUserDetails, "password"), "sms page");
 		// To fill the otp
 		GenerateOTP.fillOtp(driver, GenerateOTP.getOTP());
 		click(driver, loginPage.continueButtonSMSVerification, "Continue Button on SMS Verification page");

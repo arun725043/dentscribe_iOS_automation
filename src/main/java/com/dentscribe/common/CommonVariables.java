@@ -10,6 +10,13 @@ public class CommonVariables
 	public static String email = null;
 	public static String actualPass = null;
 	
+	// Test Data properties files
+	public static String inputFileConfig = "Config";
+	public static String inputFileUserDetails = "UserDetails";
+	public static String inputFileTestData = "TestData";
+	public static String inputFileChangePassword = "ChangePassword";
+		
+	
 	public static  String startButton = "Start-button";
 	public static String reviewButton = "Review-button";
 	
