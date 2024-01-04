@@ -52,7 +52,8 @@ public class ManageSubscriptionPage extends iOSActions {
 			click(driver, paidSubcription, "Paid Subscription on Manage Your Subscription page");
 			break;
 		default:
-			System.out.println("Please enter valid value");
+			ExtentManager.logFailureDetails(plan + " is not valid option. It could be only free/paid");
+			Assert.fail();
 		}
 	}
 	

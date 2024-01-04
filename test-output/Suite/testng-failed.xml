@@ -6,13 +6,28 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.dentscribe.testCases_iOS.TestForgotPasswordPage">
+      <class name="com.dentscribe.testCases_iOS.TestPatientSearchPage">
         <methods>
+          <include name="verifySkipLinkTourPages"/>
+          <include name="verifyPatientSearchByPatientDOB"/>
           <include name="configureAppium"/>
-          <include name="verifyForgotPasswordForNotExistsEmailId"/>
-          <include name="verityIsForgotPasswordPageExists"/>
+          <include name="verifyIsPatientSearchPageExists"/>
         </methods>
-      </class> <!-- com.dentscribe.testCases_iOS.TestForgotPasswordPage -->
+      </class> <!-- com.dentscribe.testCases_iOS.TestPatientSearchPage -->
+      <class name="com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage">
+        <methods>
+          <include name="verifyEditSoapReportAndAddSignatureDuringEditableReport"/>
+          <include name="verifyBackIconSoapReportAndReviewedButtonForAppointment"/>
+          <include name="verifyPatientProfilePage"/>
+          <include name="configureAppium"/>
+          <include name="verifyBackIconPatientProfilePage"/>
+          <include name="verifyEditIconSoapReport"/>
+          <include name="updateUserDetailsAndVerifySame"/>
+          <include name="verifyBackIconRecordingPage"/>
+          <include name="verifyIsRecordingPageOpenedForExpectedPatient"/>
+          <include name="verifyIsSoapReportCreated"/>
+        </methods>
+      </class> <!-- com.dentscribe.testCases_iOS.TestSoapReportAndPatientProfilePage -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

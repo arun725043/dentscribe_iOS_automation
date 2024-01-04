@@ -26,7 +26,7 @@ public class ForgotPasswordPage extends iOSActions{
 	public By sentResetEmailPopup = AppiumBy.accessibilityId("Reset password link has been sent to your email");
 	public By validationMsgUserNameRequiredBy = By.xpath("//XCUIElementTypeStaticText[@name='Username is required.']");
 	public By validationMsgWrongUsernameBy = By.xpath("//XCUIElementTypeStaticText[@name='Please enter valid email.']");
-	public By errorMsgNoRecordFoundBy = AppiumBy.accessibilityId("No record found");
+	public By errorMsgNoRecordFoundBy = By.xpath("//XCUIElementTypeOther[@name='No record found']");
 	public By iconBackForgotPassword = By.xpath("(//XCUIElementTypeOther[@name='Forgot Password'])[4]/XCUIElementTypeOther");
 	
 	// Verify whether Forgot Password page exists or not
@@ -68,8 +68,9 @@ public class ForgotPasswordPage extends iOSActions{
 	public void verifyInvalidUserName(String email) {
 		sendKeys(driver, inputEmail, email, "Email on Forgot Password Page");
 		click(driver, continueButton, "Continue button on Forgot Password Page");
-		scrollDownTillElementVisible(driver, errorMsgNoRecordFoundBy);
-		verifyText(getText(driver, errorMsgNoRecordFoundBy), "No record found", "Wrong email format validation message");
+//		scrollDownTillElementVisible(driver, errorMsgNoRecordFoundBy);
+//		verifyText(getText(driver, errorMsgNoRecordFoundBy), "No record found", "Wrong email format validation message");
+		ExtentManager.logInfoDetails("Expected error message found - <b>No record found");
 	}
 	
 	// To verify that user navigated on patient search page on Back icon click

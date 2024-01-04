@@ -83,6 +83,7 @@ public class SettingPage extends iOSActions {
  			break;
  		default:
  			ExtentManager.logFailureDetails("Plan name could be only free or paid.");
+ 			Assert.fail();
  		}
  	}
     

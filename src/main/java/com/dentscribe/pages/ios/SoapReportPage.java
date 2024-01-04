@@ -29,8 +29,8 @@ public class SoapReportPage extends iOSActions{
 	public By noteMsgSoapReportPageBy = By.xpath("//XCUIElementTypeStaticText[@name=' Review and sign the report.']");
 	
 	public By iconBackSoapReportPage = By.xpath("(//XCUIElementTypeOther[@name='SOAP Report'])[4]/XCUIElementTypeOther");
-	public By iconEditSoapReportPage = By.xpath("//XCUIElementTypeOther[@name=' Review and sign the report.']/XCUIElementTypeOther");
-	public By iconSaveSoapReportPage = By.xpath("//XCUIElementTypeOther[@name='']");
+	public By iconEditSoapReportPage = By.xpath("(//XCUIElementTypeOther[@name='report_edit_button'])[2]");
+	public By iconSaveSoapReportPage = By.xpath("//XCUIElementTypeStaticText[@name='report_save_button']");
 	
 	public By buttonAdoptSignature = AppiumBy.accessibilityId("adopt-signature-button");
 	public By buttonSubmitAdoptSignaturePopup = AppiumBy.accessibilityId("signature-text-submit-button");

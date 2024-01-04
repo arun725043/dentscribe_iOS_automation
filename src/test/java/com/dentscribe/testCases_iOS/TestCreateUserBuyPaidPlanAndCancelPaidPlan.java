@@ -118,7 +118,7 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 
 		// To click 'Continue' button
 		addPaymentMethodPage.clickContinueButtonPaymentMethodPage();
-
+		Thread.sleep(5000);
 		// To click on continue button on 'Manage Your Subscription'
 		manageSubscriptionPage.clickContinueButtonSubscriptionPage();
 		Thread.sleep(5000);
@@ -132,16 +132,16 @@ public class TestCreateUserBuyPaidPlanAndCancelPaidPlan extends iOSBase
 		settingPage.validateSettingsPage();
 				
 		// To Verify that buy plan is visible on screen
-	    verifyText(getText(driver, settingPage.subscriptionPlan), "$699/Month Selected ", "$699/Month Selected ");
+		settingPage.verifyBuyPlanOnSettingsPage("paid");
+	    
+	    // To save username and password for other test case
+ 		writeData(CommonVariables.inputFileUserDetails, "newuser", emailId);
+ 		writeData(CommonVariables.inputFileUserDetails, "newpassword", CommonVariables.actualPass);
 	}
 
 	@Test(priority = 7, dependsOnMethods = { "verifyCanUserBuyPaidPlan" })
 	public void verifyCancelSubscriptionPopup()
-	{
-		// To save username and password for other test case
-		writeData(CommonVariables.inputFileUserDetails, "newuser", emailId);
-		writeData(CommonVariables.inputFileUserDetails, "newpassword", CommonVariables.actualPass);
-				
+	{			
 		// to verify the all field are mandatory text
 		settingPage.verifyMandatoryFields();
 		

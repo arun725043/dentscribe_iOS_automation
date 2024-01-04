@@ -6,6 +6,7 @@ import org.testng.Assert;
 
 import com.dentscribe.ExtentReport.ExtentManager;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.ios.IOSDriver;
 
 public class FeedbackPage extends iOSActions{
@@ -19,8 +20,8 @@ public class FeedbackPage extends iOSActions{
 	
 	// Feedback page locators
 	public By headerTextFeedbackPageBy = By.xpath("//XCUIElementTypeStaticText[@name='Feedback']");
-	public By iconBackFeedbackPageBy = By.xpath("(//XCUIElementTypeOther[@name=' New Feedback'])[1]/XCUIElementTypeOther[1]");
-	public By iconNewFeedbackBy = By.xpath("(//XCUIElementTypeOther[@name=' New Feedback'])[2]");
+	public By iconBackFeedbackPageBy = AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \" new-feedback-icon\"`][1]/XCUIElementTypeOther[1]");
+	public By iconNewFeedbackBy = AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \" new-feedback-icon\"`][2]");
 	public By msgNoFeedbacksBy = By.xpath("//XCUIElementTypeStaticText[@name='No feedback found.']");
 	
 	// New feedback page locators
